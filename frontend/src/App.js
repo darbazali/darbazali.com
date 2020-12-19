@@ -1,9 +1,10 @@
 import React from 'react'
+import Home from './screens/Home'
 
 const App = () => {
   return (
-    <div>
-      <h1>Welcome to my site</h1>
+    <div className='app'>
+      <Home />
     </div>
   )
 }
