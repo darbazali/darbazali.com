@@ -1,0 +1,47 @@
+.services {
+  max-width: 816px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.service-cards {
+  margin-top: 40px;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+}
+
+.service-cards .service-cart {
+  width: 90%;
+  height: 260px;
+  border-radius: 20px;
+  background: #101017;
+  box-shadow: 0px 3px 6px #000;
+  padding: 40px 10%;
+  margin-bottom: 32px;
+  margin-left: 32px;
+}
+
+.service-cards .service-cart.vert {
+  height: 550px;
+  width: 286px;
+  padding: 120px 20px;
+  text-align: center;
+}
+
+.service-cards .service-cart h2 {
+  color: #d37876;
+  font-size: 32px;
+}
+
+.service-cards .service-cart p {
+  text-align: left;
+  color: #f2f2f2;
+}
+
+.service-cards .service-cart.vert p {
+  text-align: center;
+  max-width: 200px;
+  margin: 0 auto;
+}
