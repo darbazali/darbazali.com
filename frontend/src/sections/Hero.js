@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles/hero.css'
 import scrollMouse from '../assets/ic_mouse_24px.svg'
-export const Hero = () => {
+const Hero = () => {
   return (
     <div className='hero-container'>
       <div className='hero-content'>
@@ -13,3 +13,5 @@ export const Hero = () => {
     </div>
   )
 }
+
+export default Hero
