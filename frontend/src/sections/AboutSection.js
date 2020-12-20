@@ -16,7 +16,7 @@ const AboutSection = () => {
           revenue.
         </p>
         <Link to='/contact' className='button button-primary'>
-          <span class='button-helper'></span>
+          <span className='button-helper'></span>
           Hire me
         </Link>
       </div>
