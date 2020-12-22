@@ -8,8 +8,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background-color: #000000;
-  color: #f5f5f5;
+  background-color: #fafafb;
+  color: #4d5057;
   font-size: 16px;
 }
 
@@ -47,6 +47,7 @@ p {
 .container {
   max-width: 1240px;
   margin: 0 auto;
+  background-color: transparent;
 }
 
 section {
