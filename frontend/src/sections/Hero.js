@@ -5,9 +5,9 @@ const Hero = () => {
   return (
     <div className='hero-container'>
       <div className='hero-content'>
-        <h2>HELLO, I AM</h2>
+        <h4>Hello, I am</h4>
         <h1>DARBAZ</h1>
-        <h3>I design and build web apps</h3>
+        <h5>I design and build web apps</h5>
       </div>
       <img src={scrollMouse} alt={'scroll mouse icon'} />
     </div>

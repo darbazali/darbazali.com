@@ -9,42 +9,47 @@
 }
 
 .hero-content {
-  width: 1060px;
+  width: 1180px;
   height: 450px;
 }
 
 .hero-content h1 {
-  text-align: center;
-  font-size: 256px;
   font-weight: 700;
-  color: #d37876;
-  border-top: 1px solid #d37876;
-  border-bottom: 1px solid #d37876;
   line-height: 100%;
-  margin: 20px 0;
+  font-weight: bold;
+  font-size: 287px;
+  text-align: center;
+  color: #4d5057;
+  text-shadow: 0px 10px 20px rgba(0, 0, 0, 0.33);
 }
 
-.hero-content h2 {
-  font-size: 64px;
-  font-weight: 600;
-}
-.hero-content h3 {
-  font-size: 32px;
-  text-align: right;
-  font-weight: 500;
+.hero-content h5 {
+  float: right;
 }
 
-.hero-content h1,
-.hero-content h2,
-.hero-content h3 {
+.hero-content h1 {
   text-transform: uppercase;
 }
 
-.hero-content h2,
-.hero-content h3 {
-  opacity: 0.8;
+.hero-content h4,
+.hero-content h5,
+.hero-content h1 {
+  margin: 0;
 }
 
+/* Move greeting message to left by 16px */
+.hero-content h4 {
+  margin-left: 16px;
+  font-weight: 600;
+}
+
+/* Move h5 to right by 16px */
+.hero-content h5 {
+  margin-right: 16px;
+  font-weight: 500;
+}
+
+/* make the mouse icon less stand out */
 .hero-container img {
   position: absolute;
   bottom: 40px;
