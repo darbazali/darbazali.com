@@ -6,7 +6,7 @@ const sectionStyle = {
   margin: '0 auto',
   padding: '0',
   color: '#000',
-  backgroundColor: '#fcc230',
+  backgroundColor: '#f59182',
 }
 
 const WhyMe = () => {
