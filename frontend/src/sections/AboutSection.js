@@ -1,6 +1,7 @@
 import React from 'react'
 
 import DarbazAli from '../assets/DarbazAli.jpg'
+import Button from '../components/Button'
 import '../styles/about-section.css'
 const AboutSection = () => {
   return (
@@ -17,9 +18,11 @@ const AboutSection = () => {
           revenue.
         </p>
 
-        <a href='/#contact' className='button button-primary'>
+        {/* <a href='/#contact' className='button button-primary'>
           Hire me
-        </a>
+        </a> */}
+
+        <Button className='button'>Hire me</Button>
       </div>
     </section>
   )
