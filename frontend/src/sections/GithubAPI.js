@@ -1,6 +1,17 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import '../styles/repos.css'
+import FlexContainer from '../components/FlexContainer'
+
+const repoStyle = {
+  width: 'calc(50% - 16px)',
+  marginBottom: '1em',
+  height: '140px',
+  borderRadius: '10px',
+  backgroundColor: 'transparent',
+  border: '1px solid rgba(105, 114, 133, 0.47)',
+  padding: '2em',
+  marginRight: '1em',
+}
 
 const GithubAPI = () => {
   const [repos, setRepos] = useState([])
@@ -20,24 +31,35 @@ const GithubAPI = () => {
 
   return (
     <section>
-      <p className='section-title'>my github wall</p>
-      <div className='repo-container'>
+      <h5 className='section-title'>my github wall</h5>
+      <FlexContainer
+        className='container'
+        container
+        alignItems='stretch'
+        justifyContent='space-between'
+        alignContent='center'
+        flexWrap='wrap'
+        maxWidth='1028px'
+        margin='0 auto'
+      >
         {repos.map((repo) => (
           <Repo key={repo.id} repo={repo} />
         ))}
-      </div>
+      </FlexContainer>
     </section>
   )
 }
 
 const Repo = ({ repo: { name, html_url, language, description } }) => {
   return (
-    <div className='repo'>
+    <div style={repoStyle}>
       <a href={html_url}>
-        <h4>{name}</h4>
+        <h5 style={{ display: 'inline', fontWeight: '500' }}>{name}</h5>
       </a>{' '}
-      <span>{language || 'Node'}</span>
-      <p>{description}</p>
+      <span style={{ float: 'right' }}>{`{${language || 'Node'}}`}</span>
+      <p style={{ marginTop: '1em', height: '20px', overflow: 'hidden' }}>
+        {description}
+      </p>
     </div>
   )
 }
