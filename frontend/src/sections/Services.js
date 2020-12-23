@@ -1,6 +1,6 @@
 import React from 'react'
 import '../styles/services.css'
-
+import FlexContainer from '../components/FlexContainer'
 import uxIcon from '../assets/noun_ux_693504.svg'
 import startUpIcon from '../assets/noun_startup_1806706.svg'
 import webDevIcon from '../assets/noun_web_development_3471717.svg'
@@ -9,7 +9,7 @@ const Services = () => {
   return (
     <section className='services'>
       <h5>Services</h5>
-      <div className='service-cards'>
+      <FlexContainer className='flex' container justifyContent alignContent>
         <div className='service-cart'>
           <img src={webDevIcon} alt='webDevIcon' />
           <h5>Full-Stack Web Development</h5>
@@ -35,7 +35,7 @@ const Services = () => {
             customers.
           </p>
         </div>
-      </div>
+      </FlexContainer>
     </section>
   )
 }

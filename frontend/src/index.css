@@ -98,11 +98,10 @@ section {
   padding: 80px 0;
 }
 
-section p.section-title {
+section h5.section-title {
   text-align: center;
-  width: 200px;
-  margin: 1rem auto;
-  margin-bottom: 40px;
+  width: 300px;
+  margin: 2rem auto;
 }
 
 section#why-me {
@@ -155,7 +154,7 @@ BUTTON
   text-decoration: underline;
   font-size: 18px;
   line-height: 22px;
-  color: #698fe8;
+  color: #5197e6;
 }
 
 .center-align {

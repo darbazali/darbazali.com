@@ -5,8 +5,14 @@ import qcImage from '../assets/quad_ captcha_thumbnail.png'
 import bit8UrlImage from '../assets/8bit_url_thumbnail.png'
 import usGDPImage from '../assets/us_gdp_thumbnail.png'
 import hwmImage from '../assets/hike_with_me_thumbnail.png'
-import '../styles/projects.css'
 
+import FlexContainer from '../components/FlexContainer'
+
+/* 
+===================================================
+DATA
+===================================================
+*/
 const projects = [
   {
     id: 1,
@@ -38,32 +44,58 @@ const projects = [
   },
 ]
 
+/* 
+===================================================
+STYLES
+===================================================
+*/
+const cardStyle = {
+  width: 'calc(50% - 8px)',
+  backgroundColor: '#f4f5f6',
+  textAlign: 'center',
+  marginBottom: '1em',
+}
+
+const imageStyle = {
+  width: '80%',
+  margin: '2em auto',
+}
+
+/* 
+===================================================
+COMPONENT
+===================================================
+*/
 const Projects = () => {
   return (
-    <section className='center-align'>
-      <p className='section-title'>featured projects</p>
-      <div className='projects'>
+    <section>
+      <h5 className='section-title'>featured projects</h5>
+      <FlexContainer
+        container
+        alignItems='stretch'
+        justifyContent='space-between'
+        alignContent='center'
+        flexWrap='wrap'
+      >
         {projects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
-      </div>
-      <Link to='/projects' className='button-tritary'>
-        {' '}
-        See more{' '}
-      </Link>
+      </FlexContainer>
     </section>
   )
 }
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ project: { route, title, image, desc } }) => {
   return (
-    <Link to={project.route}>
-      <div className='project-card'>
-        <img src={project.image} alt={project.title} />
-        <h3>{project.title}</h3>
-        <p>{project.desc}</p>
-      </div>
-    </Link>
+    <div style={cardStyle}>
+      <h4>{title}</h4>
+      <p>{desc}</p>
+      <Link to={route} className='button-tritary'>
+        learn more
+      </Link>
+      <br />
+      <img style={imageStyle} src={image} alt={title} />
+    </div>
   )
 }
 

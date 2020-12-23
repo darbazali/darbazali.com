@@ -5,15 +5,7 @@
   text-align: center;
 }
 
-.service-cards {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.service-cards .service-cart {
+.service-cart {
   padding: 40px;
   width: 286px;
   height: 360px;
@@ -24,22 +16,18 @@
   margin-right: 32px;
 }
 
-.service-cards .service-cart h5 {
+.service-cart h5 {
   font-weight: 600;
   font-size: 20px;
 }
 
-.service-cards .service-cart:nth-child(2) {
+.service-cart:nth-child(2) {
   width: 392px;
   height: 450px;
   padding: 50px;
 }
 
-.service-cards .service-cart:nth-child(2) p {
+.service-cart:nth-child(2) p {
   width: 240px;
   margin: 0 auto;
-}
-
-.service-cards h5 {
-  /* margin-bottom: 40px; */
 }
