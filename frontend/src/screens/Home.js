@@ -9,15 +9,20 @@ import WhyMe from '../sections/WhyMe'
 
 const Home = () => {
   return (
-    <div className='container'>
-      <Hero />
-      <AboutSection />
-      <Services />
-      <Projects />
-      <GithubAPI />
+    <>
+      <div className='container'>
+        <Hero />
+        <AboutSection />
+        <Services />
+        <Projects />
+        <GithubAPI />
+      </div>
+
       <WhyMe />
-      <Contact />
-    </div>
+      <div className='container'>
+        <Contact />
+      </div>
+    </>
   )
 }
 
