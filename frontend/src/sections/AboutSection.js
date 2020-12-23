@@ -1,12 +1,13 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import DarbazAli from '../assets/DarbazAli.png'
+
+import DarbazAli from '../assets/DarbazAli.jpg'
 import '../styles/about-section.css'
 const AboutSection = () => {
   return (
     <section className='about'>
+      <img src={DarbazAli} alt={'Darbaz Ali'} style={{ height: '600px' }} />
       <div>
-        <h2>About Me</h2>
+        <h4>About Me</h4>
         <p>
           I’m Darbaz Ali, based in Sulaymaniyah/Iraq. I create UX, design UI,
           and develop Full-Stack web apps from the ground up. I look forward to
@@ -15,13 +16,11 @@ const AboutSection = () => {
           lives easier. As well as helping businesses to survive and generate
           revenue.
         </p>
-        <Link to='/contact' className='button button-primary'>
-          <span className='button-helper'></span>
-          Hire me
-        </Link>
-      </div>
 
-      <img src={DarbazAli} alt={'Darbaz Ali'} style={{ height: '700px' }} />
+        <a href='/#contact' className='button button-primary'>
+          Hire me
+        </a>
+      </div>
     </section>
   )
 }

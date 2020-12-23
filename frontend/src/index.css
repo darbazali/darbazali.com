@@ -15,6 +15,16 @@ body {
   line-height: 1.75;
 }
 
+html {
+  font-size: 100%;
+} /*16px*/
+
+/* 
+====================================================================
+GENERAL
+====================================================================
+*/
+
 * {
   margin: 0;
   padding: 0;
@@ -30,10 +40,6 @@ a {
   text-decoration: none;
   color: #5197e6;
 }
-
-html {
-  font-size: 100%;
-} /*16px*/
 
 p {
   margin-bottom: 1rem;
@@ -76,6 +82,17 @@ small,
   font-size: 0.618rem;
 }
 
+/* 
+====================================================================
+SECTION
+====================================================================
+*/
+
+.container {
+  margin: 0 auto;
+  max-width: 1240px;
+}
+
 section {
   padding: 80px 0;
 }
@@ -83,7 +100,7 @@ section {
 section p.section-title {
   text-align: center;
   width: 200px;
-  margin: 0 auto;
+  margin: 1rem auto;
   margin-bottom: 40px;
 }
 
@@ -105,54 +122,29 @@ section p.big-text {
   margin: 0 auto;
 }
 
+/* 
+====================================================================
+BUTTON
+====================================================================
+*/
 .button {
-  position: relative;
-  z-index: 9;
-  display: inline-block;
-  padding: 0 10px;
-  padding: 18px 36px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  border-radius: 10px;
-
-  box-shadow: 0px 8px 16px rgba(80, 64, 128, 0.57);
-  background: -webkit-gradient(135deg, #c3b8e6, #504080);
-  background: -webkit-linear-gradient(135deg, #c3b8e6, #504080);
-  background: -moz-linear-gradient(135deg, #c3b8e6, #504080);
-  background: -o-linear-gradient(135deg, #c3b8e6, #504080);
-  background: linear-gradient(135deg, #c3b8e6, #504080);
-
-  font-weight: 600;
-  font-size: 18px;
+  padding: 16px 32px;
+  border-radius: 8px;
+  background: #977af2;
+  filter: drop-shadow(0px 3px 6px rgba(151, 122, 242, 0.28));
+  font-weight: 500;
+  font-size: 20px;
   line-height: 30px;
   text-align: center;
   color: #fff;
-  text-shadow: 0px 3px 6px #422e80;
+  text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.27);
+  margin-top: 20px;
+  transition: all 300ms ease-out;
 }
 
-.button-helper {
-  border-radius: 10px;
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  background: -webkit-gradient(300deg, #a59bc5, #45376e);
-  background: -webkit-linear-gradient(300deg, #a59bc5, #45376e);
-  background: -moz-linear-gradient(300deg, #a59bc5, #45376e);
-  background: -o-linear-gradient(300deg, #a59bc5, #45376e);
-  background: linear-gradient(300deg, #a59bc5, #45376e);
-  -webkit-transition: opacity 300ms linear;
-  -moz-transition: opacity 300ms linear;
-  -o-transition: opacity 300ms linear;
-  transition: opacity 300ms linear;
-}
-
-.button:hover .button-helper {
-  opacity: 1;
+.button:hover {
+  transform: scale(1.02);
+  filter: drop-shadow(0px 3px 6px rgba(82, 66, 134, 0.562));
 }
 
 .button-tritary {

@@ -9,7 +9,7 @@ import WhyMe from '../sections/WhyMe'
 
 const Home = () => {
   return (
-    <div>
+    <div className='container'>
       <Hero />
       <AboutSection />
       <Services />

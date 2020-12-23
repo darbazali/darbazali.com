@@ -1,19 +1,22 @@
 .about {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
 }
 
-.about h2 {
-  font-size: 64px;
-  font-weight: 600;
-  color: #d37876;
+.about div {
+  width: 40%;
+  height: 500px;
 }
 
-.about p {
-  width: 400px;
-  margin-bottom: 40px;
+.about div p {
+  max-width: 450px;
+  margin-bottom: 60px;
+}
+
+.about h4 {
+  font-weight: 600;
 }
