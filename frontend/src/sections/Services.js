@@ -1,35 +1,39 @@
 import React from 'react'
 import '../styles/services.css'
+
+import uxIcon from '../assets/noun_ux_693504.svg'
+import startUpIcon from '../assets/noun_startup_1806706.svg'
+import webDevIcon from '../assets/noun_web_development_3471717.svg'
+
 const Services = () => {
   return (
     <section className='services'>
-      Services
+      <h5>Services</h5>
       <div className='service-cards'>
-        <div className='service-cart vert'>
-          <h2>Full-Stack Web Development</h2>
+        <div className='service-cart'>
+          <img src={webDevIcon} alt='webDevIcon' />
+          <h5>Full-Stack Web Development</h5>
+
+          <p>Building Full-Stack web apps with javascript (MERN) stack.</p>
+        </div>
+
+        <div className='service-cart'>
+          <img src={uxIcon} alt='UX Icon' />
+          <h5>UI/UX Design</h5>
           <p>
-            I develop Full-Stack web apps with javascript (MERN) Stack, I create
-            UI Systems with React, Visualize data with D3.js, and Back-End
-            systems with Node and MongoDB.
+            Designing digital products in a user-centric approach, with
+            strategic thinking, in order to build products that make a
+            differece.
           </p>
         </div>
-        <div>
-          <div className='service-cart'>
-            <h2>UI/UX Design</h2>
-            <p>
-              I create seamless user experiences by designing products in a
-              user-centric approach and design beautiful user interfaces to make
-              the product stand out in terms of usability and aesthetics.
-            </p>
-          </div>
 
-          <div className='service-cart'>
-            <h2>Building MVPs</h2>
-            <p>
-              If you have a multimillion-dollar idea and want to reach early
-              customers through a light-weight MVP, I got you covered.
-            </p>
-          </div>
+        <div className='service-cart'>
+          <img src={startUpIcon} alt='startup icon' />
+          <h5>Building MVPs</h5>
+          <p>
+            Creating Light-weight MVPs for Startup companies to reach early
+            customers.
+          </p>
         </div>
       </div>
     </section>
