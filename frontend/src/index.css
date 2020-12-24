@@ -104,6 +104,14 @@ section h5.section-title {
   margin: 2rem auto;
 }
 
+.skills li {
+  height: 34px;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  border: none;
+  border-left: 4px solid #ffffff;
+}
+
 /* 
 ====================================================================
 NAVIGATION

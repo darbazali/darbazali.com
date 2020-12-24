@@ -12,7 +12,7 @@ const imgStyle = {
 
 const AboutSection = () => {
   return (
-    <section>
+    <section style={{ width: '100%', height: '100vh' }}>
       <FlexContainer
         container
         alignItems='center'
