@@ -61,7 +61,7 @@ const Header = () => {
 
         <nav style={navStyle}>
           <Link to='/'>Home</Link>
-          <Link to='/#services'>Services</Link>
+          <a href='/#services'>Services</a>
           <Link to='/projects'>Projects</Link>
           <Link to='/about'>About</Link>
         </nav>
@@ -73,11 +73,11 @@ const Header = () => {
 }
 
 const ContactButton = () => (
-  <Link to='/#contact'>
+  <a href='/#contact'>
     <button style={buttonStyle} className='button-secondary'>
       Contact
     </button>
-  </Link>
+  </a>
 )
 
 export default Header

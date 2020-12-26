@@ -7,7 +7,7 @@ import webDevIcon from '../assets/ICON/noun_web_development_3471717.svg'
 
 const Services = () => {
   return (
-    <section className='services'>
+    <section className='services' id='services'>
       <h5>Services</h5>
       <FlexContainer className='flex' container justifyContent alignContent>
         <div className='service-cart'>
