@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import github from '../assets/github_logo.svg'
-import linkedin from '../assets/linkedin_logo.svg'
+import github from '../assets/ICON/github_logo.svg'
+import linkedin from '../assets/ICON/linkedin_logo.svg'
 import FlexContainer from './FlexContainer'
 
 const footerStyle = {

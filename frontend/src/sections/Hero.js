@@ -1,6 +1,6 @@
 import React from 'react'
 
-import scrollMouse from '../assets/ic_mouse_24px.svg'
+import scrollMouse from '../assets/ICON/ic_mouse_24px.svg'
 import CenterdContainer from '../components/CenterdContainer'
 
 const titleStyle = {

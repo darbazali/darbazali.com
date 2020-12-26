@@ -22,7 +22,6 @@ const GithubAPI = () => {
       const { data } = await axios.get(url, {
         'Content-Type': 'application/vnd.github.v3+json',
       })
-      console.log(data)
       setRepos(data)
     }
 
