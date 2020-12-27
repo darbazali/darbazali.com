@@ -1,27 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import FlexContainer from './FlexContainer'
 import { Link } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link'
 import logo from '../assets/darbaz_logo.png'
-
-const headerStyle = {
-  width: '100%',
-  height: '64px',
-  padding: '12px 0',
-  backgroundColor: '#f4f5f6',
-  position: 'fixed',
-  top: '0',
-  opacity: '0.98',
-  zIndex: '9999',
-}
-
-const navStyle = {
-  width: '390px',
-  display: 'flex',
-  flexDirection: 'row',
-  justifyContent: 'space-between',
-  alignItems: 'center',
-  marginLeft: '50px',
-}
+import { ReactComponent as CloseIcon } from '../assets/ICON/noun_Close_2845885.svg'
+import { ReactComponent as MenuIcon } from '../assets/ICON/noun_menu_1166835.svg'
+import '../styles/header.css'
 
 const buttonStyle = {
   width: '106px',
@@ -35,49 +19,64 @@ const buttonStyle = {
   fontWeight: '500',
   transition: 'all 300ms ease-out',
 }
+
 const Header = () => {
+  const [click, setClick] = useState(false)
+  const handleClick = () => setClick(!click)
+  const closeMobileMenu = () => setClick(false)
+
   return (
-    <header style={headerStyle}>
+    <header>
       <FlexContainer
         container
         alignItems='center'
         justifyContent='space-between'
         alignContent='center'
-        flexWrap='wrap'
+        flexWrap='nowrap'
         maxWidth='1240px'
         margin='0 auto'
       >
-        <Link
-          to='/'
-          style={{
-            borderRadius: '10px',
-            height: '40px',
-            width: '40px',
-            boxShadow: '0px 3px 6px rgba(0, 0, 0, 0.09)',
-          }}
-        >
+        {/* LOGO */}
+        <Link to='/' className='logo'>
           <img style={{ height: '40px' }} src={logo} alt='Darbaz Ali logo' />
         </Link>
 
-        <nav style={navStyle}>
-          <Link to='/'>Home</Link>
-          <a href='/#services'>Services</a>
-          <Link to='/projects'>Projects</Link>
-          <Link to='/about'>About</Link>
+        <nav className={click ? 'navbar active' : 'navbar'}>
+          <ul>
+            <Link onClick={closeMobileMenu} to='/'>
+              Home
+            </Link>
+            <HashLink onClick={closeMobileMenu} to='/#services'>
+              Services
+            </HashLink>
+            <Link onClick={closeMobileMenu} to='/projects'>
+              Projects
+            </Link>
+            <Link onClick={closeMobileMenu} to='/about'>
+              About
+            </Link>
+          </ul>
+          <ContactButton onClick={closeMobileMenu} />
         </nav>
 
-        <ContactButton />
+        <div className='mobile-menu' onClick={handleClick}>
+          {click ? (
+            <CloseIcon className='menu-icon' />
+          ) : (
+            <MenuIcon className='menu-icon' />
+          )}
+        </div>
       </FlexContainer>
     </header>
   )
 }
 
-const ContactButton = () => (
-  <a href='/#contact'>
-    <button style={buttonStyle} className='button-secondary'>
+const ContactButton = ({ onClick }) => (
+  <HashLink to='/#contact'>
+    <button onClick={onClick} style={buttonStyle} className='button-secondary'>
       Contact
     </button>
-  </a>
+  </HashLink>
 )
 
 export default Header
