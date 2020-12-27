@@ -5,9 +5,8 @@ NAVIGATION
 */
 
 header {
-  position: relative;
+  position: fixed;
   width: 100%;
-  /* max-width: 1240px; */
   margin: 0 auto;
   height: 64px;
   padding: 12px 0;
