@@ -1,0 +1,42 @@
+{
+  "name": "darbazali.com",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Darbaz Ali's homepage",
+  "main": "index.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "nodemon backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DarbazAli/darbazali.com.git"
+  },
+  "keywords": [
+    "'Darbaz",
+    "Ali'",
+    "'UX",
+    "Designer'",
+    "'UI",
+    "Designer'",
+    "MERN",
+    "React",
+    "Full-Stack"
+  ],
+  "author": "Darbaz Ali",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DarbazAli/darbazali.com/issues"
+  },
+  "homepage": "https://github.com/DarbazAli/darbazali.com#readme",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "dotenv": "^8.2.0",
+    "emailjs": "^3.4.0",
+    "express": "^4.17.1",
+    "nodemailer": "^6.4.17"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
