@@ -4,6 +4,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Home from './screens/Home'
 import About from './screens/About'
+import Projects from './screens/Projects'
 
 const App = () => {
   const [showHeader, setShowHeader] = useState(false)
@@ -23,6 +24,7 @@ const App = () => {
       <Switch>
         <Route exact path='/' component={Home} />
         <Route path='/about' component={About} />
+        <Route path='/projects' component={Projects} />
       </Switch>
       <Footer />
     </Router>

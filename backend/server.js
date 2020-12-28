@@ -10,13 +10,14 @@ const app = express()
 dotenv.config()
 
 const __dirname = path.resolve()
-
+console.log(__dirname)
 const { PORT, USERNAME, PASSWORD } = process.env
-
-app.use('/public', express.static(path.join(__dirname, 'public')))
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
+app.set('views', 'views')
+
+app.use(express.static('/public'))
 
 const transporter = nodemailer.createTransport({
   host: 'smtp.gmail.com',
