@@ -4,13 +4,6 @@ import { SegmentedControl } from 'segmented-control-react'
 import { CertCard } from '../sections/Certifications'
 import FlexContainer from '../components/FlexContainer'
 
-import d3BarChart from '../assets/D3/d3_barchart.jpg'
-import d3ChoroplethMap from '../assets/D3/d3_choropleth_map.jpg'
-import d3HeatMap from '../assets/D3/d3_heatmap.jpg'
-import d3TreeMap from '../assets/D3/d3_treemap.jpg'
-
-import hikeWithMe from '../assets/HWM_HERO_IMG.jpg'
-
 const projects = [
   {
     id: 1,
@@ -18,7 +11,7 @@ const projects = [
     desc: 'UX/UI Design',
     category: 'ui/ux',
     url: '/hike_with_me',
-    image: hikeWithMe,
+    image: 'https://i.ibb.co/VSPk1rP/HWM-HERO-IMG.jpg',
   },
   {
     id: 2,
@@ -40,7 +33,7 @@ const projects = [
     desc: 'Data Visualization',
     category: 'd3',
     url: 'https://codepen.io/Darbaz/pen/VweJxMg',
-    image: d3TreeMap,
+    image: 'https://i.ibb.co/7X1Qn58/d3-treemap.jpg',
   },
   {
     id: 5,
@@ -48,7 +41,7 @@ const projects = [
     desc: 'Data Visualization',
     category: 'd3',
     url: 'https://codepen.io/Darbaz/pen/rNxEarv',
-    image: d3ChoroplethMap,
+    image: 'https://i.ibb.co/fDbktJG/d3-choropleth-map.jpg',
   },
   {
     id: 6,
@@ -56,7 +49,7 @@ const projects = [
     desc: 'Data Visualization',
     category: 'd3',
     url: 'https://codepen.io/Darbaz/pen/bGEyLPQ',
-    image: d3HeatMap,
+    image: 'https://i.ibb.co/q90PWKg/d3-heatmap.jpg',
   },
   {
     id: 7,
@@ -64,7 +57,48 @@ const projects = [
     desc: 'Data Visualization',
     category: 'd3',
     url: 'https://codepen.io/Darbaz/pen/XWXQryj',
-    image: d3BarChart,
+    image: 'https://i.ibb.co/rvCJM8h/d3-barchart.jpg',
+  },
+
+  {
+    id: 8,
+    title: 'Pomodoro Clock',
+    desc: 'React',
+    category: 'react',
+    url: 'https://codepen.io/Darbaz/pen/KKVQXPj',
+    image: 'https://i.ibb.co/7k4FbCF/pomodoro-clock.jpg',
+  },
+  {
+    id: 9,
+    title: 'Random Quote Machine',
+    desc: 'React',
+    category: 'react',
+    url: 'https://github.com/DarbazAli/random-quote-machine',
+    image: 'https://i.ibb.co/XjYPCjc/random-quote-machine.jpg',
+  },
+  {
+    id: 10,
+    title: 'Hacker News API',
+    desc: 'React',
+    category: 'react',
+    url: 'https://hacker-stories-react-api.web.app',
+    image: 'https://i.ibb.co/7pQ719n/hacker-news-api.jpg',
+  },
+  {
+    id: 11,
+    title: 'iMarker',
+    desc: 'React',
+    category: 'react',
+    url: 'https://github.com/DarbazAli/iMarker',
+    image: 'https://i.ibb.co/6DVcXFY/iMarker.jpg',
+  },
+  {
+    id: 12,
+    title: 'Drumpad Machine',
+    desc: 'React',
+    category: 'react',
+    url: 'https://codepen.io/Darbaz/pen/WNrEJxe',
+    image: 'https://i.ibb.co/54C4KfR/drum-machine.jpg',
   },
 ]
 
@@ -123,14 +157,5 @@ const Projects = () => {
     </section>
   )
 }
-
-const ProjectCard = ({ project: { title, desc, category, image } }) => (
-  <div>
-    <h5>{title}</h5>
-    <p>{desc}</p>
-    <b>{category}</b>
-    <img src={image} alt={title} />
-  </div>
-)
 
 export default Projects

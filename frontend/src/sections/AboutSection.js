@@ -1,6 +1,5 @@
 import React from 'react'
 
-import DarbazAli from '../assets/DarbazAli.jpg'
 import Button from '../components/Button'
 import FlexContainer from '../components/FlexContainer'
 

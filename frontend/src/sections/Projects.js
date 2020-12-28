@@ -18,7 +18,7 @@ const projects = [
     id: 1,
     title: 'Hike With Me',
     desc: 'UX/UI Design',
-    image: hwmImage,
+    image: 'https://i.ibb.co/VSPk1rP/HWM-HERO-IMG.jpg',
     route: '/hike_with_me',
   },
   {
