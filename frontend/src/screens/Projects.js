@@ -9,13 +9,16 @@ import d3ChoroplethMap from '../assets/D3/d3_choropleth_map.jpg'
 import d3HeatMap from '../assets/D3/d3_heatmap.jpg'
 import d3TreeMap from '../assets/D3/d3_treemap.jpg'
 
+import hikeWithMe from '../assets/HWM_HERO_IMG.jpg'
+
 const projects = [
   {
     id: 1,
     title: 'Hike With Me',
     desc: 'UX/UI Design',
     category: 'ui/ux',
-    route: '/hike_with_me',
+    url: '/hike_with_me',
+    image: hikeWithMe,
   },
   {
     id: 2,

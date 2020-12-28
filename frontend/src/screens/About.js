@@ -4,13 +4,6 @@ import SkillSet from '../sections/SkillSet'
 import { Certifications } from '../sections/Certifications'
 import Tools from '../sections/Tools'
 
-import UX_CERT from '../assets/CERT/UX_DESIGN_CERT.jpg'
-import API_CERT from '../assets/CERT/API_MICROSERVICE_CERT.jpg'
-import DATA_VIS_CERT from '../assets/CERT/DATA_VISUALIZATION_CERT.jpg'
-import FRONT_END_CERT from '../assets/CERT/FRONT-END_LIBRARIES_CERT.jpg'
-import JS_ALGO_CERT from '../assets/CERT/FCC_JS_Algorithms_And_Data_Structures_Certification.jpg'
-import RESPONSIVE_WEB_CERT from '../assets/CERT/RESPONSIVE_DESIGN_CERT.jpg'
-
 const certData = [
   {
     id: 100,
@@ -18,7 +11,7 @@ const certData = [
     provider: 'teamTreeHouse',
     url:
       'https://www.credential.net/f5096084-e541-46e2-aef0-e982545fcc2e#gs.ofnhtb',
-    image: UX_CERT,
+    image: 'https://i.ibb.co/SngXf1Z/UX-DESIGN-CERT.jpg',
   },
 
   {
@@ -27,39 +20,40 @@ const certData = [
     provider: 'freeCodeCamp',
     url:
       'https://www.freecodecamp.org/certification/darbaz-ali/apis-and-microservices',
-    image: API_CERT,
+    image: 'https://i.ibb.co/Dz7NHzH/API-MICROSERVICE-CERT.jpg',
   },
   {
-    id: 101,
+    id: 102,
     title: 'Front End Libraries',
     provider: 'freeCodeCamp',
     url:
       'https://www.freecodecamp.org/certification/darbaz-ali/front-end-libraries',
-    image: FRONT_END_CERT,
+    image: 'https://i.ibb.co/zm2yxCn/FRONT-END-LIBRARIES-CERT.jpg',
   },
   {
-    id: 101,
+    id: 103,
     title: 'Data Visualization',
     provider: 'freeCodeCamp',
     url:
       'https://www.freecodecamp.org/certification/darbaz-ali/data-visualization',
-    image: DATA_VIS_CERT,
+    image: 'https://i.ibb.co/vmfxx4P/DATA-VISUALIZATION-CERT.jpg',
   },
   {
-    id: 101,
+    id: 104,
     title: 'JavaScript Algorithms & Data Structures',
     provider: 'freeCodeCamp',
     url:
       'https://www.freecodecamp.org/certification/darbaz-ali/javascript-algorithms-and-data-structures',
-    image: JS_ALGO_CERT,
+    image:
+      'https://i.ibb.co/hR2QVjM/FCC-JS-Algorithms-And-Data-Structures-Certification.jpg',
   },
   {
-    id: 101,
+    id: 105,
     title: 'Responsive Web Design',
     provider: 'freeCodeCamp',
     url:
       'https://www.freecodecamp.org/certification/darbaz-ali/responsive-web-design',
-    image: RESPONSIVE_WEB_CERT,
+    image: 'https://i.ibb.co/LdsGMWs/RESPONSIVE-DESIGN-CERT.jpg',
   },
 ]
 
