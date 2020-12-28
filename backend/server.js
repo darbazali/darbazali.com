@@ -17,7 +17,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.set('views', 'views')
 
-app.use(express.static('/public'))
+app.use(express.static(__dirname + '/public'))
 
 const transporter = nodemailer.createTransport({
   host: 'smtp.gmail.com',

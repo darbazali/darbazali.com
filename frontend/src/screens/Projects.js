@@ -1,6 +1,14 @@
 import React, { useState } from 'react'
 import { SegmentedControl } from 'segmented-control-react'
 
+import { CertCard } from '../sections/Certifications'
+import FlexContainer from '../components/FlexContainer'
+
+import d3BarChart from '../assets/D3/d3_barchart.jpg'
+import d3ChoroplethMap from '../assets/D3/d3_choropleth_map.jpg'
+import d3HeatMap from '../assets/D3/d3_heatmap.jpg'
+import d3TreeMap from '../assets/D3/d3_treemap.jpg'
+
 const projects = [
   {
     id: 1,
@@ -25,10 +33,35 @@ const projects = [
   },
   {
     id: 4,
+    title: 'Treemap Diagram with D3',
+    desc: 'Data Visualization',
+    category: 'd3',
+    url: 'https://codepen.io/Darbaz/pen/VweJxMg',
+    image: d3TreeMap,
+  },
+  {
+    id: 5,
+    title: 'Choropleth Map With D3',
+    desc: 'Data Visualization',
+    category: 'd3',
+    url: 'https://codepen.io/Darbaz/pen/rNxEarv',
+    image: d3ChoroplethMap,
+  },
+  {
+    id: 6,
+    title: 'Heat Map Chart with D3',
+    desc: 'Data Visualization',
+    category: 'd3',
+    url: 'https://codepen.io/Darbaz/pen/bGEyLPQ',
+    image: d3HeatMap,
+  },
+  {
+    id: 7,
     title: 'United States GDP',
     desc: 'Data Visualization',
     category: 'd3',
-    route: '/us_gdp',
+    url: 'https://codepen.io/Darbaz/pen/XWXQryj',
+    image: d3BarChart,
   },
 ]
 
@@ -60,7 +93,7 @@ const Projects = () => {
   )
   return (
     <section className='container'>
-      <h3>Projects</h3>
+      <h3 className='section-titile'>Projects</h3>
       <b>Filter by: {segment}</b>
 
       <div style={{ width: '60%' }} className='segments'>
@@ -73,20 +106,27 @@ const Projects = () => {
         />
       </div>
 
-      <div>
+      <FlexContainer
+        container
+        alignItems='center'
+        justifyContent='space-between'
+        alignContent='center'
+        flexWrap='wrap'
+      >
         {filterdList.map((project) => (
-          <ProjectCard key={project.id} project={project} />
+          <CertCard key={project.id} cert={project} />
         ))}
-      </div>
+      </FlexContainer>
     </section>
   )
 }
 
-const ProjectCard = ({ project: { title, desc, category } }) => (
+const ProjectCard = ({ project: { title, desc, category, image } }) => (
   <div>
     <h5>{title}</h5>
     <p>{desc}</p>
     <b>{category}</b>
+    <img src={image} alt={title} />
   </div>
 )
 
