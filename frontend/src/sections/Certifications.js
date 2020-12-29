@@ -39,7 +39,7 @@ const Certifications = ({ list, title }) => {
   )
 }
 
-const CertCard = ({ cert: { title, provider, url, image } }) => (
+const CertCard = ({ cert: { title, provider, url, image, desc } }) => (
   <div className='certification-container' style={containerStyle}>
     <img
       className='certification-image'
@@ -51,7 +51,7 @@ const CertCard = ({ cert: { title, provider, url, image } }) => (
       <div class='certification-overlay'>
         <div className='certification-text'>
           <b>{title}</b>
-          <p>{provider}</p>
+          <p>{provider || desc}</p>
           <a href={url}>
             <img src={lunchIcon} alt={'Lunch Icon'} />
           </a>

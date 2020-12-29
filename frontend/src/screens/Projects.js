@@ -18,17 +18,27 @@ const projects = [
     title: 'QUAD CAPTCHA',
     desc: 'CAPTCHA, API, UX/UI Design',
     category: 'vanilla',
-    route: '/quad_captcha',
+    url: '/quad_captcha',
+    image: 'https://i.ibb.co/CmyXjRb/QUAD-CAPTCHA.jpg',
   },
   {
     id: 3,
     title: '8bit URL Shortenr',
     desc: 'API',
     category: 'node',
-    route: '/8bit_url',
+    url: 'https://bit8-url.herokuapp.com',
+    image: 'https://i.ibb.co/Sm4XVbf/url-shortener-api.jpg',
   },
   {
     id: 4,
+    title: 'Metric/Imperial Converter API',
+    desc: 'API',
+    category: 'node',
+    url: 'https://m-i-converter.herokuapp.com',
+    image: 'https://i.ibb.co/mCDNLqN/m-i-converter-api.jpg',
+  },
+  {
+    id: 44,
     title: 'Treemap Diagram with D3',
     desc: 'Data Visualization',
     category: 'd3',
@@ -111,18 +121,24 @@ const segmentList = [
   { name: 'Vanilla' },
 ]
 
-const styles = {
-  fontSize: '20px',
+const segmentStyle = {
+  width: '60%',
+  margin: '1em auto',
+  marginBottom: '3em',
+  textAlign: 'center',
 }
 
 const Projects = () => {
   const [segments, setSegments] = useState(segmentList)
   const [segment, setSegment] = useState('All')
   const [selected, setSelected] = useState(0)
+  const [filterd, setFilterd] = useState(false)
 
   const handleChange = (index) => {
     const seg = segments[index].name
     setSegment(seg)
+    if (seg === 'All') setFilterd(false)
+    else setFilterd(true)
   }
 
   const filterdList = projects.filter(
@@ -130,12 +146,11 @@ const Projects = () => {
   )
   return (
     <section className='container'>
-      <h3 className='section-titile'>Projects</h3>
-      <b>Filter by: {segment}</b>
+      <h5 className='section-title'>Projects</h5>
 
-      <div style={{ width: '60%' }} className='segments'>
+      <div style={segmentStyle} className='segments'>
+        <p>Filter</p>
         <SegmentedControl
-          style={styles}
           segments={segments}
           selected={selected}
           variant='dark'
@@ -146,13 +161,17 @@ const Projects = () => {
       <FlexContainer
         container
         alignItems='center'
-        justifyContent='space-between'
+        justifyContent='space-evenly'
         alignContent='center'
         flexWrap='wrap'
       >
-        {filterdList.map((project) => (
-          <CertCard key={project.id} cert={project} />
-        ))}
+        {filterd
+          ? filterdList.map((project) => (
+              <CertCard key={project.id} cert={project} />
+            ))
+          : projects.map((project) => (
+              <CertCard key={project.id} cert={project} />
+            ))}
       </FlexContainer>
     </section>
   )

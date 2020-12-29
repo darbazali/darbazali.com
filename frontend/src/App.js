@@ -12,7 +12,7 @@ const App = () => {
   useEffect(() => {
     window.addEventListener('scroll', () => {
       let scrollTop = window.scrollY
-      if (scrollTop > 100) {
+      if (scrollTop > 50) {
         setShowHeader(true)
       }
     })
