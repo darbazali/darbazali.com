@@ -114,6 +114,36 @@ section h5.section-title {
 
 /* 
 ====================================================================
+CASE STUDIES
+====================================================================
+*/
+#case-study video,
+#case-study img {
+  width: 100%;
+  width: 816px;
+  height: auto;
+  border-radius: 15px;
+  border: 1px solid rgba(77, 80, 87, 0.44);
+}
+
+#case-study h4 {
+  font-weight: 600;
+}
+
+#case-study li,
+#case-study p {
+  max-width: 600px;
+}
+
+#case-study iframe {
+  width: 100%;
+  height: 460px;
+  border-radius: 15px;
+  border: 1px solid rgba(77, 80, 87, 0.44);
+}
+
+/* 
+====================================================================
 CERTIFICATIONS
 ====================================================================
 */
@@ -242,8 +272,9 @@ footer .socials {
   height: 44px;
 }
 footer .socials a {
-  margin-right: 10px;
+  /* margin-right: 10px; */
   transition: all 200ms ease-in-out;
+  border-radius: 100%;
 }
 
 footer .socials a:hover {

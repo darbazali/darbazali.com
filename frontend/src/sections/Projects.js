@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import qcImage from '../assets/quad_ captcha_thumbnail.png'
 import bit8UrlImage from '../assets/8bit_url_thumbnail.png'
 import usGDPImage from '../assets/us_gdp_thumbnail.png'
-import hwmImage from '../assets/hike_with_me_thumbnail.png'
+import hikeWithMe from '../assets/hike_with_me_thumbnail.png'
 
 import FlexContainer from '../components/FlexContainer'
 
@@ -18,7 +18,7 @@ const projects = [
     id: 1,
     title: 'Hike With Me',
     desc: 'UX/UI Design',
-    image: 'https://i.ibb.co/VSPk1rP/HWM-HERO-IMG.jpg',
+    image: hikeWithMe,
     route: '/hike_with_me',
   },
   {

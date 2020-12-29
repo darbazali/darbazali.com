@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import lunchIcon from '../assets/ICON/ic_open_in_new_48px.svg'
 import FlexContainer from '../components/FlexContainer'
 
@@ -52,9 +53,16 @@ const CertCard = ({ cert: { title, provider, url, image, desc } }) => (
         <div className='certification-text'>
           <b>{title}</b>
           <p>{provider || desc}</p>
-          <a href={url}>
-            <img src={lunchIcon} alt={'Lunch Icon'} />
-          </a>
+
+          {/\b(http|https)/.test(url) ? (
+            <a href={url} rel='noreferrer' target='_blank'>
+              <img src={lunchIcon} alt={'Lunch Icon'} />
+            </a>
+          ) : (
+            <Link to={url}>
+              <img src={lunchIcon} alt={'Lunch Icon'} />
+            </Link>
+          )}
         </div>
       </div>
     </div>

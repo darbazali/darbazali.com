@@ -10,7 +10,7 @@ const projects = [
     title: 'Hike With Me',
     desc: 'UX/UI Design',
     category: 'ui/ux',
-    url: '/hike_with_me',
+    url: '/hike-with-me',
     image: 'https://i.ibb.co/VSPk1rP/HWM-HERO-IMG.jpg',
   },
   {

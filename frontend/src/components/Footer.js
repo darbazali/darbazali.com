@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import github from '../assets/ICON/github_logo.svg'
-import linkedin from '../assets/ICON/linkedin_logo.svg'
 import FlexContainer from './FlexContainer'
+
+import { Github, Linkedin } from '@icons-pack/react-simple-icons'
 
 const footerStyle = {
   width: '100%',
@@ -32,11 +32,10 @@ const Footer = () => (
 
       <div className='socials'>
         <a href='https://github.com/DarbazAli'>
-          <img src={github} alt='GitHub logo' />
+          <Github size={44} fill='#697285' />
         </a>
-
         <a href='https://www.linkedin.com/in/darbaz/'>
-          <img src={linkedin} alt='Linkedin logo' />
+          <Linkedin size={44} fill='#697285' />
         </a>
       </div>
     </FlexContainer>
