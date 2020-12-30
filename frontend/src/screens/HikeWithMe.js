@@ -12,9 +12,8 @@ const hwmUserFlow = 'https://i.ibb.co/kccv0pN/HWM-USER-FLOW-DIAGRAM.jpg'
 const HikeWithMe = () => {
   return (
     <section
-      className='container'
+      className='container case-study'
       style={{ minHeight: '100vh', maxWidth: '816px' }}
-      id='case-study'
     >
       <h4>Hike With Me - Case Study</h4>
       <img src={hwmHeroImage} alt='Hike With Me' />

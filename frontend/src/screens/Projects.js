@@ -18,7 +18,7 @@ const projects = [
     title: 'QUAD CAPTCHA',
     desc: 'CAPTCHA, API, UX/UI Design',
     category: 'vanilla',
-    url: '/quad_captcha',
+    url: '/quad-captcha',
     image: 'https://i.ibb.co/CmyXjRb/QUAD-CAPTCHA.jpg',
   },
   {

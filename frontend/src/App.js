@@ -6,6 +6,7 @@ import Home from './screens/Home'
 import About from './screens/About'
 import Projects from './screens/Projects'
 import HikeWithMe from './screens/HikeWithMe'
+import QuadCaptcha from './screens/QuadCaptcha'
 
 const App = () => {
   const [showHeader, setShowHeader] = useState(false)
@@ -27,6 +28,7 @@ const App = () => {
         <Route path='/about' component={About} />
         <Route path='/projects' component={Projects} />
         <Route path='/hike-with-me' component={HikeWithMe} />
+        <Route path='/quad-captcha' component={QuadCaptcha} />
       </Switch>
       <Footer />
     </Router>
