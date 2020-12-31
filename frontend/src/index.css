@@ -204,7 +204,7 @@ BUTTON
 */
 .button:hover {
   transform: scale(1.002);
-  filter: drop-shadow(0px 3px 6px rgba(170, 95, 84, 0.418));
+  filter: drop-shadow(0px 3px 6px rgba(48, 70, 132, 0.35));
 }
 
 .button-secondary:hover {

@@ -5,8 +5,8 @@ const sectionStyle = {
   textAlign: 'center',
   margin: '0 auto',
   padding: '0',
-  color: '#000',
-  backgroundColor: '#f59182',
+  color: '#fff',
+  backgroundColor: '#304784',
 }
 
 const WhyMe = () => {
@@ -30,8 +30,7 @@ const WhyMe = () => {
           >
             As you might see, I wear a lot of hats when dealing with a digital
             product. I look at the system from different angels. I can
-            contribute to the full product development lifecycle from the very
-            first idea all the way up to IPO.
+            contribute to the full product development lifecycle.
           </p>
         </div>
       </CenterdContainer>

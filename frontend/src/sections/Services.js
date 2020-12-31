@@ -3,7 +3,7 @@ import '../styles/services.css'
 import FlexContainer from '../components/FlexContainer'
 import uxIcon from '../assets/ICON/noun_ux_693504.svg'
 import startUpIcon from '../assets/ICON/noun_startup_1806706.svg'
-import webDevIcon from '../assets/ICON/noun_web_development_3471717.svg'
+import webDevIcon from '../assets/ICON/noun_web development_3471717.svg'
 
 const Services = () => {
   return (

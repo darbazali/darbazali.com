@@ -3,8 +3,8 @@ import React from 'react'
 const buttonStyle = {
   padding: '16px 32px',
   borderRadius: '8px',
-  backgroundColor: '#f59182',
-  boxShadow: '0px 3px 6px rgba(186, 104, 92, 0.45)',
+  backgroundColor: '#304784',
+  boxShadow: '0px 3px 6px rgba(48, 71, 132, 0.3)',
   fontWeight: '500',
   fontSize: '20px',
   lineHeight: '30px',
