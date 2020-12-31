@@ -4,7 +4,7 @@ import CenterdContainer from '../components/CenterdContainer'
 import MouseScroll from '../components/MouseScroll'
 
 const titleStyle = {
-  fontSize: '287px',
+  fontSize: '21vw',
   fontWeight: '700',
   lineHeight: '100%',
   textAlign: 'center',
@@ -29,7 +29,7 @@ const Hero = () => {
   }, [shwoScroller])
   return (
     <CenterdContainer>
-      <div style={{ width: '95%', height: '450px' }}>
+      <div style={{ width: '100%', height: '450px' }}>
         <h4 style={{ margin: '0', marginLeft: '16px', fontWeight: '600' }}>
           Hello, I am
         </h4>

@@ -7,7 +7,7 @@
 
 .service-cart {
   padding: 40px;
-  width: 286px;
+  width: 30%;
   height: 360px;
   border-radius: 30px;
   background: #f4f5f6;
@@ -22,7 +22,7 @@
 }
 
 .service-cart:nth-child(2) {
-  width: 392px;
+  width: 40%;
   height: 450px;
   padding: 50px;
 }

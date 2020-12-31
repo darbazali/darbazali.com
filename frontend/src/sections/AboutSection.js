@@ -6,7 +6,8 @@ import DarbazAli from '../assets/DarbazAli.jpg'
 
 const imgStyle = {
   borderRadius: '30px',
-  height: '600px',
+  width: '100%',
+  height: 'auto',
   boxShadow: '0px 8px 16px rgba(0, 0, 0, 0.06)',
 }
 
@@ -14,12 +15,15 @@ const AboutSection = () => {
   return (
     <section style={{ width: '100%', height: '100vh' }} id='aboutme'>
       <FlexContainer
+        className='column'
         container
         alignItems='center'
         alignContent='center'
         justifyContent='space-between'
       >
-        <img src={DarbazAli} alt={'Darbaz Ali'} style={imgStyle} />
+        <div style={{ width: '50%' }} className='about-image'>
+          <img src={DarbazAli} alt={'Darbaz Ali'} style={imgStyle} />
+        </div>
 
         <div>
           <h4>About Me</h4>
