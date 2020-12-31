@@ -1,7 +1,7 @@
 import React from 'react'
 
-import scrollMouse from '../assets/ICON/ic_mouse_24px.svg'
 import CenterdContainer from '../components/CenterdContainer'
+import MouseScroll from '../components/MouseScroll'
 
 const titleStyle = {
   fontSize: '287px',
@@ -33,11 +33,8 @@ const Hero = () => {
           I design and build web apps
         </h5>
       </div>
-      <img
-        style={{ position: 'absolute', bottom: '40px', opacity: '0.5' }}
-        src={scrollMouse}
-        alt={'scroll mouse icon'}
-      />
+
+      <MouseScroll />
     </CenterdContainer>
   )
 }
