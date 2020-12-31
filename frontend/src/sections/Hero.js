@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import CenterdContainer from '../components/CenterdContainer'
 import MouseScroll from '../components/MouseScroll'
@@ -15,6 +15,18 @@ const titleStyle = {
 }
 
 const Hero = () => {
+  const [shwoScroller, setShowScroller] = useState(0.8)
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      let scrollTop = window.scrollY
+      if (scrollTop > 50) {
+        setShowScroller(0)
+      } else {
+        setShowScroller(0.8)
+      }
+    })
+  }, [shwoScroller])
   return (
     <CenterdContainer>
       <div style={{ width: '95%', height: '450px' }}>
@@ -34,7 +46,7 @@ const Hero = () => {
         </h5>
       </div>
 
-      <MouseScroll />
+      <MouseScroll opacity={`${shwoScroller}`} />
     </CenterdContainer>
   )
 }

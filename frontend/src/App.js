@@ -9,20 +9,20 @@ import HikeWithMe from './screens/HikeWithMe'
 import QuadCaptcha from './screens/QuadCaptcha'
 
 const App = () => {
-  const [showHeader, setShowHeader] = useState(false)
+  const [showHeader, setShowHeader] = useState(0)
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
       let scrollTop = window.scrollY
       if (scrollTop > 50) {
-        setShowHeader(true)
+        setShowHeader(1)
       }
     })
   }, [showHeader])
 
   return (
     <Router>
-      {showHeader ? <Header /> : ''}
+      <Header opacity={`${showHeader}`} />
       <Switch>
         <Route exact path='/' component={Home} />
         <Route path='/about' component={About} />

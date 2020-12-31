@@ -25,8 +25,8 @@ const Footer = () => (
       className='footer'
     >
       <div>
-        <Link to='/#contact'>Contact</Link>
-        <Link to='/resume'>Download Resume</Link>
+        {/* <Link to='/#contact'>Contact</Link> */}
+        <Link to='/resume'>Resume</Link>
       </div>
       <p>© 2020 - Darbaz Ali</p>
 

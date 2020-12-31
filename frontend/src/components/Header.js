@@ -20,13 +20,13 @@ const buttonStyle = {
   transition: 'all 300ms ease-out',
 }
 
-const Header = () => {
+const Header = ({ opacity }) => {
   const [click, setClick] = useState(false)
   const handleClick = () => setClick(!click)
   const closeMobileMenu = () => setClick(false)
 
   return (
-    <header>
+    <header style={{ opacity: opacity }}>
       <FlexContainer
         container
         alignItems='center'
