@@ -3,8 +3,12 @@ import React from 'react'
 const buttonStyle = {
   padding: '16px 32px',
   borderRadius: '8px',
-  backgroundColor: '#304784',
-  boxShadow: '0px 3px 6px rgba(48, 71, 132, 0.3)',
+  backgroundColor: '#f78764',
+  boxShadow: `
+  0 1.8px 0.8px rgba(245, 135, 100, 0.02),
+  0 4.3px 2.8px rgba(245, 135, 100, 0.032),
+  0 8.1px 6.9px rgba(245, 135, 100, 0.041),
+  0 14.5px 16.2px rgba(245, 135, 100, 0.2)`,
   fontWeight: '500',
   fontSize: '20px',
   lineHeight: '30px',
@@ -18,8 +22,8 @@ const buttonStyle = {
   outline: 'none',
 }
 
-const Button = ({ children, type, className }) => (
-  <button type={type} style={buttonStyle} className={className}>
+const Button = ({ children, type }) => (
+  <button type={type} style={buttonStyle} className='button'>
     {children}
   </button>
 )

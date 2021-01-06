@@ -11,17 +11,15 @@ const Home = () => {
   return (
     <>
       <Hero />
-      <div className='container'>
-        <AboutSection />
-        <Services />
-        <Projects />
-        <GithubAPI />
-      </div>
+
+      <AboutSection />
+      <Services />
+      <Projects />
+      <GithubAPI />
 
       <WhyMe />
-      <div className='container'>
-        <Contact />
-      </div>
+
+      <Contact />
     </>
   )
 }

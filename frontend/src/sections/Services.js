@@ -1,42 +1,43 @@
 import React from 'react'
 import '../styles/services.css'
 import FlexContainer from '../components/FlexContainer'
-import uxIcon from '../assets/ICON/noun_ux_693504.svg'
-import startUpIcon from '../assets/ICON/noun_startup_1806706.svg'
-import webDevIcon from '../assets/ICON/noun_web development_3471717.svg'
+
+import CoverImage from '../components/CoverImage'
+import skillsBack from '../assets/skills_back.jpg'
+
+const serviceStyle = {
+  color: '#ffffff',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  textAlign: 'center',
+}
 
 const Services = () => {
   return (
-    <section className='services' id='services'>
-      <h5>Services</h5>
-      <FlexContainer className='flex' container justifyContent alignContent>
-        <div className='service-cart'>
-          <img src={webDevIcon} alt='webDevIcon' />
-          <h5>Full-Stack Web Development</h5>
-
-          <p>Building Full-Stack web apps with javascript (MERN) stack.</p>
-        </div>
-
-        <div className='service-cart'>
-          <img src={uxIcon} alt='UX Icon' />
-          <h5>UI/UX Design</h5>
-          <p>
-            Designing digital products in a user-centric approach, with
-            strategic thinking, in order to build products that make a
-            differece.
-          </p>
-        </div>
-
-        <div className='service-cart'>
-          <img src={startUpIcon} alt='startup icon' />
-          <h5>Building MVPs</h5>
-          <p>
-            Creating Light-weight MVPs for Startup companies to reach early
-            customers.
-          </p>
-        </div>
-      </FlexContainer>
-    </section>
+    <CoverImage
+      image={skillsBack}
+      backgroundColor='rgba(31, 33, 34, 0.85)'
+      style={serviceStyle}
+    >
+      <div>
+        <h3>What I do?</h3>
+        <p style={{ maxWidth: '280px', margin: '1em auto' }}>
+          I wear a lot of hats when it comes to deal with digital products
+        </p>
+        <FlexContainer
+          container
+          alignItems='flex-start'
+          justifyContent='space-evenly'
+          alignContent='center'
+          flexWrap='wrap'
+        >
+          <div className='service-card'>Full-Stack Development</div>
+          <div className='service-card'>UX/UI Design</div>
+          <div className='service-card'>Building MVPs</div>
+        </FlexContainer>
+      </div>
+    </CoverImage>
   )
 }
 
