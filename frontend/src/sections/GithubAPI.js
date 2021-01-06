@@ -3,25 +3,26 @@ import axios from 'axios'
 import FlexContainer from '../components/FlexContainer'
 
 const repoStyle = {
-  width: 'calc(50% - 16px)',
   marginBottom: '1em',
-  height: '140px',
-  borderRadius: '10px',
-  backgroundColor: 'transparent',
-  border: '1px solid rgba(105, 114, 133, 0.47)',
-  padding: '2em',
+  borderRadius: '15px',
+  padding: '30px',
   marginRight: '1em',
+  width: '302px',
+  height: '302px',
+  backgroundColor: '#fff',
+  filter: 'drop-shadow(0px 8px 24px rgba(0, 0, 0, 0.15))',
 }
 
 const GithubAPI = () => {
   const [repos, setRepos] = useState([])
   const url =
-    'https://api.github.com/users/DarbazAli/repos?direction=desc&sort=created&per_page=10'
+    'https://api.github.com/users/DarbazAli/repos?direction=desc&sort=created&per_page=8'
   useEffect(() => {
     const getRepos = async () => {
       const { data } = await axios.get(url, {
         'Content-Type': 'application/vnd.github.v3+json',
       })
+      console.log(data)
       setRepos(data)
     }
 
@@ -30,15 +31,15 @@ const GithubAPI = () => {
 
   return (
     <section>
-      <h5 className='section-title'>my github wall</h5>
+      <h5 className='section-title'>My GitHub Wall</h5>
       <FlexContainer
         className='container'
         container
         alignItems='stretch'
-        justifyContent='space-between'
+        justifyContent='center'
         alignContent='center'
         flexWrap='wrap'
-        maxWidth='1028px'
+        width='auto'
         margin='0 auto'
       >
         {repos.map((repo) => (
@@ -51,14 +52,10 @@ const GithubAPI = () => {
 
 const Repo = ({ repo: { name, html_url, language, description } }) => {
   return (
-    <div style={repoStyle}>
-      <a href={html_url}>
-        <h5 style={{ display: 'inline', fontWeight: '500' }}>{name}</h5>
-      </a>{' '}
-      <span style={{ float: 'right' }}>{`{${language || 'Node'}}`}</span>
-      <p style={{ marginTop: '1em', height: '20px', overflow: 'hidden' }}>
-        {description}
-      </p>
+    <div style={repoStyle} className='repo'>
+      <a href={html_url}>{name}</a>
+      <p>{description}</p>
+      <span>{language || 'Node'}</span>
     </div>
   )
 }
