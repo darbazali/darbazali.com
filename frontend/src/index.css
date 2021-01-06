@@ -207,7 +207,8 @@ BUTTON
   transform: scale(1.002);
   filter: drop-shadow(0px 3px 6px rgba(48, 70, 132, 0.35));
 }
-
+.logo:hover,
+nav a:hover,
 .button-secondary:hover {
   transform: scale(1.02);
 }

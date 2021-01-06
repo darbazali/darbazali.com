@@ -3,20 +3,20 @@ import FlexContainer from './FlexContainer'
 import { Link } from 'react-router-dom'
 import { HashLink } from 'react-router-hash-link'
 import logo from '../assets/darbaz_logo.png'
-import { ReactComponent as CloseIcon } from '../assets/ICON/noun_Close_2845885.svg'
-import { ReactComponent as MenuIcon } from '../assets/ICON/noun_menu_1166835.svg'
+import { ReactComponent as CloseIcon } from '../assets/ICON/close-icon.svg'
+import { ReactComponent as MenuIcon } from '../assets/ICON/hamburger-menu.svg'
 import '../styles/header.css'
 
 const buttonStyle = {
   width: '106px',
-  height: '43px',
-  borderRadius: '6px',
+  height: '40px',
+  borderRadius: '20px',
   background: 'transparent',
-  border: '2px solid #304784',
-  color: '#304784',
+  border: '1px solid #ffffff',
+  color: '#ffffff',
   cursor: 'pointer',
   outline: 'none',
-  fontWeight: '500',
+  fontWeight: '400',
   transition: 'all 300ms ease-out',
 }
 
@@ -38,7 +38,7 @@ const Header = ({ opacity }) => {
       >
         {/* LOGO */}
         <Link to='/' className='logo'>
-          <img style={{ height: '40px' }} src={logo} alt='Darbaz Ali logo' />
+          <img style={{ height: '32px' }} src={logo} alt='Darbaz Ali logo' />
         </Link>
 
         <nav className={click ? 'navbar active' : 'navbar'}>

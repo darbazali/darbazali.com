@@ -2,7 +2,7 @@ import React from 'react'
 
 import Button from '../components/Button'
 import FlexContainer from '../components/FlexContainer'
-import DarbazAli from '../assets/DarbazAli.jpg'
+import DarbazAli from '../assets/DARBAZ_ALI_HERO_IMAGE.png'
 
 const imgStyle = {
   borderRadius: '30px',
@@ -21,7 +21,10 @@ const AboutSection = () => {
         alignContent='center'
         justifyContent='space-between'
       >
-        <div style={{ width: '50%' }} className='about-image'>
+        <div
+          style={{ width: '50%', backgroundColor: '#000' }}
+          className='about-image'
+        >
           <img src={DarbazAli} alt={'Darbaz Ali'} style={imgStyle} />
         </div>
 
