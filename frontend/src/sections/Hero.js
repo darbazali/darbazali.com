@@ -1,21 +1,32 @@
 import React, { useEffect, useState } from 'react'
 
-import CenterdContainer from '../components/CenterdContainer'
 import MouseScroll from '../components/MouseScroll'
+import HeroBack from '../assets/hero_back.jpg'
+
+const heroStyle = {
+  backgroundImage: `url(${HeroBack})`,
+  backgroundPosition: 'center center',
+  backgroundRepeat: 'no-repeat',
+  backgroundAttachment: 'fixed',
+  backgroundSize: 'cover',
+
+  width: '100%',
+  height: '100vh',
+  color: '#ffffff',
+
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  textAlign: 'center',
+}
 
 const titleStyle = {
-  fontSize: '21vw',
-  fontWeight: '700',
-  lineHeight: '100%',
-  textAlign: 'center',
-  textTransform: 'uppercase',
-  color: '#4d5057',
-  textShadow: '0px 10px 20px rgba(0, 0, 0, 0.33)',
-  margin: '0',
+  fontWeight: '600',
+  borderBottom: '1px solid #f5f5f5',
 }
 
 const Hero = () => {
-  const [shwoScroller, setShowScroller] = useState(0.8)
+  const [shwoScroller, setShowScroller] = useState(0.6)
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
@@ -23,31 +34,19 @@ const Hero = () => {
       if (scrollTop > 50) {
         setShowScroller(0)
       } else {
-        setShowScroller(0.8)
+        setShowScroller(0.6)
       }
     })
   }, [shwoScroller])
   return (
-    <CenterdContainer>
-      <div style={{ width: '100%', height: '450px' }}>
-        <h4 style={{ margin: '0', marginLeft: '16px', fontWeight: '600' }}>
-          Hello, I am
-        </h4>
-        <h1 style={titleStyle}>DARBAZ</h1>
-        <h5
-          style={{
-            margin: '0',
-            float: 'right',
-            marginRight: '16px',
-            fontWeight: '500',
-          }}
-        >
-          I design and build web apps
-        </h5>
+    <section style={heroStyle}>
+      <div>
+        <h3 style={titleStyle}>Hello, I am Darbaz</h3>
+        <h5 style={{ marginTop: '22px' }}>Creative designer and developer</h5>
       </div>
 
       <MouseScroll opacity={`${shwoScroller}`} />
-    </CenterdContainer>
+    </section>
   )
 }
 

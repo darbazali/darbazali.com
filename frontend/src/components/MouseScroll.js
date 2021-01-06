@@ -12,7 +12,7 @@ const MouseScroll = ({ opacity }) => {
           <span></span>
         </span>
       </HashLink>
-      <p>scroll</p>
+      <p>learn more</p>
     </span>
   )
 }

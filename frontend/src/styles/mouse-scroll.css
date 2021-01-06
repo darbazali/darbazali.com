@@ -53,6 +53,7 @@
     top: 29%;
   }
 }
+
 .scroll-btn {
   display: block;
   position: absolute;
@@ -60,34 +61,34 @@
   right: 0;
   bottom: 40px;
   text-align: center;
-  opacity: 0.8;
+  opacity: 0.6;
 }
 
 .scroll-btn p {
-  margin-left: -38px;
+  margin-left: -58px;
+  margin-bottom: 1em;
 }
 .scroll-btn > * {
   display: inline-block;
   line-height: 18px;
   font-size: 13px;
   font-weight: normal;
-  color: #73759c;
-  /* color: #ffffff; */
+  color: #f3f3f3;
+
   font-family: 'proxima-nova', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   letter-spacing: 2px;
 }
 .scroll-btn > *:hover,
 .scroll-btn > *:focus,
 .scroll-btn > *.active {
-  /* color: #ffffff; */
-  color: #73759c;
+  color: #f3f3f3;
 }
 .scroll-btn > *:hover,
 .scroll-btn > *:focus,
 .scroll-btn > *:active,
 .scroll-btn > *.active {
-  opacity: 0.8;
-  filter: alpha(opacity=80);
+  opacity: 0.6;
+  filter: alpha(opacity=60);
 }
 .scroll-btn .mouse {
   position: relative;
@@ -98,7 +99,7 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  border: 3px solid #73759c;
+  border: 3px solid #f3f3f3;
   border-radius: 23px;
 }
 .scroll-btn .mouse > * {
@@ -109,8 +110,8 @@
   width: 8px;
   height: 8px;
   margin: -4px 0 0 -4px;
-  background: #73759c;
-  border-radius: 50%;
+  background: #f3f3f3;
+  border-radius: 10px;
   -webkit-animation: ani-mouse 2.5s linear infinite;
   -moz-animation: ani-mouse 2.5s linear infinite;
   animation: ani-mouse 2.5s linear infinite;
