@@ -15,7 +15,7 @@ const App = () => {
     window.addEventListener('scroll', () => {
       let scrollTop = window.scrollY
       if (scrollTop > 50) {
-        setShowHeader(0.95)
+        setShowHeader(1)
       }
     })
   }, [showHeader])

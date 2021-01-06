@@ -2,18 +2,10 @@ import React, { useEffect, useState } from 'react'
 
 import MouseScroll from '../components/MouseScroll'
 import HeroBack from '../assets/hero_back.jpg'
+import CoverImage from '../components/CoverImage'
 
 const heroStyle = {
-  backgroundImage: `url(${HeroBack})`,
-  backgroundPosition: 'center center',
-  backgroundRepeat: 'no-repeat',
-  backgroundAttachment: 'fixed',
-  backgroundSize: 'cover',
-
-  width: '100%',
-  height: '100vh',
   color: '#ffffff',
-
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
@@ -22,7 +14,7 @@ const heroStyle = {
 
 const titleStyle = {
   fontWeight: '600',
-  borderBottom: '1px solid #f5f5f5',
+  borderBottom: '1px solid #555555',
 }
 
 const Hero = () => {
@@ -39,14 +31,20 @@ const Hero = () => {
     })
   }, [shwoScroller])
   return (
-    <section style={heroStyle}>
-      <div>
+    <CoverImage
+      image={HeroBack}
+      backgroundColor='radial-gradient(rgba(13, 14, 14, 0.67) 0%, rgba(13, 14, 14, 0.68) 100%)'
+      style={heroStyle}
+    >
+      <div style={{ marginTop: '-80px' }}>
         <h3 style={titleStyle}>Hello, I am Darbaz</h3>
-        <h5 style={{ marginTop: '22px' }}>Creative designer and developer</h5>
+        <h5 style={{ marginTop: '22px', opacity: '0.8' }}>
+          Creative designer and developer
+        </h5>
       </div>
 
       <MouseScroll opacity={`${shwoScroller}`} />
-    </section>
+    </CoverImage>
   )
 }
 
