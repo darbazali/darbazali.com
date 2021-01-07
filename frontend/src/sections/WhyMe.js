@@ -1,39 +1,35 @@
 import React from 'react'
-import CenterdContainer from '../components/CenterdContainer'
+import { HashLink } from 'react-router-hash-link'
+import Button from '../components/Button'
 
 const sectionStyle = {
   textAlign: 'center',
-  margin: '0 auto',
-  padding: '0',
-  color: '#fff',
-  backgroundColor: '#304784',
+  width: '100%',
+  height: 'auto',
+  padding: '100px 0',
+  backgroundColor: '#fafafa',
 }
 
 const WhyMe = () => {
   return (
     <section style={sectionStyle}>
-      <CenterdContainer>
-        <div
-          style={{
-            maxWidth: '680px',
-            textAlign: 'center',
-          }}
-        >
-          <h3 style={{ fontWeight: '700' }}>Why work with me?</h3>
-          <p
-            style={{
-              fontWeight: '500',
-              fontSize: '2em',
-              lineHeight: '40px',
-              margin: '0 auto',
-            }}
-          >
-            As you might see, I wear a lot of hats when dealing with a digital
-            product. I look at the system from different angels. I can
-            contribute to the full product development lifecycle.
-          </p>
-        </div>
-      </CenterdContainer>
+      <h4 style={{ fontWeight: '600' }}>Why work with me?</h4>
+      <p
+        style={{
+          fontWeight: '400',
+          fontSize: '1em',
+          maxWidth: '460px',
+          margin: '0 auto',
+        }}
+      >
+        As you might see, I wear a lot of hats when dealing with a digital
+        Product. I look at the system from different angles. I can contribute to
+        the full product development lifecycle.
+      </p>
+
+      <HashLink to='/#contact'>
+        <Button>Hire me</Button>
+      </HashLink>
     </section>
   )
 }
