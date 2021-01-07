@@ -6,8 +6,6 @@ import Button from '../components/Button'
 
 import '../styles/contact.css'
 
-import FlexContainer from '../components/FlexContainer'
-
 const Contact = () => {
   const [email, setEmail] = useState('')
   const [subject, setSubject] = useState('')
@@ -37,7 +35,7 @@ const Contact = () => {
     setMessage('')
   }
   return (
-    <section className='contact' id='contact'>
+    <section style={{ padding: '0' }} className='contact' id='contact'>
       <div className='container'>
         <ContactMessage />
 

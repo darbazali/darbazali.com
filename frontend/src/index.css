@@ -134,6 +134,7 @@ section.featured-project {
   align-items: center;
   justify-content: space-between;
   flex-wrap: nowrap;
+  padding: 2em 0;
 }
 
 @media (max-width: 768px) {
@@ -303,11 +304,27 @@ nav a:hover,
 REPOS
 ====================================================================
 */
-
+.repos {
+  max-width: 1256px;
+  margin: 0 auto;
+}
 .repo {
+  margin-bottom: 1em;
+  margin-right: 1em;
+  border-radius: 15px;
+  padding: 30px;
+
+  width: 23%;
+  height: 302px;
+  background-color: #fff;
+  filter: drop-shadow(0px 8px 24px rgba(0, 0, 0, 0.15));
   position: relative;
   transition: all 0.3s ease-in-out;
 }
+
+/* .repo:nth-child(odd) {
+  margin-right: 1em;
+} */
 
 .repo p {
   margin-top: 2em;
@@ -388,7 +405,6 @@ FOOTER
 */
 footer a {
   margin-left: 20px;
-  /* color: #4d5057; */
   font-weight: 500;
 }
 
@@ -396,7 +412,6 @@ footer .socials {
   height: 44px;
 }
 footer .socials a {
-  /* margin-right: 10px; */
   transition: all 200ms ease-in-out;
   border-radius: 100%;
 }
@@ -424,7 +439,35 @@ BREAK POINTS
     text-align: center !important;
   }
 
+  section {
+    padding: 2em 1em;
+  }
+
   .about-image {
     width: 80% !important;
+  }
+
+  .repos .repo {
+    width: 47%;
+    height: 220px;
+  }
+
+  .repos .repo p {
+    margin-top: 1em;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-image {
+    width: 90% !important;
+  }
+
+  .repos .repo {
+    width: 100%;
+    height: 180px;
+  }
+
+  .repo:nth-child(odd) {
+    margin-right: 0;
   }
 }

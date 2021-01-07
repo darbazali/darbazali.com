@@ -2,17 +2,6 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import FlexContainer from '../components/FlexContainer'
 
-const repoStyle = {
-  marginBottom: '1em',
-  borderRadius: '15px',
-  padding: '30px',
-  marginRight: '1em',
-  width: '302px',
-  height: '302px',
-  backgroundColor: '#fff',
-  filter: 'drop-shadow(0px 8px 24px rgba(0, 0, 0, 0.15))',
-}
-
 const GithubAPI = () => {
   const [repos, setRepos] = useState([])
   const url =
@@ -29,10 +18,10 @@ const GithubAPI = () => {
   }, [])
 
   return (
-    <section style={{ padding: '40px' }}>
+    <section>
       <h5 className='section-title'>My GitHub Wall</h5>
       <FlexContainer
-        className='container'
+        className='repos'
         container
         alignItems='stretch'
         justifyContent='center'
@@ -51,7 +40,7 @@ const GithubAPI = () => {
 
 const Repo = ({ repo: { name, html_url, language, description } }) => {
   return (
-    <div style={repoStyle} className='repo'>
+    <div className='repo'>
       <a href={html_url}>{name}</a>
       <p>{description}</p>
       <span>{language || 'Node'}</span>
