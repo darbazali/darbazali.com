@@ -101,12 +101,14 @@ SECTION
 
 .container {
   margin: 0 auto;
-  max-width: 1256px;
+  max-width: 1440px;
   /* padding: 0 1em; */
 }
 
 section {
-  padding: 50px 0;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 section h5.section-title {
