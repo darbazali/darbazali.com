@@ -29,7 +29,7 @@ const GithubAPI = () => {
   }, [])
 
   return (
-    <section>
+    <section style={{ padding: '40px' }}>
       <h5 className='section-title'>My GitHub Wall</h5>
       <FlexContainer
         className='container'

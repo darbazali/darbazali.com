@@ -22,7 +22,6 @@ const Projects = () => (
       subtitle='UX/UI Design'
       link='/hike-with-me'
     />
-
     <ProjectRightImage
       className='content-up'
       padding='0 2em'
