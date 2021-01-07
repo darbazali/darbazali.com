@@ -115,6 +115,58 @@ section h5.section-title {
   margin: 2rem auto;
 }
 
+/* 
+====================================================================
+FEATURED PROJECTS
+====================================================================
+*/
+
+section.featured-project {
+  background: #fafafa;
+  height: auto;
+  margin: 1em auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+@media (max-width: 768px) {
+  section.featured-project {
+    flex-direction: column !important;
+  }
+
+  section.featured-project.content-up {
+    flex-direction: column-reverse !important;
+  }
+
+  section.featured-project.content-up .project-content {
+    width: 100% !important;
+    text-align: center !important;
+    margin-bottom: 20px !important;
+  }
+
+  section.featured-project.content-up > div {
+    width: 100% !important;
+  }
+
+  section.featured-project.content-up h4 {
+    width: 100% !important;
+    text-align: center !important;
+    margin: 20px auto;
+  }
+}
+
+section.featured-project a::after {
+  content: '';
+  display: inline-block;
+  background: url('./assets/ICON/right_arrow_link.svg') no-repeat;
+  width: 20px;
+  height: 11px;
+  margin: 0 10px 0;
+}
+/* End of featured projects */
+
 .skills li {
   height: 34px;
   margin-bottom: 10px;

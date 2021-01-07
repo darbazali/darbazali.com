@@ -14,7 +14,7 @@ const Home = () => {
 
       <AboutSection />
       <Services />
-      {/* <Projects /> */}
+      <Projects />
       <GithubAPI />
 
       <WhyMe />
