@@ -11,6 +11,7 @@ const serviceStyle = {
   justifyContent: 'center',
   alignItems: 'center',
   textAlign: 'center',
+  padding: '40px',
 }
 
 const Services = () => {
@@ -21,11 +22,13 @@ const Services = () => {
       style={serviceStyle}
     >
       <div>
+        <h5 style={{ opacity: '0.7' }}>Services</h5>
         <h3>What I do?</h3>
         <p style={{ maxWidth: '280px', margin: '1em auto' }}>
           I wear a lot of hats when it comes to deal with digital products
         </p>
         <FlexContainer
+          className='services'
           container
           alignItems='flex-start'
           justifyContent='space-evenly'

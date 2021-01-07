@@ -1,6 +1,4 @@
 import React from 'react'
-import { HashLink } from 'react-router-hash-link'
-import Button from '../components/Button'
 
 const sectionStyle = {
   textAlign: 'center',
@@ -26,10 +24,6 @@ const WhyMe = () => {
         Product. I look at the system from different angles. I can contribute to
         the full product development lifecycle.
       </p>
-
-      <HashLink to='/#contact'>
-        <Button>Hire me</Button>
-      </HashLink>
     </section>
   )
 }

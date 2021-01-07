@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from '../components/Button'
+import { HashLink } from 'react-router-hash-link'
 
 const styles = {
   textAlign: 'center',
@@ -17,7 +18,9 @@ const AboutSection = () => {
         love building products that make people’s lives easier.
       </p>
 
-      <Button type='button'>Hire me</Button>
+      <HashLink to='/#contact'>
+        <Button type='button'>Hire me</Button>
+      </HashLink>
     </section>
   )
 }

@@ -26,3 +26,25 @@
   background: linear-gradient(#64b3f7 0%, #2e81c9 100%);
   box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15);
 }
+
+@media (max-width: 768px) {
+  .services {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .services .service-card {
+    width: 80%;
+    height: auto;
+    padding: 50px 0;
+    margin: 0 auto 1em auto;
+  }
+
+  .services .service-card:nth-child(2) {
+    width: 100%;
+  }
+
+  .services .service-card:nth-child(1) {
+    margin-top: 50px;
+  }
+}

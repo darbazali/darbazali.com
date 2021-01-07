@@ -13,7 +13,7 @@ const CoverImage = ({ image, backgroundColor, children, style }) => {
     backgroundOrigin: 'content-box',
 
     width: '100%',
-    height: '100vh',
+    minHeight: '100vh',
     ...style,
   }
   return <section style={styles}>{children}</section>
