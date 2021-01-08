@@ -113,6 +113,7 @@ section {
   margin: 0 auto;
   margin-bottom: 1em;
   background-color: #fafafa;
+  padding: 50px 0;
 }
 
 section h5.section-title {
@@ -170,7 +171,7 @@ section.featured-project a::after {
   display: inline-block;
   background: url('./assets/ICON/right_arrow_link.svg') no-repeat;
   width: 20px;
-  height: 11px;
+  height: 14px;
   margin: 0 10px 0;
 }
 /* End of featured projects */
@@ -191,7 +192,7 @@ CASE STUDIES
 .case-study video,
 .case-study img {
   width: 100%;
-  width: 816px;
+  max-width: 816px;
   height: auto;
   border-radius: 15px;
   border: 1px solid rgba(77, 80, 87, 0.44);
