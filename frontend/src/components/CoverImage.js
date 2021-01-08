@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CoverImage = ({ image, backgroundColor, children, style }) => {
+const CoverImage = ({ image, backgroundColor, children, style, id }) => {
   const styles = {
     background: `
           ${backgroundColor},
@@ -16,7 +16,11 @@ const CoverImage = ({ image, backgroundColor, children, style }) => {
     minHeight: '100vh',
     ...style,
   }
-  return <section style={styles}>{children}</section>
+  return (
+    <section id={id} style={styles}>
+      {children}
+    </section>
+  )
 }
 
 export default CoverImage

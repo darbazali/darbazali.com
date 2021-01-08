@@ -43,10 +43,22 @@ const Header = ({ opacity, top }) => {
 
         <nav className={click ? 'navbar active' : 'navbar'}>
           <ul>
-            <Link onClick={closeMobileMenu} to='/'>
+            <HashLink
+              onClick={closeMobileMenu}
+              to='/#hero'
+              scroll={(el) =>
+                el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+              }
+            >
               Home
-            </Link>
-            <HashLink onClick={closeMobileMenu} to='/#services'>
+            </HashLink>
+            <HashLink
+              onClick={closeMobileMenu}
+              to='/#services'
+              scroll={(el) =>
+                el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+              }
+            >
               Services
             </HashLink>
             <Link onClick={closeMobileMenu} to='/projects'>
@@ -72,7 +84,10 @@ const Header = ({ opacity, top }) => {
 }
 
 const ContactButton = ({ onClick }) => (
-  <HashLink to='/#contact'>
+  <HashLink
+    to='/#contact'
+    scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'start' })}
+  >
     <button onClick={onClick} style={buttonStyle} className='button-secondary'>
       Contact
     </button>

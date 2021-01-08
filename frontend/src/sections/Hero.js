@@ -35,6 +35,7 @@ const Hero = () => {
       image={HeroBack}
       backgroundColor='radial-gradient(rgba(13, 14, 14, 0.67) 0%, rgba(13, 14, 14, 0.68) 100%)'
       style={heroStyle}
+      id='hero'
     >
       <div style={{ marginTop: '-80px' }}>
         <h3 style={titleStyle}>Hello, I am Darbaz</h3>

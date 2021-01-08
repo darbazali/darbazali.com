@@ -20,6 +20,7 @@ const Services = () => {
       image={skillsBack}
       backgroundColor='rgba(31, 33, 34, 0.85)'
       style={serviceStyle}
+      id='services'
     >
       <div>
         <h5 style={{ opacity: '0.7' }}>Services</h5>
@@ -35,8 +36,8 @@ const Services = () => {
           alignContent='center'
           flexWrap='wrap'
         >
-          <div className='service-card'>Full-Stack Development</div>
           <div className='service-card'>UX/UI Design</div>
+          <div className='service-card'>Full-Stack Web Development</div>
           <div className='service-card'>Building MVPs</div>
         </FlexContainer>
       </div>
