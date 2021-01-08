@@ -2,11 +2,7 @@ import React from 'react'
 import FlexContainer from '../components/FlexContainer'
 
 const styles = {
-  backgroundColor: '#f59182',
-  width: '100vw',
-  height: '80vh',
   padding: '40px',
-  marginTop: '50px',
 }
 
 const listStyle = {

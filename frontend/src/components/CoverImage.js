@@ -2,10 +2,10 @@ import React from 'react'
 
 const CoverImage = ({ image, backgroundColor, children, style, id }) => {
   const styles = {
+    backgroundColor: '#1f2122',
     background: `
           ${backgroundColor},
           url(${image})`,
-    backgroundColor: '#1f2122',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
     backgroundAttachment: 'fixed',

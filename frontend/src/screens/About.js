@@ -1,6 +1,7 @@
 import React from 'react'
-import AboutSection from '../sections/AboutSection'
+
 import SkillSet from '../sections/SkillSet'
+import AboutMe from '../sections/AboutMe'
 import { Certifications } from '../sections/Certifications'
 import Tools from '../sections/Tools'
 
@@ -60,9 +61,7 @@ const certData = [
 const About = () => {
   return (
     <>
-      <div className='container'>
-        <AboutSection />
-      </div>
+      <AboutMe />
       <SkillSet />
       <div className='container'>
         <Certifications list={certData} title='Certifications' />
