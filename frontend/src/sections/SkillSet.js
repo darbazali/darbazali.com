@@ -1,34 +1,28 @@
 import React from 'react'
 import FlexContainer from '../components/FlexContainer'
 
-const styles = {
-  padding: '40px',
-}
+const styles = {}
 
 const listStyle = {
   padding: '0',
   listStyleType: 'none',
-  fontSize: '1.250em',
   fontWeight: '500',
-  lineHeight: '40px',
   textAlign: 'left',
-  color: '#000',
+  marginBottom: '2em',
 }
 
 const SkillSet = () => {
   return (
     <section style={styles}>
-      <h5 className='section-title' style={{ color: '#000' }}>
-        Skill Set
-      </h5>
+      <h5 className='section-title'>Skill Set</h5>
       <FlexContainer
-        className='skills'
+        className='skills container'
         container
         alignItems='stretch'
         justifyContent='space-between'
         alignContent='center'
-        flexWrap='wrap'
-        padding='60px'
+        flexWrap='nowrap'
+        padding='1em'
       >
         <ul style={listStyle}>
           <li>Front-End Systems</li>

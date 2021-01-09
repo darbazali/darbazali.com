@@ -9,7 +9,7 @@ import HikeWithMe from './screens/HikeWithMe'
 import QuadCaptcha from './screens/QuadCaptcha'
 
 const App = () => {
-  const [showHeader, setShowHeader] = useState(1)
+  const [showHeader, setShowHeader] = useState(0)
   const [top, setTop] = useState(0)
 
   useEffect(() => {

@@ -4,11 +4,12 @@ import lunchIcon from '../assets/ICON/ic_open_in_new_48px.svg'
 import FlexContainer from '../components/FlexContainer'
 
 const containerStyle = {
-  width: '392px',
-  marginBottom: '2em',
-  height: '245px',
+  width: '31.8%',
+  marginBottom: '1em',
+  marginRight: '1em',
+  height: 'auto',
   borderRadius: '20px',
-  boxShadow: '0px 6px 14px rgba(0, 0, 0, 0.08)',
+  filter: 'drop-shadow(0px 8px 24px rgba(0, 0, 0, 0.15))',
   position: 'relative',
 }
 
@@ -27,8 +28,9 @@ const Certifications = ({ list, title }) => {
       <h5 className='section-title'>{title}</h5>
       <FlexContainer
         container
+        className='container'
         alignItems='center'
-        justifyContent='space-between'
+        justifyContent='center'
         alignContent='center'
         flexWrap='wrap'
       >

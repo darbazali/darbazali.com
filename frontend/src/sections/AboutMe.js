@@ -13,20 +13,22 @@ const wrapper = {
 const contentStyle = {
   maxWidth: '605px',
   margin: '0 auto',
-  padding: '0 0 6em 0',
+  padding: '0 1em 6em 1em',
 }
 
 const titleStyle = {
   position: 'absolute',
   top: '-180px',
+  padding: '0 0 1em',
 }
 const AboutMe = () => {
   return (
     <section
+      id='about-screen'
       style={{
         width: '100%',
         padding: '0',
-        margin: '0',
+        margin: '0 auto',
         marginBottom: '1em',
       }}
     >
@@ -38,7 +40,9 @@ const AboutMe = () => {
 
       <div style={wrapper}>
         <div style={contentStyle}>
-          <h2 style={titleStyle}>About Me</h2>
+          <h2 style={titleStyle} id='about-title'>
+            About Me
+          </h2>
 
           <p>
             I'm Darbaz Ali, a creative designer, and developer based in

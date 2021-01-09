@@ -64,9 +64,15 @@ const Header = ({ opacity, top }) => {
             <Link onClick={closeMobileMenu} to='/projects'>
               Projects
             </Link>
-            <Link onClick={closeMobileMenu} to='/about'>
+            <HashLink
+              onClick={closeMobileMenu}
+              to='/about/#about-screen'
+              scroll={(el) =>
+                el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+              }
+            >
               About
-            </Link>
+            </HashLink>
           </ul>
           <ContactButton onClick={closeMobileMenu} />
         </nav>
