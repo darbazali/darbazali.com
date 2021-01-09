@@ -369,26 +369,32 @@ SEGMENTED CONTROL
 */
 
 .r-segmented-control {
-  height: 52px !important;
-  border-radius: 8px !important;
-  background: #ebebeb !important;
-  padding: 10px !important;
-  width: 100% !important;
+  /* border-radius: 8px !important; */
+  background: transparent !important;
+  /* padding: 10px !important; */
+  display: flex !important;
 }
 
 .r-segmented-control ul {
+  display: flex;
+  flex-direction: row !important;
+  justify-content: space-around;
   background: transparent !important;
   border: none !important;
   width: 100% !important;
+  background: #f3f3f3 !important;
+  height: 50px !important;
+  padding: 1em;
+  border-radius: 8px !important;
 }
 
 .r-segmented-control ul li.dark {
   font-size: 1em !important;
   font-weight: 500 !important;
   border: none !important;
-  padding: 20px 2em !important;
+  padding: 1em !important;
   transition: all 0.4s ease !important;
-  background-color: #ebebeb !important;
+  background-color: #f3f3f3 !important;
   color: #1f2122 !important;
   border-right: 1px solid #1f2122 !important;
 }

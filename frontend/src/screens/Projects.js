@@ -147,7 +147,12 @@ const Projects = () => {
   )
   return (
     <section className='container' style={{ paddingTop: '150px' }}>
-      <h5 className='section-title'>Projects</h5>
+      <h3
+        className='section-title'
+        style={{ textAlign: 'center', margin: '0 auto' }}
+      >
+        Projects
+      </h3>
 
       <div style={segmentStyle} className='segments'>
         <p>Filter</p>
