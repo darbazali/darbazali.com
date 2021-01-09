@@ -1,47 +1,49 @@
 import React from 'react'
+import Rellax from 'react-rellax'
+
 import '../styles/services.css'
 import FlexContainer from '../components/FlexContainer'
 
-import CoverImage from '../components/CoverImage'
-import skillsBack from '../assets/skills_back.jpg'
-
 const serviceStyle = {
   color: '#ffffff',
+  backgroundColor: '#1f2122',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
   textAlign: 'center',
-  padding: '40px',
+  paddingTop: '150px',
 }
 
 const Services = () => {
   return (
-    <CoverImage
-      image={skillsBack}
-      backgroundColor='rgba(31, 33, 34, 0.85)'
-      style={serviceStyle}
-      id='services'
-    >
+    <section style={serviceStyle} id='services'>
       <div>
-        <h5 style={{ opacity: '0.7' }}>Services</h5>
-        <h3>What I do?</h3>
-        <p style={{ maxWidth: '280px', margin: '1em auto' }}>
-          I wear a lot of hats when it comes to deal with digital products
-        </p>
-        <FlexContainer
-          className='services'
-          container
-          alignItems='flex-start'
-          justifyContent='space-evenly'
-          alignContent='center'
-          flexWrap='wrap'
-        >
-          <div className='service-card'>UX/UI Design</div>
-          <div className='service-card'>Full-Stack Web Development</div>
-          <div className='service-card'>Building MVPs</div>
-        </FlexContainer>
+        <Rellax speed='1'>
+          <h5 style={{ opacity: '0.7' }}>Services</h5>
+          <h3>What I do?</h3>
+          <p style={{ maxWidth: '280px', margin: '1em auto' }}>
+            I wear a lot of hats when it comes to deal with digital products
+          </p>
+        </Rellax>
+
+        <Rellax speed='3'>
+          <FlexContainer
+            className='services'
+            container
+            alignItems='flex-start'
+            justifyContent='space-evenly'
+            alignContent='center'
+            flexWrap='wrap'
+            margin='300px auto 0 auto'
+            height='200px'
+          >
+            <div className='service-card'>UX/UI Design</div>
+            <div className='service-card'>Full-Stack Web Development</div>
+            <div className='service-card'>Building MVPs</div>
+          </FlexContainer>
+        </Rellax>
       </div>
-    </CoverImage>
+    </section>
   )
 }
 

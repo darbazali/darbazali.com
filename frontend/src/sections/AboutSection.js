@@ -1,4 +1,5 @@
 import React from 'react'
+import Rellax from 'react-rellax'
 import Button from '../components/Button'
 import { HashLink } from 'react-router-hash-link'
 
@@ -12,11 +13,16 @@ const styles = {
 const AboutSection = () => {
   return (
     <section style={styles} id='aboutme'>
-      <h4>About me</h4>
-      <p style={{ maxWidth: '380px', margin: '20px auto' }}>
-        I’m Darbaz, a self-starter, self-motivated digital product enthusiast. I
-        love building products that make people’s lives easier.
-      </p>
+      <Rellax speed='1'>
+        <h4>About me</h4>
+      </Rellax>
+
+      <Rellax speed='1'>
+        <p style={{ maxWidth: '380px', margin: '20px auto' }}>
+          I’m Darbaz, a self-starter, self-motivated digital product enthusiast.
+          I love building products that make people’s lives easier.
+        </p>
+      </Rellax>
 
       <HashLink
         to='/#contact'

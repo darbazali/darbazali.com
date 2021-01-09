@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Rellax from 'react-rellax'
 
 import MouseScroll from '../components/MouseScroll'
 import HeroBack from '../assets/hero_back.jpg'
@@ -38,10 +39,15 @@ const Hero = () => {
       id='hero'
     >
       <div style={{ marginTop: '-80px' }}>
-        <h3 style={titleStyle}>Hello, I am Darbaz</h3>
-        <h5 style={{ marginTop: '22px', opacity: '0.8' }}>
-          Creative designer and developer
-        </h5>
+        <Rellax speed='-4'>
+          <h3 style={titleStyle}>Hello, I am Darbaz</h3>
+        </Rellax>
+
+        <Rellax speed='0'>
+          <h5 style={{ marginTop: '22px', opacity: '0.8' }}>
+            Creative designer and developer
+          </h5>
+        </Rellax>
       </div>
 
       <MouseScroll opacity={`${shwoScroller}`} />
