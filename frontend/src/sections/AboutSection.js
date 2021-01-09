@@ -18,7 +18,12 @@ const AboutSection = () => {
         love building products that make people’s lives easier.
       </p>
 
-      <HashLink to='/#contact'>
+      <HashLink
+        to='/#contact'
+        scroll={(el) =>
+          el.scrollIntoView({ behavior: 'smooth', block: 'start', offset: 1 })
+        }
+      >
         <Button type='button'>Hire me</Button>
       </HashLink>
     </section>

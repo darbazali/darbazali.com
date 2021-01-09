@@ -123,6 +123,7 @@ const segmentList = [
 
 const segmentStyle = {
   width: '60%',
+  maxWidth: 'none',
   margin: '1em auto',
   marginBottom: '3em',
   textAlign: 'center',
@@ -145,7 +146,7 @@ const Projects = () => {
     (p) => p.category.toLowerCase() === segment.toLowerCase()
   )
   return (
-    <section className='container'>
+    <section className='container' style={{ paddingTop: '150px' }}>
       <h5 className='section-title'>Projects</h5>
 
       <div style={segmentStyle} className='segments'>
@@ -161,7 +162,7 @@ const Projects = () => {
       <FlexContainer
         container
         alignItems='center'
-        justifyContent='space-evenly'
+        justifyContent='center'
         alignContent='center'
         flexWrap='wrap'
       >

@@ -373,11 +373,13 @@ SEGMENTED CONTROL
   border-radius: 8px !important;
   background: #ebebeb !important;
   padding: 10px !important;
+  width: 100% !important;
 }
 
 .r-segmented-control ul {
   background: transparent !important;
   border: none !important;
+  width: 100% !important;
 }
 
 .r-segmented-control ul li.dark {
@@ -387,16 +389,12 @@ SEGMENTED CONTROL
   padding: 20px 2em !important;
   transition: all 0.4s ease !important;
   background-color: #ebebeb !important;
-  color: #4d5057 !important;
-  border-right: 1px solid #4d5057 !important;
+  color: #1f2122 !important;
+  border-right: 1px solid #1f2122 !important;
 }
 
 .r-segmented-control ul li:nth-child(6) {
   border-right: none !important;
-}
-
-.r-segmented-control li.dark.selected {
-  background: #4d5057 !important;
 }
 
 /* 
