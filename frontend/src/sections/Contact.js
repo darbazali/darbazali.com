@@ -5,6 +5,7 @@ import { Github, Linkedin } from '@icons-pack/react-simple-icons'
 import '../styles/contact.css'
 
 import Button from '../components/Button'
+import Modal from '../components/Modal'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
@@ -20,6 +21,8 @@ const Contact = () => {
 
   const [loading, setLoading] = useState(false)
 
+  const [isModalOpen, setModalIsOpen] = useState(false)
+
   useEffect(() => {}, [loading])
 
   const handleSendEmail = (e) => {
@@ -32,9 +35,13 @@ const Contact = () => {
         message,
       })
       .then((res) => {
+        toggleModal()
         resetForm()
-        alert('Message sent')
       })
+  }
+
+  const toggleModal = () => {
+    setModalIsOpen(!isModalOpen)
   }
 
   const resetForm = () => {
@@ -98,6 +105,7 @@ const Contact = () => {
           </form>
         </div>
       </div>
+      {isModalOpen && <Modal onRequestClose={toggleModal} />}
     </section>
   )
 }

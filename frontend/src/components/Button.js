@@ -22,8 +22,8 @@ const buttonStyle = {
   outline: 'none',
 }
 
-const Button = ({ children, type }) => (
-  <button type={type} style={buttonStyle} className='button'>
+const Button = ({ children, type, onClick }) => (
+  <button type={type} style={buttonStyle} className='button' onClick={onClick}>
     {children}
   </button>
 )
