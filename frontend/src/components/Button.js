@@ -14,7 +14,7 @@ const buttonStyle = {
   lineHeight: '30px',
   textAlign: 'center',
   color: '#fff',
-  textShadow: '0px 2px 5px rgba(0, 0, 0, 0.6)',
+  textShadow: '0px 2px 5px rgba(0, 0, 0, 0.3)',
   marginTop: '20px',
   transition: 'all 300ms ease-out',
   cursor: 'pointer',

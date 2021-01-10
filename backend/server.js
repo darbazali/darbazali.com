@@ -34,7 +34,7 @@ const transporter = nodemailer.createTransport({
 // verify connection configration
 transporter.verify((error, process) => {
   if (error) console.log(error)
-  else console.log('Server is ready to take our mesages!')
+  // else console.log('Server is ready to take our mesages!')
 })
 
 app.get('/', (req, res) => {
@@ -49,13 +49,14 @@ app.post('/access', async (req, res, next) => {
   const mail = {
     from: email,
     to: USERNAME,
+    name: email,
     subject: subject,
     text: message,
   }
 
   transporter.sendMail(mail, (err, data) => {
     if (err) {
-      console.log(err)
+      // console.log(err)
       res.sendStatus(500)
     } else {
       res.status(200).send('Message successfully sent')

@@ -158,7 +158,7 @@ input:placeholder-shown + label {
 */
 textarea:focus::-webkit-input-placeholder,
 input:focus::-webkit-input-placeholder {
-  opacity: 1;
+  opacity: 0;
 }
 /**
 * When the element is focused, remove the label transform.

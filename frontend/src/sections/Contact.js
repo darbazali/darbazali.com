@@ -1,10 +1,17 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Github, Linkedin } from '@icons-pack/react-simple-icons'
 
+import '../styles/contact.css'
+
 import Button from '../components/Button'
 
-import '../styles/contact.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
+import { faSpinner } from '@fortawesome/free-solid-svg-icons'
+
+const sendIcon = <FontAwesomeIcon icon={faPaperPlane} />
+const loadingIcon = <FontAwesomeIcon icon={faSpinner} className='fa-spin' />
 
 const Contact = () => {
   const [email, setEmail] = useState('')
@@ -12,6 +19,8 @@ const Contact = () => {
   const [message, setMessage] = useState('')
 
   const [loading, setLoading] = useState(false)
+
+  useEffect(() => {}, [loading])
 
   const handleSendEmail = (e) => {
     e.preventDefault()
@@ -23,9 +32,8 @@ const Contact = () => {
         message,
       })
       .then((res) => {
-        setLoading(false)
-        alert('Message sent')
         resetForm()
+        alert('Message sent')
       })
   }
 
@@ -33,6 +41,7 @@ const Contact = () => {
     setEmail('')
     setSubject('')
     setMessage('')
+    setLoading(false)
   }
   return (
     <section style={{ padding: '0' }} className='contact' id='contact'>
@@ -44,41 +53,47 @@ const Contact = () => {
             <h5>Send a message</h5>
             <div className='field'>
               <input
+                // required
                 type='email'
                 name='email'
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 id='email'
-                placeholder='agent@station.com'
+                placeholder=''
               ></input>
               <label htmlFor='email'>Email</label>
             </div>
 
             <div className='field'>
               <input
+                // required
                 type='text'
                 name='subject'
                 value={subject}
                 onChange={(e) => setSubject(e.target.value)}
                 id='subject'
-                placeholder='Aliens are comming'
+                placeholder=''
               ></input>
               <label htmlFor='subject'>Subject</label>
             </div>
 
             <div className='field'>
               <textarea
+                // required
                 name='message'
                 id='message'
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                placeholder='Prepare Tomahawk for counter lunch!'
+                placeholder=''
               ></textarea>
               <label htmlFor='message'>Message</label>
             </div>
-
-            <Button className='button' type='submit' onClick={handleSendEmail}>
-              {loading ? 'Sending..' : 'Send Message'}
+            <Button type='submit' onClick={handleSendEmail}>
+              {loading ? (
+                <span>{loadingIcon} Sending..</span>
+              ) : (
+                <span>{sendIcon} Send message</span>
+              )}
             </Button>
           </form>
         </div>
