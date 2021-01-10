@@ -37,10 +37,6 @@ transporter.verify((error, process) => {
   // else console.log('Server is ready to take our mesages!')
 })
 
-app.get('/', (req, res) => {
-  res.send('API WORKING..')
-})
-
 // message endpoint
 app.post('/access', async (req, res, next) => {
   const { email, message, subject } = req.body
@@ -63,6 +59,21 @@ app.post('/access', async (req, res, next) => {
     }
   })
 })
+
+// use statics
+
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, '/frontend/build')))
+
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'))
+  })
+} else {
+  // setup routes
+  app.get('/', (req, res) => {
+    res.status(200).send('API is working..')
+  })
+}
 
 app.listen(PORT || 5000, () => {
   console.info(`Server listenting on port ${PORT}`)
