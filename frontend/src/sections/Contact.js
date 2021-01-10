@@ -18,26 +18,33 @@ const Contact = () => {
   const [email, setEmail] = useState('')
   const [subject, setSubject] = useState('')
   const [message, setMessage] = useState('')
+  const [error, setError] = useState('')
 
   const [loading, setLoading] = useState(false)
 
   const [isModalOpen, setModalIsOpen] = useState(false)
 
   useEffect(() => {}, [loading])
-
-  const handleSendEmail = (e) => {
+  console.log(error)
+  const handleSendEmail = async (e) => {
     e.preventDefault()
     setLoading(true)
-    axios
-      .post('/access', {
+
+    try {
+      const sendMessage = await axios.post('/access', {
         email,
         subject,
         message,
       })
-      .then((res) => {
+      if (sendMessage.status === 200) {
         toggleModal()
         resetForm()
-      })
+      }
+    } catch (error) {
+      setError('There was a problem sending message, please try again')
+      toggleModal()
+      resetForm()
+    }
   }
 
   const toggleModal = () => {
@@ -95,7 +102,7 @@ const Contact = () => {
               ></textarea>
               <label htmlFor='message'>Message</label>
             </div>
-            <Button type='submit' onClick={handleSendEmail}>
+            <Button type='submit'>
               {loading ? (
                 <span>{loadingIcon} Sending..</span>
               ) : (
@@ -105,7 +112,7 @@ const Contact = () => {
           </form>
         </div>
       </div>
-      {isModalOpen && <Modal onRequestClose={toggleModal} />}
+      {isModalOpen && <Modal onRequestClose={toggleModal} error={error} />}
     </section>
   )
 }
@@ -130,10 +137,10 @@ const ContactMessage = () => {
 const Socials = () => (
   <div className='socials'>
     <a href='https://github.com/DarbazAli' style={{ marginRight: '2em' }}>
-      <Github size={44} fill='#697285' />
+      <Github size={44} fill='#1f2122' />
     </a>
     <a href='https://www.linkedin.com/in/darbaz/'>
-      <Linkedin size={44} fill='#697285' />
+      <Linkedin size={44} fill='#1f2122' />
     </a>
   </div>
 )
