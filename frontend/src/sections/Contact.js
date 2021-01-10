@@ -60,38 +60,38 @@ const Contact = () => {
             <h5>Send a message</h5>
             <div className='field'>
               <input
-                // required
+                required
                 type='email'
                 name='email'
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 id='email'
-                placeholder=''
+                placeholder='email'
               ></input>
               <label htmlFor='email'>Email</label>
             </div>
 
             <div className='field'>
               <input
-                // required
+                required
                 type='text'
                 name='subject'
                 value={subject}
                 onChange={(e) => setSubject(e.target.value)}
                 id='subject'
-                placeholder=''
+                placeholder='subject'
               ></input>
               <label htmlFor='subject'>Subject</label>
             </div>
 
             <div className='field'>
               <textarea
-                // required
+                required
                 name='message'
                 id='message'
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                placeholder=''
+                placeholder='message'
               ></textarea>
               <label htmlFor='message'>Message</label>
             </div>

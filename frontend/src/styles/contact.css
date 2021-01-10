@@ -62,7 +62,7 @@ form {
 }
 
 form .button {
-  float: right;
+  /* float: right; */
 }
 /**
 * Make the field a flex-container, reverse the order so label is on top.
