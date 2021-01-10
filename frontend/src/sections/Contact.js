@@ -8,8 +8,7 @@ import Button from '../components/Button'
 import Modal from '../components/Modal'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
-import { faSpinner } from '@fortawesome/free-solid-svg-icons'
+import { faPaperPlane, faSpinner } from '@fortawesome/free-solid-svg-icons'
 
 const sendIcon = <FontAwesomeIcon icon={faPaperPlane} />
 const loadingIcon = <FontAwesomeIcon icon={faSpinner} className='fa-spin' />
