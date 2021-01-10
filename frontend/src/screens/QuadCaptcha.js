@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Button from '../components/Button'
 const quadCaptchaImage = 'https://i.ibb.co/CmyXjRb/QUAD-CAPTCHA.jpg'
 const qcPersona = 'https://i.ibb.co/gRqpJT4/QC-PERSONA.png'
 const qcWire = 'https://i.ibb.co/YbSR8xb/qc-proto-wire.jpg'
@@ -13,6 +13,15 @@ const QuadCaptcha = () => {
       <div className='case-study-content'>
         <h4>QUAD CAPTCHA MVP - Case Study</h4>
         <img src={quadCaptchaImage} alt='QUAD CAPTCHA' />
+
+        <a
+          href='https://quad-captcha.herokuapp.com'
+          rel='noreferrer'
+          target='_blank'
+        >
+          <Button>Visit the MVP</Button>
+        </a>
+
         <h4>The Project</h4>
         <p>
           QQUAD CAPTCHA is an (open source) gamified bot detector web
@@ -27,7 +36,9 @@ const QuadCaptcha = () => {
         </p>
 
         <h5>Process</h5>
-        <b>Research -&gt; Ideate -&gt; Prototype -&gt; develop -&gt; Test</b>
+        <p>
+          <b>Research -&gt; Ideate -&gt; Prototype -&gt; develop -&gt; Test</b>
+        </p>
 
         <h5>Research methods</h5>
         <ul>
@@ -96,6 +107,13 @@ const QuadCaptcha = () => {
           whether your design decisions are right or wrong. This way, you won’t
           waste a lot of energy and time(money) going in the wrong direction.
         </p>
+        <a
+          href='https://quad-captcha.herokuapp.com'
+          rel='noreferrer'
+          target='_blank'
+        >
+          <Button>Visit the MVP</Button>
+        </a>
       </div>
     </section>
   )

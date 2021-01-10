@@ -29,7 +29,7 @@ const Projects = () => (
       image={qcImage}
       title='QUAD CAPTCHA'
       subtitle='Gamified Bot Detector'
-      link='/hike-with-me'
+      link='/quad-captcha'
     />
 
     <ProjectRightImage
