@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import hwmImage from '../assets/HWM.png'
-import qcImage from '../assets/QC_MOCKUP.png'
-import bit8Url from '../assets/8BIT_URL.png'
-import heatMapD3 from '../assets/HEAT_MAP_D3.png'
+import hwmImage from '../assets/JPEG/HWM.jpg'
+import qcImage from '../assets/JPEG/QC_MOCKUP.jpg'
+import bit8Url from '../assets/JPEG/8BIT_URL.jpg'
+import heatMapD3 from '../assets/JPEG/HEAT_MAP_D3.jpg'
 
 /* 
 ===================================================

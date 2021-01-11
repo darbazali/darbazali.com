@@ -35,10 +35,8 @@
   "dependencies": {
     "compression": "^1.7.4",
     "dotenv": "^8.2.0",
-    "emailjs": "^3.4.0",
     "express": "^4.17.1",
-    "nodemailer": "^6.4.17",
-    "react-rellax": "^1.0.3"
+    "nodemailer": "^6.4.17"
   },
   "devDependencies": {
     "concurrently": "^5.3.0",

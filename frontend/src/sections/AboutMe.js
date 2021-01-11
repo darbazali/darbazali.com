@@ -1,6 +1,6 @@
 import React from 'react'
 import Rellax from 'react-rellax'
-import DARBAZ_ALI from '../assets/DARBAZ_ALI.jpg'
+import DARBAZ_ALI from '../assets/JPEG/DARBAZ_ALI.jpg'
 
 const wrapper = {
   position: 'relative',

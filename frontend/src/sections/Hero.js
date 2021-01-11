@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Rellax from 'react-rellax'
 
 import MouseScroll from '../components/MouseScroll'
-import HeroBack from '../assets/hero_back.jpg'
+import HeroBack from '../assets/JPEG/hero_back.jpg'
 import CoverImage from '../components/CoverImage'
 
 const heroStyle = {

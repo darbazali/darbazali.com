@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import FlexContainer from './FlexContainer'
 import { Link } from 'react-router-dom'
 import { HashLink } from 'react-router-hash-link'
-import logo from '../assets/darbaz_logo.png'
+import logo from '../assets/JPEG/darbaz_logo.jpg'
 import { ReactComponent as CloseIcon } from '../assets/ICON/close-icon.svg'
 import { ReactComponent as MenuIcon } from '../assets/ICON/hamburger-menu.svg'
 import '../styles/header.css'
@@ -38,7 +38,11 @@ const Header = ({ opacity, top }) => {
       >
         {/* LOGO */}
         <Link to='/' className='logo'>
-          <img style={{ height: '32px' }} src={logo} alt='Darbaz Ali logo' />
+          <img
+            style={{ height: '32px', borderRadius: '5px' }}
+            src={logo}
+            alt='Darbaz Ali logo'
+          />
         </Link>
 
         <nav className={click ? 'navbar active' : 'navbar'}>
