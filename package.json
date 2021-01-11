@@ -4,6 +4,10 @@
   "type": "module",
   "description": "Darbaz Ali's homepage",
   "main": "index.js",
+  "engines": {
+    "node": ">=13.0.0",
+    "npm": ">=6.0.0"
+  },
   "scripts": {
     "start": "node backend/server.js",
     "server": "nodemon backend/server.js",
