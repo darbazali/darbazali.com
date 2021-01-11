@@ -5,7 +5,7 @@ const sectionStyle = {
   width: '100%',
   height: 'auto',
   padding: '100px 0',
-  backgroundColor: '#fafafa',
+  backgroundColor: '#fff',
 }
 
 const WhyMe = () => {

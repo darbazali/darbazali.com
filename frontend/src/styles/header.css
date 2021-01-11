@@ -21,12 +21,12 @@ header .logo {
   border-radius: 10px;
   height: 32px;
   width: 32px;
-  opacity: 0.9;
+  opacity: 1;
   transition: all 0.2s ease-in;
 }
 
 .navbar {
-  width: 70%;
+  width: 62%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -34,7 +34,7 @@ header .logo {
 }
 
 .navbar ul {
-  width: 380px;
+  width: 250px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

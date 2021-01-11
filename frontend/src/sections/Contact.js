@@ -134,7 +134,7 @@ const ContactMessage = () => {
 }
 
 const Socials = () => (
-  <div className='socials'>
+  <div className='socials' style={{ opacity: 0.8 }}>
     <a href='https://github.com/DarbazAli' style={{ marginRight: '2em' }}>
       <Github size={44} fill='#1f2122' />
     </a>

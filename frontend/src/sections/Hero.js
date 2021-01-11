@@ -39,11 +39,11 @@ const Hero = () => {
       id='hero'
     >
       <div style={{ marginTop: '-80px' }}>
-        <Rellax speed='-4'>
+        <Rellax speed={-2}>
           <h3 style={titleStyle}>Hello, I am Darbaz</h3>
         </Rellax>
 
-        <Rellax speed='0'>
+        <Rellax speed={0}>
           <h5 style={{ marginTop: '22px', opacity: '0.8' }}>
             Creative designer and developer
           </h5>

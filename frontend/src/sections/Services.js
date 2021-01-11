@@ -18,7 +18,7 @@ const Services = () => {
   return (
     <section style={serviceStyle} id='services'>
       <div>
-        <Rellax speed='1'>
+        <Rellax speed={0}>
           <h5 style={{ opacity: '0.7' }}>Services</h5>
           <h3>What I do?</h3>
           <p style={{ maxWidth: '280px', margin: '1em auto' }}>
@@ -26,7 +26,7 @@ const Services = () => {
           </p>
         </Rellax>
 
-        <Rellax speed='3'>
+        <Rellax speed={2}>
           <FlexContainer
             className='services'
             container

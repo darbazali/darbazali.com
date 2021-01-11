@@ -1,6 +1,6 @@
 #contact .container {
   width: 100%;
-  background-color: #fafafa;
+  background-color: #fff;
   margin: 1em 0;
   padding: 0;
 
@@ -40,7 +40,7 @@
 }
 
 #contact .contact-message {
-  background-color: #f3f3f3;
+  background-color: #fff;
   margin-right: 1em;
   /* padding: 80px 40px; */
 }
@@ -61,9 +61,6 @@ form {
   /* padding: 40px 40px; */
 }
 
-form .button {
-  /* float: right; */
-}
 /**
 * Make the field a flex-container, reverse the order so label is on top.
 */

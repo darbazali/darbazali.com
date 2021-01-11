@@ -13,11 +13,11 @@ const styles = {
 const AboutSection = () => {
   return (
     <section style={styles} id='aboutme'>
-      <Rellax speed='1'>
+      <Rellax speed={1}>
         <h4>About me</h4>
       </Rellax>
 
-      <Rellax speed='1'>
+      <Rellax speed={1}>
         <p style={{ maxWidth: '380px', margin: '20px auto' }}>
           I’m Darbaz, a self-starter, self-motivated digital product enthusiast.
           I love building products that make people’s lives easier.
