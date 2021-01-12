@@ -425,47 +425,6 @@ SEGMENTED CONTROL
 
 /* 
 ====================================================================
-FOOTER
-====================================================================
-*/
-footer a {
-  margin-left: 20px;
-  font-weight: 500;
-}
-
-footer .socials {
-  height: 44px;
-}
-footer .socials a {
-  transition: all 200ms ease-in-out;
-  border-radius: 100%;
-}
-
-footer .socials a:hover {
-  opacity: 0.9;
-}
-
-footer p {
-  opacity: 0.8;
-  margin-bottom: 0;
-}
-
-/* 
-====================================================================
-ANIMATIONS
-====================================================================
-*/
-/* .fade-enter {
-  opacity: 0;
-  z-index: 1;
-}
-
-.fade-enter.fade-enter-active {
-  opacity: 1;
-  transition: all 1s ease-in-out;
-} */
-/* 
-====================================================================
 BREAK POINTS
 ====================================================================
 */
