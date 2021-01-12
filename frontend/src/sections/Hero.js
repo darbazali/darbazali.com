@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Rellax from 'react-rellax'
 
 import MouseScroll from '../components/MouseScroll'
@@ -19,18 +19,6 @@ const titleStyle = {
 }
 
 const Hero = () => {
-  const [shwoScroller, setShowScroller] = useState(0.6)
-
-  useEffect(() => {
-    window.addEventListener('scroll', () => {
-      let scrollTop = window.scrollY
-      if (scrollTop > 50) {
-        setShowScroller(0)
-      } else {
-        setShowScroller(0.6)
-      }
-    })
-  }, [shwoScroller])
   return (
     <CoverImage
       image={HeroBack}
@@ -50,7 +38,7 @@ const Hero = () => {
         </Rellax>
       </div>
 
-      <MouseScroll opacity={`${shwoScroller}`} />
+      <MouseScroll />
     </CoverImage>
   )
 }

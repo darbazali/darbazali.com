@@ -130,9 +130,9 @@ const segmentStyle = {
 }
 
 const Projects = () => {
-  const [segments, setSegments] = useState(segmentList)
+  const [segments] = useState(segmentList)
   const [segment, setSegment] = useState('All')
-  const [selected, setSelected] = useState(0)
+  const [selected] = useState(0)
   const [filterd, setFilterd] = useState(false)
 
   const handleChange = (index) => {

@@ -2,12 +2,9 @@ import React from 'react'
 import { HashLink } from 'react-router-hash-link'
 import '../styles/mouse-scroll.css'
 
-const MouseScroll = ({ opacity }) => {
+const MouseScroll = () => {
   return (
-    <span
-      className='scroll-btn'
-      style={{ opacity: opacity, transition: 'all 0.5s ease-out' }}
-    >
+    <span className='scroll-btn'>
       <HashLink
         to='/#intro'
         scroll={(el) =>
