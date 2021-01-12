@@ -24,7 +24,7 @@ const Contact = () => {
   const [isModalOpen, setModalIsOpen] = useState(false)
 
   useEffect(() => {}, [loading])
-  console.log(error)
+
   const handleSendEmail = async (e) => {
     e.preventDefault()
     setLoading(true)
@@ -57,7 +57,11 @@ const Contact = () => {
     setLoading(false)
   }
   return (
-    <section style={{ padding: '0' }} className='contact' id='contact'>
+    <section
+      style={{ padding: '0', paddingTop: '60px' }}
+      className='contact'
+      id='contact'
+    >
       <div className='container'>
         <ContactMessage />
 

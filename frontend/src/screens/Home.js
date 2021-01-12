@@ -1,5 +1,5 @@
 import React from 'react'
-import AboutSection from '../sections/AboutSection'
+import Intro from '../sections/Intro'
 import Contact from '../sections/Contact'
 import GithubAPI from '../sections/GithubAPI'
 import Hero from '../sections/Hero'
@@ -12,7 +12,7 @@ const Home = () => {
     <>
       <Hero />
 
-      <AboutSection />
+      <Intro />
       <Services />
       <Projects />
       <GithubAPI />

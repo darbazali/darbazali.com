@@ -18,13 +18,13 @@ const contentStyle = {
 
 const titleStyle = {
   position: 'absolute',
-  top: '-180px',
+  top: '-300px',
   padding: '0 0 1em',
 }
 const AboutMe = () => {
   return (
     <section
-      id='about-screen'
+      id='about'
       style={{
         width: '100%',
         padding: '0',
@@ -32,7 +32,7 @@ const AboutMe = () => {
         marginBottom: '1em',
       }}
     >
-      <Rellax speed='-2'>
+      <Rellax speed={-2}>
         <img
           src={DARBAZ_ALI}
           alt='DARBAZ ALI'
@@ -42,13 +42,13 @@ const AboutMe = () => {
 
       <div style={wrapper}>
         <div style={contentStyle}>
-          <Rellax speed='3'>
+          <Rellax speed={3}>
             <h2 style={titleStyle} id='about-title'>
               About Me
             </h2>
           </Rellax>
 
-          <Rellax speed='2'>
+          <Rellax speed={2}>
             <p>
               I'm Darbaz Ali, a creative designer, and developer based in
               Sulaymaniyah/Iraq. I have a great passion for technology,

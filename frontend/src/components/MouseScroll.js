@@ -9,7 +9,7 @@ const MouseScroll = ({ opacity }) => {
       style={{ opacity: opacity, transition: 'all 0.5s ease-out' }}
     >
       <HashLink
-        to='/#aboutme'
+        to='/#intro'
         scroll={(el) =>
           el.scrollIntoView({ behavior: 'smooth', block: 'start' })
         }

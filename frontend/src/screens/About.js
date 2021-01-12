@@ -1,5 +1,4 @@
 import React from 'react'
-
 import SkillSet from '../sections/SkillSet'
 import AboutMe from '../sections/AboutMe'
 import { Certifications } from '../sections/Certifications'
@@ -63,10 +62,8 @@ const About = () => {
     <>
       <AboutMe />
       <SkillSet />
-      <div className='container'>
-        <Certifications list={certData} title='Certifications' />
-        <Tools />
-      </div>
+      <Certifications list={certData} title='Certifications' />
+      <Tools />
     </>
   )
 }

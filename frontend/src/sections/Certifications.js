@@ -51,7 +51,7 @@ const CertCard = ({ cert: { title, provider, url, image, desc } }) => (
       style={imgStyle}
     />
     <div className='certification-card-content'>
-      <div class='certification-overlay'>
+      <div className='certification-overlay'>
         <div className='certification-text'>
           <b>{title}</b>
           <p>{provider || desc}</p>

@@ -62,7 +62,7 @@ const Header = ({ opacity, top }) => {
             </Link>
             <HashLink
               onClick={closeMobileMenu}
-              to='/about/#about-screen'
+              to='/about/#about'
               scroll={(el) =>
                 el.scrollIntoView({ behavior: 'smooth', block: 'start' })
               }
@@ -86,14 +86,11 @@ const Header = ({ opacity, top }) => {
 }
 
 const ContactButton = ({ onClick }) => (
-  <HashLink
-    to='/#contact'
-    scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'start' })}
-  >
+  <Link to='/contact'>
     <button onClick={onClick} style={buttonStyle} className='button-secondary'>
       Contact
     </button>
-  </HashLink>
+  </Link>
 )
 
 export default Header

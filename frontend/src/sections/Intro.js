@@ -1,7 +1,7 @@
 import React from 'react'
 import Rellax from 'react-rellax'
 import Button from '../components/Button'
-import { HashLink } from 'react-router-hash-link'
+import { Link } from 'react-router-dom'
 
 const styles = {
   textAlign: 'center',
@@ -12,7 +12,7 @@ const styles = {
 
 const AboutSection = () => {
   return (
-    <section style={styles} id='aboutme'>
+    <section style={styles} id='intro'>
       <Rellax speed={1}>
         <h4>About me</h4>
       </Rellax>
@@ -24,14 +24,9 @@ const AboutSection = () => {
         </p>
       </Rellax>
 
-      <HashLink
-        to='/#contact'
-        scroll={(el) =>
-          el.scrollIntoView({ behavior: 'smooth', block: 'start', offset: 1 })
-        }
-      >
+      <Link to='/contact'>
         <Button type='button'>Hire me</Button>
-      </HashLink>
+      </Link>
     </section>
   )
 }
