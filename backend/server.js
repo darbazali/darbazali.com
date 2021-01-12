@@ -6,6 +6,7 @@ import nodemailer from 'nodemailer'
 import compress from 'compression'
 import path from 'path'
 import dotenv from 'dotenv'
+import helmet from 'helmet'
 
 const app = express()
 dotenv.config()
@@ -17,6 +18,7 @@ const { PORT, USERNAME, PASSWORD } = process.env
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(compress())
+app.use(helmet.noSniff())
 app.set('views', 'views')
 
 app.use(express.static(__dirname + '/public'))
