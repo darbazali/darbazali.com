@@ -21,6 +21,21 @@ app.set('views', 'views')
 
 app.use(express.static(__dirname + '/public'))
 
+// use statics
+
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, '/frontend/build')))
+
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'))
+  })
+} else {
+  // setup routes
+  app.get('/', (req, res) => {
+    res.status(200).send('API is working..')
+  })
+}
+
 const transporter = nodemailer.createTransport({
   host: 'smtp.gmail.com',
   service: 'Gmail',
@@ -61,21 +76,6 @@ app.post('/access', async (req, res, next) => {
     }
   })
 })
-
-// use statics
-
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '/frontend/build')))
-
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'))
-  })
-} else {
-  // setup routes
-  app.get('/', (req, res) => {
-    res.status(200).send('API is working..')
-  })
-}
 
 app.listen(PORT || 5000, () => {
   console.info(`Server listenting on port ${PORT}`)
