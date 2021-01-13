@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import FlexContainer from './FlexContainer'
+
 import { Link } from 'react-router-dom'
 import { HashLink } from 'react-router-hash-link'
-import logo from '../assets/JPEG/darbaz_logo.jpg'
+import logo from '../assets/ICON/DARBAZ_ALI_LOGO.svg'
 import { ReactComponent as CloseIcon } from '../assets/ICON/close-icon.svg'
 import { ReactComponent as MenuIcon } from '../assets/ICON/hamburger-menu.svg'
 import '../styles/header.css'
@@ -12,21 +13,21 @@ const buttonStyle = {
   height: '40px',
   borderRadius: '20px',
   background: 'transparent',
-  border: '1px solid #ffffff',
-  color: '#ffffff',
+  border: '2px solid #f78764',
+  color: '#f78764',
   cursor: 'pointer',
   outline: 'none',
-  fontWeight: '400',
+  fontWeight: '500',
   transition: 'all 300ms ease-out',
 }
 
-const Header = ({ opacity, top }) => {
+const Header = () => {
   const [click, setClick] = useState(false)
   const handleClick = () => setClick(!click)
   const closeMobileMenu = () => setClick(false)
 
   return (
-    <header style={{ opacity: opacity, top: top }}>
+    <header>
       <FlexContainer
         container
         alignItems='center'
@@ -39,7 +40,12 @@ const Header = ({ opacity, top }) => {
         {/* LOGO */}
         <Link to='/' className='logo'>
           <img
-            style={{ height: '32px', borderRadius: '5px' }}
+            style={{
+              height: '32px',
+              width: '32px',
+              opacity: '0.9',
+              borderRadius: '5px',
+            }}
             src={logo}
             alt='Darbaz Ali logo'
           />
@@ -57,9 +63,15 @@ const Header = ({ opacity, top }) => {
               Home
             </HashLink>
 
-            <Link onClick={closeMobileMenu} to='/projects'>
+            <HashLink
+              onClick={closeMobileMenu}
+              to='/#projects'
+              scroll={(el) =>
+                el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+              }
+            >
               Projects
-            </Link>
+            </HashLink>
             <HashLink
               onClick={closeMobileMenu}
               to='/about/#about'

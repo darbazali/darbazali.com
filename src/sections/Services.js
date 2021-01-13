@@ -5,13 +5,12 @@ import '../styles/services.css'
 import FlexContainer from '../components/FlexContainer'
 
 const serviceStyle = {
-  color: '#ffffff',
-  backgroundColor: '#1f2122',
+  color: '#1f2122',
+  backgroundColor: '#ffffff',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
   textAlign: 'center',
-  paddingTop: '150px',
 }
 
 const Services = () => {
@@ -19,8 +18,7 @@ const Services = () => {
     <section style={serviceStyle} id='services'>
       <div>
         <Rellax speed={0}>
-          <h5 style={{ opacity: '0.7' }}>Services</h5>
-          <h3>What I do?</h3>
+          <h4>What I do with Computers?</h4>
           <p style={{ maxWidth: '280px', margin: '1em auto' }}>
             I wear a lot of hats when it comes to deal with digital products
           </p>
@@ -34,7 +32,7 @@ const Services = () => {
             justifyContent='space-evenly'
             alignContent='center'
             flexWrap='wrap'
-            margin='300px auto 0 auto'
+            margin='200px auto 0 auto'
             height='200px'
           >
             <div className='service-card'>UX/UI Design</div>

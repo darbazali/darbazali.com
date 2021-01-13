@@ -1,45 +1,27 @@
 import React from 'react'
-import Rellax from 'react-rellax'
-
-import MouseScroll from '../components/MouseScroll'
-import HeroBack from '../assets/JPEG/hero_back.jpg'
-import CoverImage from '../components/CoverImage'
-
-const heroStyle = {
-  color: '#ffffff',
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
+import CenterdContainer from '../components/CenterdContainer'
+const styles = {
+  maxWidth: '770px',
   textAlign: 'center',
+  margin: '0 auto',
 }
-
-const titleStyle = {
-  fontWeight: '600',
-  borderBottom: '1px solid #555555',
-}
-
 const Hero = () => {
   return (
-    <CoverImage
-      image={HeroBack}
-      backgroundColor='radial-gradient(rgba(13, 14, 14, 0.67) 0%, rgba(13, 14, 14, 0.68) 100%)'
-      style={heroStyle}
-      id='hero'
-    >
-      <div style={{ marginTop: '-80px' }}>
-        <Rellax speed={-2}>
-          <h3 style={titleStyle}>Hello, I am Darbaz</h3>
-        </Rellax>
+    <CenterdContainer height={'calc(100vh - 78px)'}>
+      <div style={styles}>
+        <h4
+          style={{ fontWeight: '400', marginTop: '-50px' }}
+        >{`{Hello, World}`}</h4>
 
-        <Rellax speed={0}>
-          <h5 style={{ marginTop: '22px', opacity: '0.8' }}>
-            Creative designer and developer
-          </h5>
-        </Rellax>
+        <h2>This is Darbaz</h2>
+
+        <p style={{ maxWidth: '630px', margin: '0 auto' }}>
+          A creative designer and developer based in South Kurdistan. He loves
+          to build muscles, open-sourcing and solving interesting problems along
+          the way.
+        </p>
       </div>
-
-      <MouseScroll />
-    </CoverImage>
+    </CenterdContainer>
   )
 }
 
