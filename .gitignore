@@ -5,13 +5,14 @@
 /frontend/node_modules
 /.pnp
 .pnp.js
-frontend/.eslintcache
+.eslintcache
 
 # testing
 /coverage
 
 # production
 /frontend/build
+/build
 
 
 
