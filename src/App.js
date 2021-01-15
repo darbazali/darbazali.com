@@ -1,8 +1,9 @@
-import React, { Suspense, lazy } from 'react'
+import React, { useState, useEffect, Suspense, lazy } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import Header from './components/Header'
 import Footer from './components/Footer'
+import Modal from './components/Modal'
 
 import GithubAPI from './sections/GithubAPI'
 import Hero from './sections/Hero'
@@ -25,10 +26,16 @@ const ProjectPomodoroClock = lazy(() =>
 const ProjectHeatMap = lazy(() => import('./sections/ProjectHeatMap'))
 
 const App = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
+  useEffect(() => {}, [isModalOpen])
+
+  const toggleModal = () => setIsModalOpen(!isModalOpen)
+
   return (
     <Router>
       <Suspense fallback={<div>Loading...</div>}>
-        <Header />
+        <Header onToggle={toggleModal} />
         <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path='/about' component={About} />
@@ -36,6 +43,11 @@ const App = () => {
           <Route exact path='/quad-captcha' component={QuadCaptcha} />
         </Switch>
         <Footer />
+        {isModalOpen ? (
+          <Modal onRequestClose={toggleModal} isVisible={isModalOpen} />
+        ) : (
+          ''
+        )}
       </Suspense>
     </Router>
   )

@@ -21,7 +21,7 @@ const buttonStyle = {
   transition: 'all 300ms ease-out',
 }
 
-const Header = () => {
+const Header = ({ onToggle }) => {
   const [click, setClick] = useState(false)
   const handleClick = () => setClick(!click)
   const closeMobileMenu = () => setClick(false)
@@ -82,7 +82,7 @@ const Header = () => {
               About
             </HashLink>
           </ul>
-          <ContactButton onClick={closeMobileMenu} />
+          <ContactButton onClick={onToggle} />
         </nav>
 
         <div className='mobile-menu' onClick={handleClick}>
@@ -98,11 +98,9 @@ const Header = () => {
 }
 
 const ContactButton = ({ onClick }) => (
-  <Link to='/contact'>
-    <button onClick={onClick} style={buttonStyle} className='button-secondary'>
-      Contact
-    </button>
-  </Link>
+  <button onClick={onClick} style={buttonStyle} className='button-secondary'>
+    Contact
+  </button>
 )
 
 export default Header

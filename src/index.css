@@ -399,6 +399,94 @@ REPOS
 
 /* 
 ====================================================================
+MODAL
+====================================================================
+*/
+
+.modal__backdrop {
+  background: rgba(0, 0, 0, 0.65);
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 999;
+}
+
+.modal__container {
+  padding: 0;
+
+  z-index: 9999;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 80%;
+  max-width: 832px;
+  /* min-height: 100px; */
+
+  border-radius: 15px;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  text-align: center;
+}
+
+.modal__title {
+  font-weight: 600;
+}
+
+.modal__container p {
+  margin-top: 1em;
+}
+
+.modal-footer {
+  /* height: 180px; */
+  border-radius: 0px 0px 25px 25px;
+  background: #f0f0f0;
+  text-align: center;
+  padding: 4em 0;
+  margin-top: 4em;
+}
+
+/* 
+=========================
+SOCIALS
+=========================
+*/
+.socials {
+  max-width: 350px;
+  margin: 0 auto;
+}
+.socials,
+.socials a {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.socials a {
+  text-align: left;
+}
+
+.socials a svg {
+  border-radius: 100%;
+}
+
+.socials a p {
+  margin: 0;
+  margin-left: 1em;
+}
+
+@media (max-width: 768px) {
+  .modal__container {
+    width: 90%;
+  }
+}
+
+/* 
+====================================================================
 BREAK POINTS
 ====================================================================
 */
