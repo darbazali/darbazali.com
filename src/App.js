@@ -6,7 +6,6 @@ import Footer from './components/Footer'
 
 const Home = lazy(() => import('./screens/Home'))
 const About = lazy(() => import('./screens/About'))
-// const Projects = lazy(() => import('./screens/Projects'))
 const HikeWithMe = lazy(() => import('./screens/HikeWithMe'))
 const QuadCaptcha = lazy(() => import('./screens/QuadCaptcha'))
 
@@ -18,8 +17,6 @@ const App = () => {
         <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path='/about' component={About} />
-          {/* <Route exact path='/projects' component={Projects} /> */}
-          {/* <Route exact path='/contact' component={Contact} /> */}
           <Route exact path='/hike-with-me' component={HikeWithMe} />
           <Route exact path='/quad-captcha' component={QuadCaptcha} />
         </Switch>
