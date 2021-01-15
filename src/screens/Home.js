@@ -1,6 +1,5 @@
 import React from 'react'
 
-import Contact from '../sections/Contact'
 import GithubAPI from '../sections/GithubAPI'
 import Hero from '../sections/Hero'
 import Projects from '../sections/Projects'
@@ -17,8 +16,6 @@ const Home = () => {
       <GithubAPI />
 
       <WhyMe />
-
-      <Contact />
     </>
   )
 }

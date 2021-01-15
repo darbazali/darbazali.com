@@ -1,11 +1,12 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import ProjectCard from '../components/ProjectCard'
 
 import hwmImage from '../assets/JPEG/HWM.jpg'
 import qcImage from '../assets/JPEG/QC_MOCKUP.jpg'
 import bit8Url from '../assets/JPEG/8BIT_URL.jpg'
 import heatMapD3 from '../assets/JPEG/HEAT_MAP_D3.jpg'
-
+import M_I_Converter_API from '../assets/JPEG/M-I-CONVERTER-API.jpg'
+import pomodoroClock from '../assets/JPEG/POMODORO_CLOCK.jpg'
 /* 
 ===================================================
 COMPONENT
@@ -13,95 +14,52 @@ COMPONENT
 */
 const Projects = () => (
   <>
-    <ProjectRightImage
-      className='content-up'
-      direction='row'
-      padding='0 4em'
-      image={hwmImage}
-      title='Hike With Me'
-      subtitle='UX/UI Design'
-      link='/hike-with-me'
-    />
-    <ProjectRightImage
-      className='content-up'
-      padding='0 2em'
-      direction='row-reverse'
+    <ProjectCard
       image={qcImage}
       title='QUAD CAPTCHA'
       subtitle='Gamified Bot Detector'
       link='/quad-captcha'
+      cta_label='Read the case study'
     />
 
-    <ProjectRightImage
-      className='content-up'
-      padding='0 4em'
-      direction='row'
+    <ProjectCard
+      image={hwmImage}
+      title='Hike With Me'
+      subtitle='UX/UI Design'
+      link='/hike-with-me'
+      cta_label='Read the case study'
+    />
+
+    <ProjectCard
       image={bit8Url}
       title='8bit-URL Shortener'
       subtitle='URL Shortener API, MERN Stack'
       link='https://bit8-url.herokuapp.com'
+      cta_label='Visit the app'
     />
-    <ProjectRightImage
-      className='content-up'
-      padding='0 2em'
-      direction='row-reverse'
+    <ProjectCard
+      image={M_I_Converter_API}
+      title='Metric/Imperial Converter API'
+      subtitle='Unit Converter API with Node.js'
+      link='http://m-i-converter.herokuapp.com/'
+      cta_label='Visit the app'
+    />
+    <ProjectCard
+      image={pomodoroClock}
+      title='Pomodoro Clock'
+      subtitle='Pomodoro Clock app with React'
+      link='https://codepen.io/Darbaz/pen/KKVQXPj'
+      cta_label='Visit the app'
+    />
+
+    <ProjectCard
       image={heatMapD3}
-      title='Monthly Global Temperature'
+      title='Monthly Global Land-Surface Temperature'
       subtitle='Data Visualization with D3'
       link='https://codepen.io/Darbaz/pen/bGEyLPQ'
+      cta_label='Visit the app'
     />
   </>
 )
-
-const ProjectRightImage = ({
-  title,
-  image,
-  subtitle,
-  link,
-  direction,
-  padding,
-  className,
-}) => {
-  return (
-    <section
-      className={`featured-project ${className}`}
-      style={{ flexDirection: direction }}
-    >
-      <div style={{ width: '50%' }}>
-        <img src={image} alt={title} style={{ width: '100%' }} />
-      </div>
-
-      <div
-        className='project-content'
-        style={{ width: '50%', padding: padding }}
-      >
-        <h4 style={{ maxWidth: '340px', marginBottom: '20px' }}>{title}</h4>
-        <p>{subtitle}</p>
-
-        {/\b(http|https)/.test(link) ? (
-          <a
-            href={link}
-            style={{
-              fontWeight: '600',
-              fontSize: '20px',
-            }}
-          >
-            Visit the app
-          </a>
-        ) : (
-          <Link
-            to={link}
-            style={{
-              fontWeight: '600',
-              fontSize: '20px',
-            }}
-          >
-            Learn more
-          </Link>
-        )}
-      </div>
-    </section>
-  )
-}
 
 export default Projects

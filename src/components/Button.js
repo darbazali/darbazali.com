@@ -23,7 +23,12 @@ const buttonStyle = {
 }
 
 const Button = ({ children, type, onClick }) => (
-  <button type={type} style={buttonStyle} className='button' onClick={onClick}>
+  <button
+    type={type}
+    style={buttonStyle}
+    className='button button-primary'
+    onClick={onClick}
+  >
     {children}
   </button>
 )

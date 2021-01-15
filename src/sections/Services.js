@@ -1,7 +1,6 @@
 import React from 'react'
 import Rellax from 'react-rellax'
 
-import '../styles/services.css'
 import FlexContainer from '../components/FlexContainer'
 
 const serviceStyle = {

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import FlexContainer from './FlexContainer'
 
 import { Link } from 'react-router-dom'
@@ -13,11 +13,11 @@ const buttonStyle = {
   height: '40px',
   borderRadius: '20px',
   background: 'transparent',
-  border: '2px solid #f78764',
+  border: '1px solid #f78764',
   color: '#f78764',
   cursor: 'pointer',
   outline: 'none',
-  fontWeight: '500',
+  fontWeight: '400',
   transition: 'all 300ms ease-out',
 }
 
@@ -25,7 +25,7 @@ const Header = () => {
   const [click, setClick] = useState(false)
   const handleClick = () => setClick(!click)
   const closeMobileMenu = () => setClick(false)
-
+  useEffect(() => {}, [click])
   return (
     <header>
       <FlexContainer
