@@ -1,6 +1,6 @@
 import React from 'react'
 import Rellax from 'react-rellax'
-import DARBAZ_ALI from '../assets/JPEG/DARBAZ_ALI.jpg'
+// import DARBAZ_ALI from '../assets/JPEG/DARBAZ_ALI.jpg'
 
 const wrapper = {
   position: 'relative',
@@ -34,7 +34,6 @@ const AboutMe = () => {
     >
       <Rellax speed={-2}>
         <img
-          src={DARBAZ_ALI}
           alt='DARBAZ ALI'
           style={{ width: '100%', height: 'auto', margin: '0' }}
         />
