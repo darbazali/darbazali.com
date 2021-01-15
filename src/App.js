@@ -4,10 +4,25 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Footer from './components/Footer'
 
-const Home = lazy(() => import('./screens/Home'))
+import GithubAPI from './sections/GithubAPI'
+import Hero from './sections/Hero'
+import Services from './sections/Services'
+import WhyMe from './sections/WhyMe'
+
+// const Home = lazy(() => import('./screens/Home'))
 const About = lazy(() => import('./screens/About'))
 const HikeWithMe = lazy(() => import('./screens/HikeWithMe'))
 const QuadCaptcha = lazy(() => import('./screens/QuadCaptcha'))
+
+// Home
+const ProjectQuadCaptcha = lazy(() => import('./sections/ProjectQuadCaptcha'))
+const ProjectHikeWithMe = lazy(() => import('./sections/ProjectHikeWithMe'))
+const ProjectURLShortener = lazy(() => import('./sections/ProjectURLShortener'))
+const ProjectMIConverter = lazy(() => import('./sections/ProjectMIConverter'))
+const ProjectPomodoroClock = lazy(() =>
+  import('./sections/ProjectPomodoroClock')
+)
+const ProjectHeatMap = lazy(() => import('./sections/ProjectHeatMap'))
 
 const App = () => {
   return (
@@ -23,6 +38,25 @@ const App = () => {
       </Suspense>
       <Footer />
     </Router>
+  )
+}
+
+const Home = () => {
+  return (
+    <>
+      <Hero />
+      <Services />
+
+      <ProjectQuadCaptcha />
+      <ProjectHikeWithMe />
+      <ProjectURLShortener />
+      <ProjectMIConverter />
+      <ProjectPomodoroClock />
+      <ProjectHeatMap />
+
+      <GithubAPI />
+      <WhyMe />
+    </>
   )
 }
 
