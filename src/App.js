@@ -27,16 +27,16 @@ const ProjectHeatMap = lazy(() => import('./sections/ProjectHeatMap'))
 const App = () => {
   return (
     <Router>
-      <Header />
       <Suspense fallback={<div>Loading...</div>}>
+        <Header />
         <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path='/about' component={About} />
           <Route exact path='/hike-with-me' component={HikeWithMe} />
           <Route exact path='/quad-captcha' component={QuadCaptcha} />
         </Switch>
+        <Footer />
       </Suspense>
-      <Footer />
     </Router>
   )
 }

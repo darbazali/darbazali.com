@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import FlexContainer from '../components/FlexContainer'
+import repoIcon from '../assets/ICON/repository_icon.svg'
 
 const GithubAPI = () => {
   const [repos, setRepos] = useState([])
@@ -41,6 +42,15 @@ const GithubAPI = () => {
 const Repo = ({ repo: { name, html_url, language, description } }) => {
   return (
     <div className='repo'>
+      <img
+        src={repoIcon}
+        alt='repo icon'
+        style={{
+          display: 'inline-block',
+          marginBottom: '-10px',
+          marginRight: '1em',
+        }}
+      />
       <a href={html_url}>{name}</a>
       <p>{description}</p>
       <span>{language || 'Node'}</span>

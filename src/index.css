@@ -200,42 +200,6 @@ section.project {
   }
 }
 
-/* @media (max-width: 768px) {
-  section.project {
-    flex-direction: column !important;
-  }
-
-  section.project.content-up {
-    flex-direction: column-reverse !important;
-  }
-
-  section.project.content-up .project-content {
-    width: 100% !important;
-    text-align: center !important;
-    margin-bottom: 20px !important;
-  }
-
-  section.project.content-up > div {
-    width: 100% !important;
-  }
-
-  section.project.content-up h4 {
-    width: 100% !important;
-    text-align: center !important;
-    margin: 20px auto;
-  }
-} */
-
-/* section.project a::after {
-  content: '';
-  display: inline-block;
-  background: url('./assets/ICON/right_arrow_link.svg') no-repeat;
-  width: 20px;
-  height: 14px;
-  margin: 0 10px 0;
-} */
-/* End of featured projects */
-
 .skills li {
   width: 100%;
   height: 34px;
@@ -416,15 +380,6 @@ REPOS
   font-weight: 500;
 }
 
-.repo a:before {
-  content: '';
-  display: inline-block;
-  background: url('./assets/ICON/repository_icon.svg') no-repeat;
-  width: 34px;
-  height: 34px;
-  margin: 0 6px -16px 0;
-}
-
 .repo span {
   position: absolute;
   bottom: 30px;
@@ -440,47 +395,6 @@ REPOS
   height: 18px;
   background: #f7d564;
   border-radius: 50%;
-}
-
-/* 
-====================================================================
-SEGMENTED CONTROL
-====================================================================
-*/
-
-.r-segmented-control {
-  /* border-radius: 8px !important; */
-  background: transparent !important;
-  /* padding: 10px !important; */
-  display: flex !important;
-}
-
-.r-segmented-control ul {
-  display: flex;
-  flex-direction: row !important;
-  justify-content: space-around;
-  background: transparent !important;
-  border: none !important;
-  width: 100% !important;
-  background: #f3f3f3 !important;
-  height: 50px !important;
-  padding: 1em;
-  border-radius: 8px !important;
-}
-
-.r-segmented-control ul li.dark {
-  font-size: 1em !important;
-  font-weight: 500 !important;
-  border: none !important;
-  padding: 1em !important;
-  transition: all 0.4s ease !important;
-  background-color: #f3f3f3 !important;
-  color: #1f2122 !important;
-  border-right: 1px solid #1f2122 !important;
-}
-
-.r-segmented-control ul li:nth-child(6) {
-  border-right: none !important;
 }
 
 /* 
