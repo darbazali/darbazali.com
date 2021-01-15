@@ -1,14 +1,14 @@
 import React, { useState, useEffect, Suspense, lazy } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
-import Header from './components/Header'
-import Footer from './components/Footer'
-import Modal from './components/Modal'
+const Header = lazy(() => import('./components/Header'))
+const Footer = lazy(() => import('./components/Footer'))
+const Modal = lazy(() => import('./components/Modal'))
 
-import GithubAPI from './sections/GithubAPI'
-import Hero from './sections/Hero'
-import Services from './sections/Services'
-import WhyMe from './sections/WhyMe'
+const GithubAPI = lazy(() => import('./sections/GithubAPI'))
+const Hero = lazy(() => import('./sections/Hero'))
+const Services = lazy(() => import('./sections/Services'))
+const WhyMe = lazy(() => import('./sections/WhyMe'))
 
 // const Home = lazy(() => import('./screens/Home'))
 const About = lazy(() => import('./screens/About'))
