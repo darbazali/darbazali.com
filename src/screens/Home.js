@@ -1,4 +1,4 @@
-import React, { lazy } from 'react'
+import React, { Suspense, lazy } from 'react'
 
 import GithubAPI from '../sections/GithubAPI'
 import Hero from '../sections/Hero'
@@ -23,12 +23,15 @@ const Home = () => {
       <Hero />
 
       <Services />
-      <ProjectQuadCaptcha />
-      <ProjectHikeWithMe />
-      <ProjectURLShortener />
-      <ProjectMIConverter />
-      <ProjectPomodoroClock />
-      <ProjectHeatMap />
+      <Suspense fallback={<div>Loading projects..</div>}>
+        <ProjectQuadCaptcha />
+        <ProjectHikeWithMe />
+        <ProjectURLShortener />
+        <ProjectMIConverter />
+        <ProjectPomodoroClock />
+        <ProjectHeatMap />
+      </Suspense>
+
       <GithubAPI />
 
       <WhyMe />
