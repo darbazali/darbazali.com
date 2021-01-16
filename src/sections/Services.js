@@ -10,6 +10,7 @@ const serviceStyle = {
   justifyContent: 'center',
   alignItems: 'center',
   textAlign: 'center',
+  paddingTop: '2em',
 }
 
 const Services = () => {

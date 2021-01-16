@@ -7,7 +7,7 @@ const styles = {
 }
 const Hero = () => {
   return (
-    <CenterdContainer minHeight={'calc(100vh - 78px)'}>
+    <CenterdContainer minHeight='100vh'>
       <div style={styles}>
         <h4
           style={{ fontWeight: '400', marginTop: '-50px', opacity: '0.8' }}

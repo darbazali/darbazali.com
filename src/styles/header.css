@@ -5,12 +5,12 @@ NAVIGATION
 */
 
 header {
-  /* position: fixed; */
+  position: fixed;
   width: 100%;
   margin: 0 auto;
   background: #ffffff;
   padding: 20px 1em;
-  z-index: 9999;
+  z-index: 999;
   transition: all 0.4s ease-in;
   height: 78px;
   color: #1f2122;

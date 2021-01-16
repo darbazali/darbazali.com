@@ -27,15 +27,30 @@ const ProjectHeatMap = lazy(() => import('./sections/ProjectHeatMap'))
 
 const App = () => {
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [showHeader, setShowHeader] = useState(false)
+  const [top, setTop] = useState(0)
 
-  useEffect(() => {}, [isModalOpen])
+  useEffect(() => {
+    let position = window.scrollY
+    window.addEventListener('scroll', () => {
+      let scroll = window.scrollY
+      if (scroll > position && scroll > 60) {
+        setShowHeader(0)
+        setTop('-78px')
+      } else {
+        setShowHeader(1)
+        setTop(0)
+      }
+      position = scroll
+    })
+  }, [isModalOpen, showHeader, top])
 
   const toggleModal = () => setIsModalOpen(!isModalOpen)
 
   return (
     <Router>
       <Suspense fallback={<div>Loading...</div>}>
-        <Header onToggle={toggleModal} />
+        <Header onToggle={toggleModal} opacity={showHeader} top={top} />
         <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path='/about' component={About} />

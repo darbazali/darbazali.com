@@ -10,7 +10,7 @@ const styles = {
 
 const AboutMe = () => {
   return (
-    <CenterdContainer minHeight={'calc(100vh - 78px)'} id='about'>
+    <CenterdContainer minHeight='100vh' id='about'>
       <div style={styles}>
         <h2 style={{ marginTop: '-50px' }}>About me</h2>
         <p>

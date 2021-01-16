@@ -21,13 +21,13 @@ const buttonStyle = {
   transition: 'all 300ms ease-out',
 }
 
-const Header = ({ onToggle }) => {
+const Header = ({ onToggle, opacity, top }) => {
   const [click, setClick] = useState(false)
   const handleClick = () => setClick(!click)
   const closeMobileMenu = () => setClick(false)
   useEffect(() => {}, [click])
   return (
-    <header>
+    <header style={{ opacity: opacity, top: top }}>
       <FlexContainer
         container
         alignItems='center'
