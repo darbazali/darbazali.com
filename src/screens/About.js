@@ -62,8 +62,8 @@ const About = () => {
     <>
       <AboutMe />
       <Certifications list={certData} title='Certifications' />
-      {/* <SkillSet /> */}
-      {/* <Tools /> */}
+      <SkillSet />
+      <Tools />
     </>
   )
 }

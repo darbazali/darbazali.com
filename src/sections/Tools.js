@@ -26,16 +26,16 @@ import FlexContainer from '../components/FlexContainer'
 
 const Tools = () => (
   <section>
-    <h5 className='section-title'>Tools</h5>
+    <h4 className='section-title'>Tools</h4>
 
     <FlexContainer
       className='tools'
       container
       alignItems='center'
-      justifyContent='space-between'
+      justifyContent='center'
       alignContent='center'
       flexWrap='wrap'
-      maxWidth='816px'
+      maxWidth='1028px'
       margin='2em auto'
     >
       <Html5 size={74} />
