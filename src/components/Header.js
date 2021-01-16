@@ -13,11 +13,11 @@ const buttonStyle = {
   height: '40px',
   borderRadius: '20px',
   background: 'transparent',
-  border: '1px solid #f78764',
-  color: '#f78764',
+  border: '1px solid #a988f2',
+  color: '#a988f2',
   cursor: 'pointer',
   outline: 'none',
-  fontWeight: '400',
+  fontWeight: '500',
   transition: 'all 300ms ease-out',
 }
 
@@ -55,12 +55,12 @@ const Header = ({ onToggle }) => {
           <ul>
             <HashLink
               onClick={closeMobileMenu}
-              to='/#hero'
+              to='/#services'
               scroll={(el) =>
                 el.scrollIntoView({ behavior: 'smooth', block: 'start' })
               }
             >
-              Home
+              Services
             </HashLink>
 
             <HashLink

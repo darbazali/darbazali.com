@@ -3,28 +3,38 @@ import CenterdContainer from '../components/CenterdContainer'
 
 const styles = {
   maxWidth: '1028px',
-  textAlign: 'center',
+  textAlign: 'left',
   margin: '0 auto',
+  padding: '2em 1em',
 }
 
 const AboutMe = () => {
   return (
-    <CenterdContainer height={'calc(100vh - 78px)'} id='about'>
+    <CenterdContainer minHeight={'calc(100vh - 78px)'} id='about'>
       <div style={styles}>
         <h2 style={{ marginTop: '-50px' }}>About me</h2>
         <p>
-          I'm Darbaz Ali, a creative designer, and developer based in
-          Sulaymaniyah/Iraq. I have a great passion for technology, especially
-          software development.
+          I'm Darbaz Ali, a self-starter, self-motivated digital product
+          enthusiast. I love building products that make people's lives easier.
         </p>
         <p>
-          I look forward to joining a small and dedicated team to learn and grow
-          together, meanwhile solving tech-related problems for businesses, and
-          making both users and stakeholders happy.
+          've studied Electronics, both hardware, and software. Soon I realized
+          that writing software is my passion.
         </p>
         <p>
-          I would love to connect with like-minded people and gain new friends
-          that have an equal passion for tech.
+          I began with MATLAB, a high-level, industrial, multi-paradigm, and
+          numeric computing programming language.
+        </p>
+        <p>
+          The next move was Python, I learned the syntax, it was quite different
+          from traditional programming languages. Simply put, it was awesome to
+          learn Python.
+        </p>
+        <p>
+          Then I hit javaScript. As soon as I realized that it's everywhere, I
+          couldn't leave javaScript to another language. Now, I use it for
+          various kinds of computing, especially with the web, Front-End, and
+          Back-End.
         </p>
       </div>
     </CenterdContainer>

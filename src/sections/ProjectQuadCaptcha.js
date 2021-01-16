@@ -4,7 +4,7 @@ import qcImage from '../assets/JPEG/QC_MOCKUP.jpg'
 
 const ProjectQuadCaptcha = () => {
   return (
-    <>
+    <div id='projects'>
       <ProjectCard
         image={qcImage}
         title='QUAD CAPTCHA'
@@ -12,7 +12,7 @@ const ProjectQuadCaptcha = () => {
         link='/quad-captcha'
         cta_label='Read the case study'
       />
-    </>
+    </div>
   )
 }
 

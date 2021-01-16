@@ -7,7 +7,7 @@ const styles = {
 }
 const Hero = () => {
   return (
-    <CenterdContainer height={'calc(100vh - 78px)'}>
+    <CenterdContainer minHeight={'calc(100vh - 78px)'}>
       <div style={styles}>
         <h4
           style={{ fontWeight: '400', marginTop: '-50px', opacity: '0.8' }}
@@ -15,10 +15,10 @@ const Hero = () => {
 
         <h2>This is Darbaz</h2>
 
-        <p style={{ maxWidth: '630px', margin: '0 auto' }}>
-          A creative designer and developer based in South Kurdistan. He loves
-          to build muscles, open-sourcing and solving interesting problems along
-          the way.
+        <p style={{ maxWidth: '710px', margin: '0 auto' }}>
+          A creative designer and developer based in South Kurdistan. I love
+          white space, open-sourcing, solving interesting problems, and building
+          muscles along the way.
         </p>
       </div>
     </CenterdContainer>

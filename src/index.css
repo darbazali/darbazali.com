@@ -106,7 +106,7 @@ section {
   margin: 0 auto;
   background-color: #ffffff;
 }
-
+section .project-content p,
 section .section-title {
   text-align: center;
   width: 300px;
@@ -262,9 +262,7 @@ ABOUT
   font-weight: 600 !important;
 }
 #about p {
-  margin: 1em auto;
-  max-width: 640px;
-  padding: 0 1em;
+  max-width: 634px;
 }
 
 .skills ul {
@@ -352,25 +350,25 @@ BUTTON
 
 .button.button-primary:hover {
   transform: scale(1.02);
-  box-shadow: 0 1.8px 0.8px rgba(245, 135, 100, 0.02),
-    0 4.3px 2.8px rgba(245, 135, 100, 0.032),
-    0 8.1px 6.9px rgba(245, 135, 100, 0.041),
-    0 14.5px 16.2px rgba(245, 135, 100, 0.3);
+  box-shadow: 0 1.8px 0.8px rgba(169, 136, 242, 0.02),
+    0 4.3px 2.8px rgba(169, 136, 242, 0.032),
+    0 8.1px 6.9px rgba(169, 136, 242, 0.041),
+    0 14.5px 16.2px rgba(169, 136, 242, 0.3);
 }
 
 .logo:hover,
-nav a:hover,
-.button-secondary:hover {
-  transform: scale(1.025);
+nav a:hover {
+  transform: scale(1.02);
 }
 
 .button.button-secondary {
   margin: 1em auto;
   border-radius: 5px;
   background: transparent;
-  border: 1px solid #a988f2;
+  border: 2px solid #a988f2;
   padding: 15px 30px;
   color: #a988f2;
+  font-weight: 500;
 }
 
 .center-align {
