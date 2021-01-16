@@ -10,7 +10,7 @@ const Hero = () => {
     <CenterdContainer height={'calc(100vh - 78px)'}>
       <div style={styles}>
         <h4
-          style={{ fontWeight: '400', marginTop: '-50px' }}
+          style={{ fontWeight: '400', marginTop: '-50px', opacity: '0.8' }}
         >{`{Hello, World}`}</h4>
 
         <h2>This is Darbaz</h2>

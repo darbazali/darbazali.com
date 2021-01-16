@@ -72,15 +72,9 @@ const Header = ({ onToggle }) => {
             >
               Projects
             </HashLink>
-            <HashLink
-              onClick={closeMobileMenu}
-              to='/about/#about'
-              scroll={(el) =>
-                el.scrollIntoView({ behavior: 'smooth', block: 'start' })
-              }
-            >
+            <Link onClick={closeMobileMenu} to='/about'>
               About
-            </HashLink>
+            </Link>
           </ul>
           <ContactButton onClick={onToggle} />
         </nav>

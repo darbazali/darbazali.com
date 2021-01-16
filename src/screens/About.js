@@ -61,9 +61,9 @@ const About = () => {
   return (
     <>
       <AboutMe />
-      <SkillSet />
       <Certifications list={certData} title='Certifications' />
-      <Tools />
+      {/* <SkillSet /> */}
+      {/* <Tools /> */}
     </>
   )
 }

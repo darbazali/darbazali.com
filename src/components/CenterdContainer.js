@@ -7,8 +7,10 @@ const styles = {
   alignItems: 'center',
   position: 'relative',
 }
-const CenterdContainer = ({ children, height }) => (
-  <div style={{ ...styles, height: height }}>{children || ''}</div>
+const CenterdContainer = ({ children, height, id }) => (
+  <div id={id} style={{ ...styles, height: height }}>
+    {children || ''}
+  </div>
 )
 
 export default CenterdContainer
