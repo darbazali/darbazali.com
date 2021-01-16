@@ -1,9 +1,12 @@
 import React, { useState, useEffect, Suspense, lazy } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
+import Fallback from './components/Fallback'
+
 const Header = lazy(() => import('./components/Header'))
 const Footer = lazy(() => import('./components/Footer'))
 const Modal = lazy(() => import('./components/Modal'))
+// const Fallback = lazy(() => import('./components/Fallback'))
 
 const GithubAPI = lazy(() => import('./sections/GithubAPI'))
 const Hero = lazy(() => import('./sections/Hero'))
@@ -49,7 +52,7 @@ const App = () => {
 
   return (
     <Router>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Fallback />}>
         <Header onToggle={toggleModal} opacity={showHeader} top={top} />
         <Switch>
           <Route exact path='/' component={Home} />
