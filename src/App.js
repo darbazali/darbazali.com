@@ -60,7 +60,7 @@ const App = () => {
           <Route exact path='/hike-with-me' component={HikeWithMe} />
           <Route exact path='/quad-captcha' component={QuadCaptcha} />
         </Switch>
-        <Footer />
+        {/* <Footer /> */}
         {isModalOpen ? (
           <Modal onRequestClose={toggleModal} isVisible={isModalOpen} />
         ) : (

@@ -1,98 +1,111 @@
 import React, { useState, useEffect } from 'react'
-import FlexContainer from './FlexContainer'
 
 import { Link } from 'react-router-dom'
-import { HashLink } from 'react-router-hash-link'
 import logo from '../assets/ICON/DARBAZ_ALI_LOGO.svg'
-import { ReactComponent as CloseIcon } from '../assets/ICON/close-icon.svg'
-import { ReactComponent as MenuIcon } from '../assets/ICON/hamburger-menu.svg'
-import '../styles/header.css'
-
-const buttonStyle = {
-  width: '106px',
-  height: '40px',
-  borderRadius: '20px',
-  background: 'transparent',
-  border: '1px solid #a988f2',
-  color: '#a988f2',
-  cursor: 'pointer',
-  outline: 'none',
-  fontWeight: '500',
-  transition: 'all 300ms ease-out',
-}
 
 const Header = ({ onToggle, opacity, top }) => {
   const [click, setClick] = useState(false)
   const handleClick = () => setClick(!click)
   const closeMobileMenu = () => setClick(false)
-  useEffect(() => {}, [click])
+
+  useEffect(() => {
+    // disable scrolling
+    if (click) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'visible'
+    }
+  }, [click])
+
   return (
-    <header style={{ opacity: opacity, top: top }}>
-      <FlexContainer
-        container
-        alignItems='center'
-        justifyContent='space-between'
-        alignContent='center'
-        flexWrap='nowrap'
-        maxWidth='1240px'
-        margin='0 auto'
-      >
-        {/* LOGO */}
-        <Link to='/' className='logo'>
-          <img
-            style={{
-              height: '32px',
-              width: '32px',
-              opacity: '0.9',
-              borderRadius: '5px',
-            }}
-            src={logo}
-            alt='Darbaz Ali logo'
-          />
+    <header
+      className={click ? 'header open' : 'header'}
+      style={{ opacity: opacity, top: top }}
+    >
+      <div
+        className={
+          click
+            ? 'overlay fade-in hide-for-desktop'
+            : 'overlay fade-out hide-for-desktop'
+        }
+        onClick={closeMobileMenu}
+      ></div>
+
+      <nav className='container flex flex-jc-sb flex-ai-c'>
+        <a href='/' className='header__logo'>
+          <img src={logo} alt='Darbaz Ali' />
+        </a>
+
+        <Link
+          to=''
+          className='header__toggle hide-for-desktop'
+          onClick={handleClick}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
         </Link>
 
-        <nav className={click ? 'navbar active' : 'navbar'}>
-          <ul>
-            <HashLink
-              onClick={closeMobileMenu}
-              to='/#services'
-              scroll={(el) =>
-                el.scrollIntoView({ behavior: 'smooth', block: 'start' })
-              }
-            >
-              Services
-            </HashLink>
-
-            <HashLink
-              onClick={closeMobileMenu}
-              to='/#projects'
-              scroll={(el) =>
-                el.scrollIntoView({ behavior: 'smooth', block: 'start' })
-              }
-            >
-              Projects
-            </HashLink>
-            <Link onClick={closeMobileMenu} to='/about'>
-              About
-            </Link>
-          </ul>
-          <ContactButton onClick={onToggle} />
-        </nav>
-
-        <div className='mobile-menu' onClick={handleClick}>
-          {click ? (
-            <CloseIcon className='menu-icon' />
-          ) : (
-            <MenuIcon className='menu-icon' />
-          )}
+        <div className='header__links hide-for-mobile'>
+          <Link to='/' onClick={closeMobileMenu}>
+            Projects
+          </Link>
+          <Link to='/about' onClick={closeMobileMenu}>
+            About
+          </Link>
+          <Link to='/' onClick={closeMobileMenu}>
+            Resume
+          </Link>
         </div>
-      </FlexContainer>
+
+        <ContactButton
+          onClick={() => {
+            closeMobileMenu()
+            onToggle()
+          }}
+        />
+      </nav>
+
+      <MobileMenu open={click} onClick={[closeMobileMenu, onToggle]} />
     </header>
   )
 }
 
-const ContactButton = ({ onClick }) => (
-  <button onClick={onClick} style={buttonStyle} className='button-secondary'>
+const MobileMenu = ({ open, onClick }) => {
+  const [closeMobileMenu, onToggle] = onClick
+  return (
+    <div
+      className={
+        open
+          ? 'mobile__menu fade-in container hide-for-desktop'
+          : 'mobile__menu fade-out container hide-for-desktop'
+      }
+    >
+      <Link to='/projects' onClick={onClick} className='mobile-link'>
+        Projects
+      </Link>
+      <Link to='/about' onClick={onClick} className='mobile-link'>
+        About
+      </Link>
+      <Link to='/resume' onClick={onClick} className='mobile-link'>
+        Resume
+      </Link>
+      <ContactButton
+        onClick={() => {
+          closeMobileMenu()
+          onToggle()
+        }}
+        className='mobile-link'
+      />
+    </div>
+  )
+}
+
+const ContactButton = ({ onClick, className }) => (
+  <button
+    className={`${className} button header__cta hide-for-mobile`}
+    onClick={onClick}
+  >
     Contact
   </button>
 )
