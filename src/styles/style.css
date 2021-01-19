@@ -264,7 +264,7 @@ button,
 }
 
 .header__links {
-  margin-right: -5.9375rem;
+  margin-right: -6.6rem;
 }
 
 .header__links a {
@@ -359,31 +359,34 @@ button,
 }
 
 .projects .project {
+  position: relative;
   width: 100%;
-  margin-bottom: 0.5em;
+  margin-bottom: 1rem;
+  overflow: hidden;
 }
 
 @media (min-width: 64em) {
   .projects .project {
-    width: calc(50% - 0.5em);
+    width: calc(50% - 0.5rem);
   }
 }
 
 .projects .project img {
   width: 100%;
+  max-width: 100%;
+  display: block;
+  -webkit-transform: scale(1);
+          transform: scale(1);
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
 }
 
 .projects .project img:hover {
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .projects .project a {
-  margin: 0;
-  padding: 0;
-  height: 0;
   line-height: 0;
 }
 /*# sourceMappingURL=style.css.map */
