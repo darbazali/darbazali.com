@@ -54,12 +54,12 @@ const App = () => {
     <Router>
       <Suspense fallback={<Fallback />}>
         <Header onToggle={toggleModal} opacity={showHeader} top={top} />
-        {/* <Switch>
+        <Switch>
           <Route exact path='/' component={Home} />
-          <Route exact path='/about' component={About} />
+          {/* <Route exact path='/about' component={About} />
           <Route exact path='/hike-with-me' component={HikeWithMe} />
-          <Route exact path='/quad-captcha' component={QuadCaptcha} />
-        </Switch> */}
+          <Route exact path='/quad-captcha' component={QuadCaptcha} /> */}
+        </Switch>
         {/* <Footer /> */}
         {isModalOpen ? (
           <Modal onRequestClose={toggleModal} isVisible={isModalOpen} />
@@ -74,18 +74,21 @@ const App = () => {
 const Home = () => {
   return (
     <>
-      <Hero />
-      <Services />
+      <h1 className='headline container'>
+        Hi, I am Darbaz - A Full-Stack JavaScript Developer based in South
+        Kurdistan
+      </h1>
 
-      <ProjectQuadCaptcha />
-      <ProjectHikeWithMe />
-      <ProjectURLShortener />
-      <ProjectMIConverter />
-      <ProjectPomodoroClock />
-      <ProjectHeatMap />
+      <div className='projects container flex flex-fd-c'>
+        <ProjectQuadCaptcha />
+        <ProjectHikeWithMe />
+        <ProjectURLShortener />
+        <ProjectMIConverter />
+        <ProjectPomodoroClock />
+        <ProjectHeatMap />
+      </div>
 
-      <GithubAPI />
-      <WhyMe />
+      {/* <Services /> */}
     </>
   )
 }

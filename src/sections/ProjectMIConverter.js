@@ -1,19 +1,13 @@
 import React from 'react'
 import ProjectCard from '../components/ProjectCard'
-import M_I_Converter_API from '../assets/JPEG/M-I-CONVERTER-API.jpg'
+import M_I_Converter_API from '../assets/JPEG/M_I_CONVERTER_API.jpg'
 
-const ProjectMIConverter = () => {
-  return (
-    <>
-      <ProjectCard
-        image={M_I_Converter_API}
-        title='Metric/Imperial Converter API'
-        subtitle='Unit Converter API with Node.js'
-        link='http://m-i-converter.herokuapp.com/'
-        cta_label='Visit the app'
-      />
-    </>
-  )
-}
+const ProjectMIConverter = () => (
+  <ProjectCard
+    image={M_I_Converter_API}
+    title='Metric/Imperial Converter API'
+    link='http://m-i-converter.herokuapp.com/'
+  />
+)
 
 export default ProjectMIConverter

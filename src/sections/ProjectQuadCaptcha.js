@@ -1,19 +1,9 @@
 import React from 'react'
 import ProjectCard from '../components/ProjectCard'
-import qcImage from '../assets/JPEG/QC_MOCKUP.jpg'
+import qcImage from '../assets/JPEG/QUAD_CAPTCHA.jpg'
 
-const ProjectQuadCaptcha = () => {
-  return (
-    <div id='projects'>
-      <ProjectCard
-        image={qcImage}
-        title='QUAD CAPTCHA'
-        subtitle='Gamified Bot Detector'
-        link='/quad-captcha'
-        cta_label='Read the case study'
-      />
-    </div>
-  )
-}
+const ProjectQuadCaptcha = () => (
+  <ProjectCard image={qcImage} link='/quad-captcha' title='QUAD CAPTCHA' />
+)
 
 export default ProjectQuadCaptcha

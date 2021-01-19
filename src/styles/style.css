@@ -89,7 +89,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
-  line-height: 1.3;
+  line-height: 1.5;
   font-size: 16px;
   background-color: white;
   color: #1f2122;
@@ -104,6 +104,9 @@ a:hover {
 
 .container {
   padding: 1rem;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .flex {
@@ -159,6 +162,13 @@ button,
   .hide-for-desktop {
     display: none;
   }
+}
+
+.headline {
+  text-align: center;
+  font-weight: 300;
+  max-width: 870px;
+  margin: 5rem auto;
 }
 
 .header {
@@ -252,6 +262,10 @@ button,
   margin-bottom: 10px;
 }
 
+.header__links {
+  margin-right: -5.9375rem;
+}
+
 .header__links a {
   position: relative;
   font-size: 1rem;
@@ -324,5 +338,53 @@ button,
 
 .mobile__menu:not(:last-child) {
   margin-bottom: 1em;
+}
+
+@media (min-width: 64em) {
+  .projects {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.projects .project {
+  width: 100%;
+  margin-bottom: 0.5em;
+}
+
+@media (min-width: 64em) {
+  .projects .project {
+    width: calc(50% - 0.5em);
+  }
+}
+
+.projects .project img {
+  width: 100%;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.projects .project img:hover {
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.projects .project a {
+  margin: 0;
+  padding: 0;
+  height: 0;
+  line-height: 0;
 }
 /*# sourceMappingURL=style.css.map */

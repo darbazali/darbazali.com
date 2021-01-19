@@ -16,6 +16,11 @@ $breakpoint-down: (
   'large': '87.4375em',
 );
 
+@mixin scale-up($size) {
+  transition: all 300ms ease-in-out;
+  transform: scale($size);
+}
+
 @mixin breakpoint-up($size) {
   @media (min-width: map-get($breakpoint-up, $size)) {
     @content;
