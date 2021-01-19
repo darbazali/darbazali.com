@@ -232,6 +232,7 @@ button,
 
 .header.open .header__toggle > span:nth-child(2) {
   opacity: 0;
+  margin-left: -32px;
 }
 
 .header.open .header__toggle > span:last-child {
@@ -375,8 +376,6 @@ button,
 }
 
 .projects .project img:hover {
-  -webkit-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
 }
