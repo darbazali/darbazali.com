@@ -15,6 +15,7 @@ const Header = ({ onToggle, opacity, top }) => {
     } else {
       document.body.style.overflow = 'visible'
     }
+    return null
   }, [click])
 
   return (
@@ -22,15 +23,6 @@ const Header = ({ onToggle, opacity, top }) => {
       className={click ? 'header open' : 'header'}
       style={{ opacity: opacity, top: top }}
     >
-      <div
-        className={
-          click
-            ? 'overlay fade-in hide-for-desktop'
-            : 'overlay fade-out hide-for-desktop'
-        }
-        onClick={closeMobileMenu}
-      ></div>
-
       <nav className='container flex flex-jc-sb flex-ai-c'>
         <a href='/' className='header__logo'>
           <img src={logo} alt='Darbaz Ali' />
@@ -74,29 +66,31 @@ const Header = ({ onToggle, opacity, top }) => {
 const MobileMenu = ({ open, onClick }) => {
   const [closeMobileMenu, onToggle] = onClick
   return (
-    <div
-      className={
-        open
-          ? 'mobile__menu fade-in container hide-for-desktop'
-          : 'mobile__menu fade-out container hide-for-desktop'
-      }
-    >
-      <Link to='/projects' onClick={onClick} className='mobile-link'>
-        Projects
-      </Link>
-      <Link to='/about' onClick={onClick} className='mobile-link'>
-        About
-      </Link>
-      <Link to='/resume' onClick={onClick} className='mobile-link'>
-        Resume
-      </Link>
-      <ContactButton
-        onClick={() => {
-          closeMobileMenu()
-          onToggle()
-        }}
-        className='mobile-link'
-      />
+    <div className='overlay hide-for-desktop' onClick={closeMobileMenu}>
+      <div
+        className={
+          open
+            ? 'mobile__menu container hide-for-desktop fade-in'
+            : 'mobile__menu container hide-for-desktop'
+        }
+      >
+        <Link to='/projects' onClick={closeMobileMenu} className='mobile-link'>
+          Projects
+        </Link>
+        <Link to='/about' onClick={closeMobileMenu} className='mobile-link'>
+          About
+        </Link>
+        <Link to='/resume' onClick={closeMobileMenu} className='mobile-link'>
+          Resume
+        </Link>
+        <ContactButton
+          onClick={() => {
+            closeMobileMenu()
+            onToggle()
+          }}
+          className='mobile-link'
+        />
+      </div>
     </div>
   )
 }
