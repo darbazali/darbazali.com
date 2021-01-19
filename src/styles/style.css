@@ -59,13 +59,13 @@
 }
 
 .fade-in {
-  -webkit-animation: fade-in 200ms ease-in-out forwards;
-          animation: fade-in 200ms ease-in-out forwards;
+  -webkit-animation: fade-in 400ms ease-in-out forwards;
+          animation: fade-in 400ms ease-in-out forwards;
 }
 
 .fade-out {
-  -webkit-animation: fade-out 200ms ease-in-out forwards;
-          animation: fade-out 200ms ease-in-out forwards;
+  -webkit-animation: fade-out 400ms ease-in-out forwards;
+          animation: fade-out 400ms ease-in-out forwards;
 }
 
 html {
@@ -79,6 +79,10 @@ html {
 *::after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
 }
 
 body {
@@ -158,6 +162,12 @@ button,
 }
 
 .header {
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 90;
+  background-color: white;
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
   /* 
   ======================================================
   OVERLAY
@@ -181,8 +191,8 @@ button,
 }
 
 .header .overlay {
-  z-index: 999;
-  background-color: rgba(31, 34, 35, 0.4);
+  z-index: 99;
+  background-color: rgba(31, 34, 35, 0.5);
   position: absolute;
   visibility: hidden;
   top: 4.3125rem;
@@ -200,8 +210,7 @@ button,
   height: 2rem;
 }
 
-.header.open .overlay,
-.header.open .mobile__menu {
+.header.open .overlay {
   visibility: visible;
 }
 
@@ -246,7 +255,7 @@ button,
 .header__links a {
   position: relative;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 300;
   color: #1f2122;
   -webkit-transition: color 300ms ease-in-out;
   transition: color 300ms ease-in-out;
@@ -283,8 +292,11 @@ button,
 .header__cta {
   font-size: 1rem;
   color: white;
-  -webkit-transition: opacity 300ms ease-in-out;
-  transition: opacity 300ms ease-in-out;
+  border-radius: 30px;
+  background: transparent;
+  border: 1px solid #a988f2;
+  color: #a988f2;
+  cursor: pointer;
 }
 
 .header__cta:hover {
@@ -292,28 +304,22 @@ button,
 }
 
 .mobile__menu {
-  position: absolute;
-  z-index: 9999;
   background-color: white;
   padding: 3rem 0;
-  margin-top: 1rem;
+  margin: 1rem auto;
   width: calc(100% - 2rem);
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
   border-radius: 15px;
   height: auto;
-  visibility: hidden;
 }
 
 .mobile__menu .mobile-link {
   display: block;
   color: #1f2122;
-  padding: 1rem;
   text-align: center;
-  font-weight: 400;
-  width: 50%;
+  font-weight: 300;
+  width: 200px;
   margin: 0 auto;
+  padding: 1rem;
 }
 
 .mobile__menu:not(:last-child) {

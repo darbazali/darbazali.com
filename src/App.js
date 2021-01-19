@@ -54,12 +54,12 @@ const App = () => {
     <Router>
       <Suspense fallback={<Fallback />}>
         <Header onToggle={toggleModal} opacity={showHeader} top={top} />
-        <Switch>
+        {/* <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path='/about' component={About} />
           <Route exact path='/hike-with-me' component={HikeWithMe} />
           <Route exact path='/quad-captcha' component={QuadCaptcha} />
-        </Switch>
+        </Switch> */}
         {/* <Footer /> */}
         {isModalOpen ? (
           <Modal onRequestClose={toggleModal} isVisible={isModalOpen} />

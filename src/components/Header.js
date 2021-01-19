@@ -66,14 +66,13 @@ const Header = ({ onToggle, opacity, top }) => {
 const MobileMenu = ({ open, onClick }) => {
   const [closeMobileMenu, onToggle] = onClick
   return (
-    <div className='overlay hide-for-desktop' onClick={closeMobileMenu}>
-      <div
-        className={
-          open
-            ? 'mobile__menu container hide-for-desktop fade-in'
-            : 'mobile__menu container hide-for-desktop'
-        }
-      >
+    <div
+      className={
+        open ? 'overlay hide-for-desktop fade-in' : `overlay hide-for-desktop`
+      }
+      onClick={closeMobileMenu}
+    >
+      <div className='mobile__menu container hide-for-desktop'>
         <Link to='/projects' onClick={closeMobileMenu} className='mobile-link'>
           Projects
         </Link>

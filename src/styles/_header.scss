@@ -1,11 +1,16 @@
 .header {
+  position: sticky;
+  z-index: 90;
+  background-color: $white;
+  transition: all 400ms ease-in-out;
+
   /* 
   ======================================================
   OVERLAY
   ======================================================
   */
   .overlay {
-    z-index: 999;
+    z-index: 99;
     background-color: $overlayBlack;
     position: absolute;
     visibility: hidden;
@@ -26,8 +31,7 @@
   }
 
   &.open {
-    .overlay,
-    .mobile__menu {
+    .overlay {
       visibility: visible;
     }
 
@@ -81,7 +85,7 @@
     a {
       position: relative;
       font-size: $font-med;
-      font-weight: 400;
+      font-weight: 300;
       color: $dark;
       transition: color 300ms ease-in-out;
       &:not(:last-child) {
@@ -119,19 +123,11 @@
   &__cta {
     font-size: $font-med;
     color: $white;
-    transition: opacity 300ms ease-in-out;
-
-    // width: '106px',
-    // height: '40px',
-    // borderRadius: '20px',
-    // background: 'transparent',
-    // border: '1px solid #a988f2',
-    // color: '#a988f2',
-    // cursor: 'pointer',
-    // outline: 'none',
-    // fontWeight: '500',
-    // transition: 'all 300ms ease-out',
-
+    border-radius: 30px;
+    background: transparent;
+    border: 1px solid #a988f2;
+    color: #a988f2;
+    cursor: pointer;
     &:hover {
       opacity: 0.75;
     }
@@ -140,26 +136,21 @@
 
 // MOBILE MENU
 .mobile__menu {
-  position: absolute;
-  z-index: 9999;
   background-color: $white;
   padding: 3rem 0;
-  margin-top: 1rem;
+  margin: 1rem auto;
   width: calc(100% - 2rem);
-  left: 50%;
-  transform: translateX(-50%);
   border-radius: 15px;
   height: auto;
-  visibility: hidden;
 
   .mobile-link {
     display: block;
     color: $dark;
-    padding: 1rem;
     text-align: center;
-    font-weight: 400;
-    width: 50%;
+    font-weight: 300;
+    width: 200px;
     margin: 0 auto;
+    padding: 1rem;
   }
 
   &:not(:last-child) {

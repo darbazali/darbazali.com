@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { Github, Linkedin } from '@icons-pack/react-simple-icons'
-import { motion, AnimatePresence } from 'framer-motion'
+// import { motion, AnimatePresence } from 'framer-motion'
 import Button from './Button'
 
 import CloseIcon from '../assets/ICON/close-icon.svg'
@@ -27,50 +27,48 @@ const Modal = ({ onRequestClose, isVisible }) => {
   })
 
   return (
-    <AnimatePresence>
-      {isVisible && (
-        <motion.div
-          className='modal__backdrop'
-          initial={{ scale: 1 }}
-          animate={{ scale: 1.05 }}
-          exit={{ scale: 1 }}
-          transition={{ duration: 0.5 }}
+    // <AnimatePresence>
+    //   {isVisible && (
+    <div
+      className='modal__backdrop'
+      // initial={{ scale: 1 }}
+      // animate={{ scale: 1.05 }}
+      // exit={{ scale: 1 }}
+      // transition={{ duration: 0.5 }}
+    >
+      <div className='modal__container'>
+        <button
+          onClick={onRequestClose}
+          style={{
+            float: 'right',
+            margin: '1em 1em 0 0',
+            background: '#fff',
+            border: 'none',
+            outline: 'none',
+            cursor: 'pointer',
+            display: 'block',
+            clear: 'both',
+          }}
         >
-          <div className='modal__container'>
-            <button
-              onClick={onRequestClose}
-              style={{
-                float: 'right',
-                margin: '1em 1em 0 0',
-                background: '#fff',
-                border: 'none',
-                outline: 'none',
-                cursor: 'pointer',
-                display: 'block',
-                clear: 'both',
-              }}
-            >
-              <img src={CloseIcon} alt='Close' />
-            </button>
-            <br />
-            <h3 style={{ marginTop: '1em', textAlign: 'center' }}>
-              Get in touch
-            </h3>
-            <p style={{ maxWidth: '545px', margin: '1em auto' }}>
-              Whether you have a product/service problem, or just wanna say hi ,
-              feel free to shoot me an email, and I will be in touch asap.
-            </p>
-            <a href='mailto:darbaz.me@gmail.com'>
-              <Button>Shoot me an email</Button>
-            </a>
+          <img src={CloseIcon} alt='Close' />
+        </button>
+        <br />
+        <h3 style={{ marginTop: '1em', textAlign: 'center' }}>Get in touch</h3>
+        <p style={{ maxWidth: '545px', margin: '1em auto' }}>
+          Whether you have a product/service problem, or just wanna say hi ,
+          feel free to shoot me an email, and I will be in touch asap.
+        </p>
+        <a href='mailto:darbaz.me@gmail.com'>
+          <Button>Shoot me an email</Button>
+        </a>
 
-            <div className='modal-footer'>
-              <Socials />
-            </div>
-          </div>
-        </motion.div>
-      )}
-    </AnimatePresence>
+        <div className='modal-footer'>
+          <Socials />
+        </div>
+      </div>
+    </div>
+
+    // </AnimatePresence>
   )
 }
 
