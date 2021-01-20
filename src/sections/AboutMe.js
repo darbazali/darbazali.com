@@ -1,5 +1,4 @@
 import React from 'react'
-import CenterdContainer from '../components/CenterdContainer'
 
 const styles = {
   maxWidth: '1028px',
@@ -10,7 +9,7 @@ const styles = {
 
 const AboutMe = () => {
   return (
-    <CenterdContainer minHeight='100vh' id='about'>
+    <div id='about'>
       <div style={styles}>
         <h2 style={{ marginTop: '-50px' }}>About me</h2>
         <p>
@@ -37,7 +36,7 @@ const AboutMe = () => {
           Back-End.
         </p>
       </div>
-    </CenterdContainer>
+    </div>
   )
 }
 

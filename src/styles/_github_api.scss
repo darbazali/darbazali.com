@@ -3,18 +3,12 @@
 REPOS
 ====================================================================
 */
-// .repos {
-//   max-width: 1256px;
-//   margin: 0 auto;
-// }
 
 .repo {
   margin-bottom: 1em;
-  //   margin-right: 1em;
   border-radius: 15px;
   padding: 30px;
 
-  //   width: 23%;
   width: calc(50% - 0.5rem);
   height: 250px;
   background-color: #fff;
@@ -37,7 +31,7 @@ REPOS
   }
 
   & a {
-    font-size: 1em;
+    font-size: 1.125rem;
     font-weight: 500;
     color: $lightBlue;
   }

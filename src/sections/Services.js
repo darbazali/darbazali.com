@@ -1,8 +1,6 @@
 import React from 'react'
 import Rellax from 'react-rellax'
 
-import FlexContainer from '../components/FlexContainer'
-
 const serviceStyle = {
   color: '#1f2122',
   backgroundColor: '#ffffff',
@@ -25,20 +23,11 @@ const Services = () => {
         </Rellax>
 
         <Rellax speed={2}>
-          <FlexContainer
-            className='services'
-            container
-            alignItems='flex-start'
-            justifyContent='space-evenly'
-            alignContent='center'
-            flexWrap='wrap'
-            margin='200px auto 0 auto'
-            height='200px'
-          >
+          <div>
             <div className='service-card'>UX/UI Design</div>
             <div className='service-card'>Full-Stack Web Development</div>
             <div className='service-card'>Building MVPs</div>
-          </FlexContainer>
+          </div>
         </Rellax>
       </div>
     </section>

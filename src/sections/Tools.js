@@ -22,22 +22,13 @@ import {
   Microsoftaccess,
   Slack,
 } from '@icons-pack/react-simple-icons'
-import FlexContainer from '../components/FlexContainer'
+// import FlexContainer from '../components/FlexContainer'
 
 const Tools = () => (
   <section>
     <h4 className='section-title'>Tools</h4>
 
-    <FlexContainer
-      className='tools'
-      container
-      alignItems='center'
-      justifyContent='center'
-      alignContent='center'
-      flexWrap='wrap'
-      maxWidth='1028px'
-      margin='2em auto'
-    >
+    <div>
       <Html5 size={74} />
       <Css3 size={74} />
       <Javascript size={74} />
@@ -62,7 +53,7 @@ const Tools = () => (
       <Adobexd size={74} />
       <Sketch size={74} />
       <Slack size={74} />
-    </FlexContainer>
+    </div>
   </section>
 )
 

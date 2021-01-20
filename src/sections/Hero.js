@@ -1,5 +1,5 @@
 import React from 'react'
-import CenterdContainer from '../components/CenterdContainer'
+
 const styles = {
   maxWidth: '770px',
   textAlign: 'center',
@@ -7,7 +7,7 @@ const styles = {
 }
 const Hero = () => {
   return (
-    <CenterdContainer minHeight='100vh'>
+    <div>
       <div style={styles}>
         <h4
           style={{ fontWeight: '400', marginTop: '-50px', opacity: '0.8' }}
@@ -21,7 +21,7 @@ const Hero = () => {
           muscles along the way.
         </p>
       </div>
-    </CenterdContainer>
+    </div>
   )
 }
 

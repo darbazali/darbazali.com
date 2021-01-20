@@ -9,12 +9,13 @@ const Modal = lazy(() => import('./components/Modal'))
 // const Fallback = lazy(() => import('./components/Fallback'))
 
 const GithubAPI = lazy(() => import('./sections/GithubAPI'))
+const Certifications = lazy(() => import('./sections/Certifications'))
 const Hero = lazy(() => import('./sections/Hero'))
 const Services = lazy(() => import('./sections/Services'))
 const WhyMe = lazy(() => import('./sections/WhyMe'))
 
 // const Home = lazy(() => import('./screens/Home'))
-const About = lazy(() => import('./screens/About'))
+// const About = lazy(() => import('./screens/About'))
 const HikeWithMe = lazy(() => import('./screens/HikeWithMe'))
 const QuadCaptcha = lazy(() => import('./screens/QuadCaptcha'))
 
@@ -91,6 +92,7 @@ const Home = () => {
       {/* <Services /> */}
 
       <GithubAPI />
+      <Certifications />
     </>
   )
 }

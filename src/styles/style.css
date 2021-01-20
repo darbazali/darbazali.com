@@ -480,7 +480,7 @@ REPOS
 }
 
 .repo a {
-  font-size: 1em;
+  font-size: 1.125rem;
   font-weight: 500;
   color: #2292e5;
 }
@@ -500,5 +500,31 @@ REPOS
   height: 18px;
   background: #f7d564;
   border-radius: 50%;
+}
+
+.cert-card {
+  padding: 1.5625rem;
+  width: 100%;
+  border-radius: 15px;
+  background: white;
+  -webkit-box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 40em) {
+  .cert-card {
+    width: calc(50% - 0.5rem);
+  }
+}
+
+.cert-card a {
+  color: #2292e5;
+  font-weight: 500;
+  font-size: 1.125rem;
+}
+
+.cert-card p {
+  margin-bottom: 0;
 }
 /*# sourceMappingURL=style.css.map */
