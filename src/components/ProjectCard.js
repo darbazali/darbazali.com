@@ -6,7 +6,7 @@ const ProjectCard = ({ title, image, link }) => {
     <div className='project'>
       {/\b(http|https)/.test(link) ? (
         <a href={link} rel='noreferrer' target='_blank'>
-          <img src={image} alt={title} width='736' height='auto' />
+          <img src={image} alt={title} width='680' height='426' />
         </a>
       ) : (
         <Link to={link}>

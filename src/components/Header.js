@@ -25,7 +25,7 @@ const Header = ({ onToggle, opacity, top }) => {
     >
       <nav className='container flex flex-jc-sb flex-ai-c'>
         <a href='/' className='header__logo'>
-          <img src={logo} alt='Darbaz Ali' />
+          <img src={logo} alt='Darbaz Ali' height='32' width='32' />
         </a>
 
         <Link

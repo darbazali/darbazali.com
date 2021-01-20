@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import FlexContainer from '../components/FlexContainer'
 import repoIcon from '../assets/ICON/repository_icon.svg'
 
 const GithubAPI = () => {
@@ -20,21 +19,12 @@ const GithubAPI = () => {
 
   return (
     <section>
-      <h5 className='section-title'>My GitHub Wall</h5>
-      <FlexContainer
-        className='repos'
-        container
-        alignItems='stretch'
-        justifyContent='center'
-        alignContent='center'
-        flexWrap='wrap'
-        width='auto'
-        margin='0 auto'
-      >
+      <h3 className='section-title'>GitHub Wall</h3>
+      <div className='container flex flex-jc-sb flex-fw-w'>
         {repos.map((repo) => (
           <Repo key={repo.id} repo={repo} />
         ))}
-      </FlexContainer>
+      </div>
     </section>
   )
 }
@@ -43,6 +33,8 @@ const Repo = ({ repo: { name, html_url, language, description } }) => {
   return (
     <div className='repo'>
       <img
+        width='24'
+        height='32'
         src={repoIcon}
         alt='repo icon'
         style={{
@@ -53,7 +45,7 @@ const Repo = ({ repo: { name, html_url, language, description } }) => {
       />
       <a href={html_url}>{name}</a>
       <p>{description}</p>
-      <span>{language || 'Node'}</span>
+      <span>{language || 'None'}</span>
     </div>
   )
 }

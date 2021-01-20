@@ -89,6 +89,8 @@ const Home = () => {
       </div>
 
       {/* <Services /> */}
+
+      <GithubAPI />
     </>
   )
 }
