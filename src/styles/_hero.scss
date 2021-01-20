@@ -1,0 +1,35 @@
+#hero {
+  max-width: 100%;
+  min-height: 450px;
+  text-align: center;
+  margin: 0 auto;
+  background-color: #f7f7f7;
+  margin-top: -80px;
+  padding: 1rem;
+  padding-top: 11.5rem;
+  @include breakpoint-down(small) {
+    padding-top: 8rem;
+  }
+
+  & h1 {
+    font-size: 2.25rem;
+    font-weight: 300;
+    max-width: 880px;
+    margin: 0 auto;
+    line-height: 50px;
+    @include breakpoint-down(small) {
+      font-size: 1.5rem;
+      line-height: 1.4;
+    }
+  }
+
+  ul {
+    max-width: 600px;
+    margin: 2rem auto;
+    list-style-type: none;
+    opacity: 0.4;
+    & img {
+      margin-right: 10px;
+    }
+  }
+}

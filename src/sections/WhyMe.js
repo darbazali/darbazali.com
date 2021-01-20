@@ -4,20 +4,20 @@ import Button from '../components/Button'
 const sectionStyle = {
   textAlign: 'center',
   width: '100%',
-  height: '80vh',
-  padding: '20vh 0',
+  height: 'auto',
+  padding: '10vh 0',
   backgroundColor: '#fff',
 }
 
 const WhyMe = () => {
   return (
     <section style={sectionStyle}>
-      <h3 style={{ fontWeight: '600' }}>Why work with me?</h3>
+      <h2 style={{ fontWeight: '600' }}>Why work with me?</h2>
       <p
         style={{
           fontWeight: '400',
           fontSize: '1em',
-          maxWidth: '590px',
+          maxWidth: '588px',
           margin: '1em auto',
         }}
       >

@@ -11,7 +11,7 @@ const Modal = lazy(() => import('./components/Modal'))
 const GithubAPI = lazy(() => import('./sections/GithubAPI'))
 const Certifications = lazy(() => import('./sections/Certifications'))
 const Hero = lazy(() => import('./sections/Hero'))
-const Services = lazy(() => import('./sections/Services'))
+
 const WhyMe = lazy(() => import('./sections/WhyMe'))
 
 // const Home = lazy(() => import('./screens/Home'))
@@ -61,7 +61,7 @@ const App = () => {
           <Route exact path='/hike-with-me' component={HikeWithMe} />
           <Route exact path='/quad-captcha' component={QuadCaptcha} /> */}
         </Switch>
-        {/* <Footer /> */}
+        <Footer />
         {isModalOpen ? (
           <Modal onRequestClose={toggleModal} isVisible={isModalOpen} />
         ) : (
@@ -75,10 +75,11 @@ const App = () => {
 const Home = () => {
   return (
     <>
-      <h1 className='headline container'>
+      {/* <h1 className='headline container'>
         Hi, I am Darbaz - A Full-Stack JavaScript Developer based in South
         Kurdistan
-      </h1>
+      </h1> */}
+      <Hero />
 
       <div className='projects container flex flex-fd-c'>
         <ProjectQuadCaptcha />
@@ -89,10 +90,9 @@ const Home = () => {
         <ProjectHeatMap />
       </div>
 
-      {/* <Services /> */}
-
       <GithubAPI />
       <Certifications />
+      <WhyMe />
     </>
   )
 }

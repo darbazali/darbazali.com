@@ -1,26 +1,30 @@
 import React from 'react'
+import checkIcon from '../assets/ICON/check_icon.svg'
 
-const styles = {
-  maxWidth: '770px',
-  textAlign: 'center',
-  margin: '0 auto',
-}
 const Hero = () => {
   return (
-    <div>
-      <div style={styles}>
-        <h4
-          style={{ fontWeight: '400', marginTop: '-50px', opacity: '0.8' }}
-        >{`{Hello, World}`}</h4>
+    <div id='hero'>
+      <h1>
+        Hi, I am Darbaz - A Creative Designer &amp; Full-Stack JavaScript
+        Developer based in South Kurdistan
+      </h1>
 
-        <h2>This is Darbaz</h2>
+      <ul className='flex flex-jc-sb'>
+        <li>
+          <img src={checkIcon} alt='check icon' height='16' width='16' />{' '}
+          Full-Stack Web Development
+        </li>
 
-        <p style={{ maxWidth: '710px', margin: '0 auto' }}>
-          A creative designer and developer based in South Kurdistan. I love
-          white space, open-sourcing, solving interesting problems, and building
-          muscles along the way.
-        </p>
-      </div>
+        <li>
+          <img src={checkIcon} alt='check icon' height='16' width='16' /> UX/UI
+          Design
+        </li>
+
+        <li>
+          <img src={checkIcon} alt='check icon' height='16' width='16' /> MVP
+          Building
+        </li>
+      </ul>
     </div>
   )
 }
