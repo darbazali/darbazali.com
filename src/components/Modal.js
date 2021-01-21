@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { Github, Linkedin } from '@icons-pack/react-simple-icons'
 // import { motion, AnimatePresence } from 'framer-motion'
-import Button from './Button'
+// import Button from './Button'
 
 import CloseIcon from '../assets/ICON/close-icon.svg'
 
@@ -59,7 +59,7 @@ const Modal = ({ onRequestClose, isVisible }) => {
           feel free to shoot me an email, and I will be in touch asap.
         </p>
         <a href='mailto:darbaz.me@gmail.com'>
-          <Button>Shoot me an email</Button>
+          {/* <Button>Shoot me an email</Button> */}
         </a>
 
         <div className='modal-footer'>

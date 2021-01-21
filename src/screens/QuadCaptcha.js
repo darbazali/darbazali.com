@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from '../components/Button'
+// import Button from '../components/Button'
 const quadCaptchaImage = 'https://i.ibb.co/CmyXjRb/QUAD-CAPTCHA.jpg'
 const qcPersona = 'https://i.ibb.co/gRqpJT4/QC-PERSONA.png'
 const qcWire = 'https://i.ibb.co/YbSR8xb/qc-proto-wire.jpg'
@@ -19,7 +19,7 @@ const QuadCaptcha = () => {
           rel='noreferrer'
           target='_blank'
         >
-          <Button>Visit the MVP</Button>
+          {/* <Button>Visit the MVP</Button> */}
         </a>
 
         <h4>The Project</h4>
@@ -112,7 +112,7 @@ const QuadCaptcha = () => {
           rel='noreferrer'
           target='_blank'
         >
-          <Button>Visit the MVP</Button>
+          {/* <Button>Visit the MVP</Button> */}
         </a>
       </div>
     </section>

@@ -190,16 +190,26 @@ section.full-screen {
       flex-wrap: wrap;
 }
 
-button,
-.button {
-  padding: 0.875rem 2.1875rem;
-  border-radius: 50px;
-  border: 0;
-  cursor: pointer;
+a.button-primary,
+button.button-primary {
+  padding: 1rem 2rem;
+  border-radius: 7px;
   background-color: #a988f2;
-  color: white;
-  font-weight: 400;
-  font-size: 1rem;
+  -webkit-box-shadow: 0 1.8px 0.8px rgba(169, 136, 242, 0.02), 0 4.3px 2.8px rgba(169, 136, 242, 0.032), 0 8.1px 6.9px rgba(169, 136, 242, 0.041), 0 14.5px 16.2px rgba(169, 136, 242, 0.2);
+          box-shadow: 0 1.8px 0.8px rgba(169, 136, 242, 0.02), 0 4.3px 2.8px rgba(169, 136, 242, 0.032), 0 8.1px 6.9px rgba(169, 136, 242, 0.041), 0 14.5px 16.2px rgba(169, 136, 242, 0.2);
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  margin-top: 1rem;
+  -webkit-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  display: inline-block;
 }
 
 @media (max-width: 63.9375em) {
@@ -602,5 +612,58 @@ REPOS
 
 #contact .socials svg {
   fill: #1f2122;
+}
+
+#about {
+  max-width: 1024px;
+  padding-top: 4rem;
+}
+
+#about .about-content {
+  float: right;
+  width: 60%;
+}
+
+#about img {
+  width: 250px;
+  height: 250px;
+  border-radius: 100%;
+  -webkit-box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.11);
+          box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.11);
+  margin-right: 2rem;
+  position: fixed;
+}
+
+#about h3 {
+  margin-top: 4.6875rem;
+}
+
+#about p {
+  max-width: 560px;
+  line-height: 1.5rem;
+}
+
+@media (max-width: 39.9375em) {
+  #about {
+    padding-top: 2rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  #about .about-content {
+    width: 100%;
+  }
+  #about img {
+    position: -webkit-sticky;
+    position: sticky;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 2rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */

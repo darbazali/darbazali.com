@@ -109,16 +109,27 @@ section.full-screen {
 }
 
 // button
-button,
-.button {
-  padding: 0.875rem 2.1875rem;
-  border-radius: 50px;
-  border: 0;
+a.button-primary,
+button.button-primary {
+  padding: 1rem 2rem;
+  border-radius: 7px;
+  background-color: #a988f2;
+  box-shadow: 0 1.8px 0.8px rgba(169, 136, 242, 0.02),
+    0 4.3px 2.8px rgba(169, 136, 242, 0.032),
+    0 8.1px 6.9px rgba(169, 136, 242, 0.041),
+    0 14.5px 16.2px rgba(169, 136, 242, 0.2);
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  margin-top: 1rem;
+  transition: all 300ms ease-out;
   cursor: pointer;
-  background-color: $purple;
-  color: $white;
-  font-weight: 400;
-  font-size: $font-med;
+  border: none;
+  outline: none;
+  display: inline-block;
 }
 
 // visibility

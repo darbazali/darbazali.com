@@ -8,6 +8,8 @@ const footerStyle = {
   margin: '0 auto',
   marginTop: '50px',
   textAlign: 'center',
+  display: 'block',
+  clear: 'both',
   opacity: '0.8',
 }
 
