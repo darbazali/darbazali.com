@@ -16,6 +16,7 @@ const WhyMe = lazy(() => import('./sections/WhyMe'))
 
 // const Home = lazy(() => import('./screens/Home'))
 // const About = lazy(() => import('./screens/About'))
+const Contact = lazy(() => import('./screens/Contact'))
 const HikeWithMe = lazy(() => import('./screens/HikeWithMe'))
 const QuadCaptcha = lazy(() => import('./screens/QuadCaptcha'))
 
@@ -54,19 +55,21 @@ const App = () => {
   return (
     <Router>
       <Suspense fallback={<Fallback />}>
-        <Header onToggle={toggleModal} opacity={showHeader} top={top} />
+        <Header opacity={showHeader} top={top} />
         <Switch>
           <Route exact path='/' component={Home} />
+          <Route exact path='/contact' component={Contact} />
+
           {/* <Route exact path='/about' component={About} />
           <Route exact path='/hike-with-me' component={HikeWithMe} />
           <Route exact path='/quad-captcha' component={QuadCaptcha} /> */}
         </Switch>
         <Footer />
-        {isModalOpen ? (
+        {/* {isModalOpen ? (
           <Modal onRequestClose={toggleModal} isVisible={isModalOpen} />
         ) : (
           ''
-        )}
+        )} */}
       </Suspense>
     </Router>
   )

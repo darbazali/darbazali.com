@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../assets/ICON/DARBAZ_ALI_LOGO.svg'
 
-const Header = ({ onToggle, opacity, top }) => {
+const Header = ({ opacity, top }) => {
   const [click, setClick] = useState(false)
   const handleClick = () => setClick(!click)
   const closeMobileMenu = () => setClick(false)
@@ -28,15 +28,15 @@ const Header = ({ onToggle, opacity, top }) => {
           <img src={logo} alt='Darbaz Ali' height='32' width='32' />
         </a>
 
-        <Link
-          to=''
+        <button
+          style={{ padding: '0', backgroundColor: 'transparent' }}
           className='header__toggle hide-for-desktop'
           onClick={handleClick}
         >
           <span></span>
           <span></span>
           <span></span>
-        </Link>
+        </button>
 
         <div className='header__links hide-for-mobile'>
           <Link to='/' onClick={closeMobileMenu}>
@@ -50,57 +50,46 @@ const Header = ({ onToggle, opacity, top }) => {
           </Link>
         </div>
 
-        <ContactButton
-          onClick={() => {
-            closeMobileMenu()
-            onToggle()
-          }}
-        />
+        <ContactButton onClick={closeMobileMenu} />
       </nav>
 
-      <MobileMenu open={click} onClick={[closeMobileMenu, onToggle]} />
+      <MobileMenu open={click} onClick={closeMobileMenu} />
     </header>
   )
 }
 
 const MobileMenu = ({ open, onClick }) => {
-  const [closeMobileMenu, onToggle] = onClick
   return (
     <div
       className={
         open ? 'overlay hide-for-desktop fade-in' : `overlay hide-for-desktop`
       }
-      onClick={closeMobileMenu}
+      onClick={onClick}
     >
       <div className='mobile__menu container hide-for-desktop'>
-        <Link to='/projects' onClick={closeMobileMenu} className='mobile-link'>
+        <Link to='/projects' onClick={onClick} className='mobile-link'>
           Projects
         </Link>
-        <Link to='/about' onClick={closeMobileMenu} className='mobile-link'>
+        <Link to='/about' onClick={onClick} className='mobile-link'>
           About
         </Link>
-        <Link to='/resume' onClick={closeMobileMenu} className='mobile-link'>
+        <Link to='/resume' onClick={onClick} className='mobile-link'>
           Resume
         </Link>
-        <ContactButton
-          onClick={() => {
-            closeMobileMenu()
-            onToggle()
-          }}
-          className='mobile-link'
-        />
+        <ContactButton onClick={onClick} className='mobile-link' />
       </div>
     </div>
   )
 }
 
 const ContactButton = ({ onClick, className }) => (
-  <button
+  <Link
+    to='/contact'
     className={`${className} button header__cta hide-for-mobile`}
     onClick={onClick}
   >
     Contact
-  </button>
+  </Link>
 )
 
 export default Header
