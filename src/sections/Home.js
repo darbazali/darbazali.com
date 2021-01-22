@@ -1,20 +1,15 @@
-import React, { lazy } from 'react'
-const GithubAPI = lazy(() => import('../sections/GithubAPI'))
-const Certifications = lazy(() => import('../sections/Certifications'))
-const Hero = lazy(() => import('../sections/Hero'))
+import React from 'react'
 
-const WhyMe = lazy(() => import('../sections/WhyMe'))
-// Home
-const ProjectQuadCaptcha = lazy(() => import('../sections/ProjectQuadCaptcha'))
-const ProjectHikeWithMe = lazy(() => import('../sections/ProjectHikeWithMe'))
-const ProjectURLShortener = lazy(() =>
-  import('../sections/ProjectURLShortener')
-)
-const ProjectMIConverter = lazy(() => import('../sections/ProjectMIConverter'))
-const ProjectPomodoroClock = lazy(() =>
-  import('../sections/ProjectPomodoroClock')
-)
-const ProjectHeatMap = lazy(() => import('../sections/ProjectHeatMap'))
+import GithubAPI from '../sections/GithubAPI'
+import Certifications from '../sections/Certifications'
+import Hero from '../sections/Hero'
+import WhyMe from '../sections/WhyMe'
+import ProjectQuadCaptcha from '../sections/ProjectQuadCaptcha'
+import ProjectHikeWithMe from '../sections/ProjectHikeWithMe'
+import ProjectURLShortener from '../sections/ProjectURLShortener'
+import ProjectMIConverter from '../sections/ProjectMIConverter'
+import ProjectPomodoroClock from '../sections/ProjectPomodoroClock'
+import ProjectHeatMap from '../sections/ProjectHeatMap'
 
 const Home = () => {
   return (
