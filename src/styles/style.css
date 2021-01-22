@@ -145,6 +145,15 @@ section {
 section.full-screen {
   width: 100vw;
   height: 100vh;
+  position: relative;
+}
+
+section.full-screen img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .container {
@@ -433,7 +442,7 @@ button.button-primary {
 
 @media (max-width: 39.9375em) {
   #hero h1 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     line-height: 1.4;
   }
 }
