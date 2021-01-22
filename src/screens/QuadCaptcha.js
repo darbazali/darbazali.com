@@ -1,5 +1,5 @@
 import React from 'react'
-// import Button from '../components/Button'
+
 const quadCaptchaImage = 'https://i.ibb.co/CmyXjRb/QUAD-CAPTCHA.jpg'
 const qcPersona = 'https://i.ibb.co/gRqpJT4/QC-PERSONA.png'
 const qcWire = 'https://i.ibb.co/YbSR8xb/qc-proto-wire.jpg'
@@ -11,18 +11,20 @@ const QuadCaptcha = () => {
   return (
     <section className='case-study'>
       <div className='case-study-content'>
-        <h4>QUAD CAPTCHA MVP - Case Study</h4>
+        <h1>QUAD CAPTCHA MVP</h1>
         <img src={quadCaptchaImage} alt='QUAD CAPTCHA' />
 
         <a
+          className='button-primary'
           href='https://quad-captcha.herokuapp.com'
           rel='noreferrer'
           target='_blank'
+          style={{ marginBottom: '30px' }}
         >
-          {/* <Button>Visit the MVP</Button> */}
+          Visit the MVP
         </a>
 
-        <h4>The Project</h4>
+        <h2>The Project</h2>
         <p>
           QQUAD CAPTCHA is an (open source) gamified bot detector web
           application. The project aims to create a light-weight MVP to reach
@@ -30,17 +32,17 @@ const QuadCaptcha = () => {
           game-changer in the fraud prevention industry.
         </p>
 
-        <h5>Role</h5>
+        <h3>Role</h3>
         <p>
           <b>Product Developer</b>
         </p>
 
-        <h5>Process</h5>
+        <h3>Process</h3>
         <p>
           <b>Research -&gt; Ideate -&gt; Prototype -&gt; develop -&gt; Test</b>
         </p>
 
-        <h5>Research methods</h5>
+        <h3>Research methods</h3>
         <ul>
           <li>Market Research</li>
           <li>Competitor Analysis</li>
@@ -48,16 +50,16 @@ const QuadCaptcha = () => {
         </ul>
         <img src={qcPersona} alt='QUAD CAPTCHA - Persona' />
 
-        <h5>Ideate &amp; Prototype</h5>
+        <h3>Ideate &amp; Prototype</h3>
         <img src={qcWire} alt='QUAD CAPTCHA - Wireframe' />
         <img src={qcHiFi} alt='QUAD CAPTCHA - Prototype' />
 
-        <h5>Development</h5>
+        <h3>Development</h3>
         <img src={qcDev} alt='QUAD CAPTCHA - Development' />
-        <h4>MVP</h4>
+        <h2>MVP</h2>
         <img src={qcMVP} alt='QUAD CAPTCHA - MVP' />
 
-        <h4>Applying for YC2020</h4>
+        <h2>Applying for YC2020</h2>
         <p>
           Despite the fact that the website was far from even good, I tried to
           give it a shot and apply it to YC2020. And the outcome was a
@@ -70,7 +72,7 @@ const QuadCaptcha = () => {
           remarkable business and marketing insights to the founders.
         </p>
 
-        <h4>Testing with Companies</h4>
+        <h2>Testing with Companies</h2>
         <p>
           After the project has been turned down from YC, I tried to test the
           idea with fraud prevention companies, I looked for a tiny window of
@@ -89,14 +91,14 @@ const QuadCaptcha = () => {
           users how to solve the CAPTCHA
         </p>
 
-        <h4>What is next?</h4>
+        <h2>What is next?</h2>
         <p>
           My job for the next iteration is to solve this problem and conduct a
           usability test with real users, then going for the next level, which
           is shipping.
         </p>
 
-        <h4>What did I learn?</h4>
+        <h2>What did I learn?</h2>
         <p>
           The initial idea may work very well and solve a real-world problem,
           but not exactly as you planned, so you have to be open to any
@@ -108,11 +110,13 @@ const QuadCaptcha = () => {
           waste a lot of energy and time(money) going in the wrong direction.
         </p>
         <a
+          className='button-primary'
           href='https://quad-captcha.herokuapp.com'
           rel='noreferrer'
           target='_blank'
+          style={{ marginBottom: '30px' }}
         >
-          {/* <Button>Visit the MVP</Button> */}
+          Visit the MVP
         </a>
       </div>
     </section>

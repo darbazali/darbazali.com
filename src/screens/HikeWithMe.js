@@ -13,10 +13,10 @@ const HikeWithMe = () => {
   return (
     <section className='case-study'>
       <div className='case-study-content'>
-        <h4>Hike With Me - Case Study</h4>
+        <h1>Hike With Me</h1>
         <img src={hwmHeroImage} alt='Hike With Me' />
 
-        <h5>Brief</h5>
+        <h3>Brief</h3>
         <p>
           I have been hired to create a user flow for a new outdoors app called
           “Hike with Me”. Their team has completed their research and are shared
@@ -27,14 +27,14 @@ const HikeWithMe = () => {
           their business goals.
         </p>
 
-        <h5>App Description</h5>
+        <h3>App Description</h3>
         <p>
           <b>
             Hike with Me is a Mobile app for scheduling a hike with others.{' '}
           </b>
         </p>
 
-        <h5>Business Goals</h5>
+        <h3>Business Goals</h3>
         <ul>
           <li>
             Create healthier communities and more active individuals by giving
@@ -44,9 +44,9 @@ const HikeWithMe = () => {
           <li>Increase the number of app downloads</li>
         </ul>
 
-        <h4>Discovery </h4>
+        <h2>Discovery </h2>
 
-        <h5>User Research</h5>
+        <h3>User Research</h3>
         <p>
           Although my clients’ team conducted a research to find their users’
           needs, for me, it wasn’t enough to understand how hikers plan to go
@@ -57,18 +57,18 @@ const HikeWithMe = () => {
         </p>
         <img src={hwmUserSurvy} alt='Hike with Me - user survey' />
 
-        <h5>Personas</h5>
+        <h3>Personas</h3>
         <img src={hwmPersonas} alt='Hike with Me - Personas' />
 
-        <h4>Ideation</h4>
-        <h5>User-Flow</h5>
+        <h2>Ideation</h2>
+        <h3>User-Flow</h3>
         <p>
           I started by designing a user-flow to see how the user flows through
           different screens of th app.
         </p>
         <img src={hwmUserFlow} alt='Hike with Me - User-Flow' />
 
-        <h5>Sketching</h5>
+        <h3>Sketching</h3>
         <p>
           In the Ideation phase, I started by sketching some low-tech wireframes
           by using a technique called, CRAZY 8s, this technique is a great way
@@ -78,7 +78,7 @@ const HikeWithMe = () => {
         </p>
         <img src={hwmCrazy8s} alt='Hike with Me - Sketchs' />
 
-        <h5>Low-Fi Prototype</h5>
+        <h3>Low-Fi Prototype</h3>
         <p>
           <b>Creating Event: </b>This phase is the primary goal of the app, it
           must be carefuly optimized . This feature determines the success of
@@ -86,18 +86,18 @@ const HikeWithMe = () => {
         </p>
         <img src={hwmCreateEvent} alt='Hike with Me - Creating Events' />
 
-        <h5>Hi-Fi Prototype</h5>
+        <h3>Hi-Fi Prototype</h3>
         <img src={hwmHiFi} alt='Hike with Me - Hi-Fi Prototype' />
 
-        <h4>Problems &amp; Solutions</h4>
-        <h5>The Problem</h5>
+        <h2>Problems &amp; Solutions</h2>
+        <h3>The Problem</h3>
         <p>
           As the user research suggests, most of the hikers go hiking by groups,
           and the group may not agree with each other which Trail to go, so this
           should be a serious problem that faces the hikers.
         </p>
 
-        <h5>Solution</h5>
+        <h3>Solution</h3>
         <p>
           Upvoting a Trail within a particular event is the solution to this
           problem. during the process of creating a Hiking event, you are
@@ -108,7 +108,7 @@ const HikeWithMe = () => {
 
         <img src={hwmEventSummary} alt='Hike with Me - Event Summary' />
 
-        <h5>Next Step</h5>
+        <h3>Next Step</h3>
         <p>
           This prototype is an MVP, and it’s not tested on the real users, and
           my next move should be conducting a usability test to determine what
@@ -117,7 +117,7 @@ const HikeWithMe = () => {
           phase.
         </p>
 
-        <h5>What did I learn?</h5>
+        <h3>What did I learn?</h3>
         <p>
           Throughout the process of designing this product, I learned that, at
           every stage of the process, if you or your team encountered an
@@ -127,7 +127,7 @@ const HikeWithMe = () => {
           audiences.
         </p>
 
-        <h5>See the Prototype</h5>
+        <h3>See the Prototype</h3>
         <iframe
           title='Videos'
           width='100%'
