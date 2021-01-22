@@ -11,17 +11,16 @@ const Hero = () => {
 
       <ul className='flex flex-jc-sb'>
         <li>
-          <img src={checkIcon} alt='check icon' height='16' width='16' />{' '}
+          <img src={checkIcon} alt='check icon' height='14' width='14' /> UX/UI
+          Design
+        </li>
+        <li>
+          <img src={checkIcon} alt='check icon' height='14' width='14' />{' '}
           Full-Stack Web Development
         </li>
 
         <li>
-          <img src={checkIcon} alt='check icon' height='16' width='16' /> UX/UI
-          Design
-        </li>
-
-        <li>
-          <img src={checkIcon} alt='check icon' height='16' width='16' /> MVP
+          <img src={checkIcon} alt='check icon' height='14' width='14' /> MVP
           Building
         </li>
       </ul>

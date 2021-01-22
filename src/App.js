@@ -5,18 +5,15 @@ import Fallback from './components/Fallback'
 
 const Header = lazy(() => import('./components/Header'))
 const Footer = lazy(() => import('./components/Footer'))
-const Modal = lazy(() => import('./components/Modal'))
-// const Fallback = lazy(() => import('./components/Fallback'))
 
 const GithubAPI = lazy(() => import('./sections/GithubAPI'))
 const Certifications = lazy(() => import('./sections/Certifications'))
 const Hero = lazy(() => import('./sections/Hero'))
 
 const WhyMe = lazy(() => import('./sections/WhyMe'))
-
-// const Home = lazy(() => import('./screens/Home'))
 const About = lazy(() => import('./screens/About'))
 const Contact = lazy(() => import('./screens/Contact'))
+// const Resume = lazy(() => import('./screens/Resume'))
 const HikeWithMe = lazy(() => import('./screens/HikeWithMe'))
 const QuadCaptcha = lazy(() => import('./screens/QuadCaptcha'))
 
@@ -31,7 +28,6 @@ const ProjectPomodoroClock = lazy(() =>
 const ProjectHeatMap = lazy(() => import('./sections/ProjectHeatMap'))
 
 const App = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false)
   const [showHeader, setShowHeader] = useState(false)
   const [top, setTop] = useState(0)
 
@@ -48,9 +44,7 @@ const App = () => {
       }
       position = scroll
     })
-  }, [isModalOpen, showHeader, top])
-
-  const toggleModal = () => setIsModalOpen(!isModalOpen)
+  }, [showHeader, top])
 
   return (
     <Router>
@@ -61,15 +55,11 @@ const App = () => {
           <Route exact path='/contact' component={Contact} />
 
           <Route exact path='/about' component={About} />
+          {/* <Route exact path='/resume' component={Resume} /> */}
           <Route exact path='/hike-with-me' component={HikeWithMe} />
           <Route exact path='/quad-captcha' component={QuadCaptcha} />
         </Switch>
         <Footer />
-        {/* {isModalOpen ? (
-          <Modal onRequestClose={toggleModal} isVisible={isModalOpen} />
-        ) : (
-          ''
-        )} */}
       </Suspense>
     </Router>
   )
@@ -78,10 +68,6 @@ const App = () => {
 const Home = () => {
   return (
     <>
-      {/* <h1 className='headline container'>
-        Hi, I am Darbaz - A Full-Stack JavaScript Developer based in South
-        Kurdistan
-      </h1> */}
       <Hero />
 
       <div className='projects container flex flex-fd-c'>

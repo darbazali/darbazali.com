@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
-
 import { Link } from 'react-router-dom'
 import logo from '../assets/ICON/DARBAZ_ALI_LOGO.svg'
+import resume from '../assets/Darbaz-Ali-Resume.pdf'
 
 const Header = ({ opacity, top }) => {
   const [click, setClick] = useState(false)
@@ -40,15 +40,17 @@ const Header = ({ opacity, top }) => {
 
         <div className='header__links hide-for-mobile'>
           <Link to='/' onClick={closeMobileMenu}>
-            Projects
+            Home
           </Link>
           <Link to='/about' onClick={closeMobileMenu}>
             About
           </Link>
-          <Link to='/' onClick={closeMobileMenu}>
+          <a href={resume} onClick={closeMobileMenu}>
             Resume
-          </Link>
+          </a>
         </div>
+
+        {/* href="Assets/Darbaz-Ali-Resume.pdf" target="_top" */}
 
         <ContactButton onClick={closeMobileMenu} />
       </nav>
@@ -67,15 +69,15 @@ const MobileMenu = ({ open, onClick }) => {
       onClick={onClick}
     >
       <div className='mobile__menu container hide-for-desktop'>
-        <Link to='/projects' onClick={onClick} className='mobile-link'>
-          Projects
+        <Link to='/' onClick={onClick} className='mobile-link'>
+          Home
         </Link>
         <Link to='/about' onClick={onClick} className='mobile-link'>
           About
         </Link>
-        <Link to='/resume' onClick={onClick} className='mobile-link'>
+        <a href={resume} onClick={onClick} className='mobile-link'>
           Resume
-        </Link>
+        </a>
         <ContactButton onClick={onClick} className='mobile-link' />
       </div>
     </div>

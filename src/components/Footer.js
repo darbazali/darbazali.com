@@ -2,11 +2,9 @@ import React from 'react'
 
 const footerStyle = {
   width: '100%',
-  height: '100px',
   background: 'transparent',
-  padding: '20px 0',
+  padding: '4rem 0 2rem 0',
   margin: '0 auto',
-  marginTop: '50px',
   textAlign: 'center',
   display: 'block',
   clear: 'both',

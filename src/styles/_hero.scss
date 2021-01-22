@@ -24,12 +24,20 @@
   }
 
   ul {
-    max-width: 600px;
-    margin: 2rem auto;
+    max-width: 514px;
+    margin: 1.5rem auto;
     list-style-type: none;
     opacity: 0.4;
     & img {
-      margin-right: 10px;
+      margin-right: 0.5rem;
+      margin-bottom: -2px;
+    }
+
+    & li {
+      font-size: $font-sm;
+      padding: 0;
+      height: 14px;
+      margin: 0;
     }
   }
 }

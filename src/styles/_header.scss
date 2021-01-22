@@ -83,15 +83,16 @@
   ======================================================
   */
   &__links {
-    margin-right: -6.6rem;
+    margin-right: -5rem;
     a {
       position: relative;
       font-size: $font-med;
       font-weight: 300;
       color: $dark;
+      cursor: pointer;
       transition: color 300ms ease-in-out;
       &:not(:last-child) {
-        margin-right: 32px;
+        margin-right: 2rem;
       }
       &::before {
         position: absolute;
@@ -108,7 +109,8 @@
         transition: opacity 300ms ease-in-out;
       }
 
-      &:hover {
+      &:hover,
+      &:active {
         color: $dark;
         &::before {
           opacity: 1;
@@ -125,13 +127,15 @@
   &__cta {
     font-size: $font-med;
     color: $white;
-    border-radius: 30px;
+    padding: 0.5rem 1.125rem;
+    border-radius: 8px;
     background: transparent;
-    border: 1px solid #a988f2;
-    color: #a988f2;
+    border: 1px solid $purple;
+    color: $purple;
     cursor: pointer;
+    transition: all 200ms ease-in-out;
     &:hover {
-      opacity: 0.75;
+      opacity: 0.8;
     }
   }
 }

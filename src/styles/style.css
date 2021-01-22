@@ -325,7 +325,7 @@ button.button-primary {
 }
 
 .header__links {
-  margin-right: -6.6rem;
+  margin-right: -5rem;
 }
 
 .header__links a {
@@ -333,12 +333,13 @@ button.button-primary {
   font-size: 1rem;
   font-weight: 300;
   color: #1f2122;
+  cursor: pointer;
   -webkit-transition: color 300ms ease-in-out;
   transition: color 300ms ease-in-out;
 }
 
 .header__links a:not(:last-child) {
-  margin-right: 32px;
+  margin-right: 2rem;
 }
 
 .header__links a::before {
@@ -357,26 +358,29 @@ button.button-primary {
   transition: opacity 300ms ease-in-out;
 }
 
-.header__links a:hover {
+.header__links a:hover, .header__links a:active {
   color: #1f2122;
 }
 
-.header__links a:hover::before {
+.header__links a:hover::before, .header__links a:active::before {
   opacity: 1;
 }
 
 .header__cta {
   font-size: 1rem;
   color: white;
-  border-radius: 30px;
+  padding: 0.5rem 1.125rem;
+  border-radius: 8px;
   background: transparent;
   border: 1px solid #a988f2;
   color: #a988f2;
   cursor: pointer;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 
 .header__cta:hover {
-  opacity: 0.75;
+  opacity: 0.8;
 }
 
 .mobile__menu {
@@ -435,14 +439,22 @@ button.button-primary {
 }
 
 #hero ul {
-  max-width: 600px;
-  margin: 2rem auto;
+  max-width: 514px;
+  margin: 1.5rem auto;
   list-style-type: none;
   opacity: 0.4;
 }
 
 #hero ul img {
-  margin-right: 10px;
+  margin-right: 0.5rem;
+  margin-bottom: -2px;
+}
+
+#hero ul li {
+  font-size: 0.875rem;
+  padding: 0;
+  height: 14px;
+  margin: 0;
 }
 
 @media (min-width: 64em) {
@@ -584,7 +596,7 @@ REPOS
 #contact {
   text-align: center;
   padding-top: 6rem;
-  height: calc(100vh - 250px);
+  height: calc(100vh - 104px);
 }
 
 @media (max-width: 39.9375em) {
