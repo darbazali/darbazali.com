@@ -10,7 +10,7 @@ const ProjectCard = ({ title, image, link }) => {
         </a>
       ) : (
         <Link to={link}>
-          <img src={image} alt={title} />
+          <img src={image} alt={title} width='680' height='426' />
         </Link>
       )}
     </div>
