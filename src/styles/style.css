@@ -342,6 +342,12 @@ CASE STUDIES
 .header__logo img {
   width: 2rem;
   height: 2rem;
+  margin-bottom: -6px;
+}
+
+.header__logo a {
+  margin: 0;
+  line-height: 0;
 }
 
 .header.open .overlay {
@@ -463,6 +469,10 @@ CASE STUDIES
   width: 200px;
   margin: 0 auto;
   padding: 1rem;
+}
+
+.mobile__menu .header__cta {
+  color: #a988f2 !important;
 }
 
 .mobile__menu:not(:last-child) {
@@ -733,12 +743,16 @@ REPOS
   #about .about-content {
     width: 100%;
   }
+  #about h1 {
+    font-size: 3rem;
+  }
   #about img {
     position: -webkit-sticky;
     position: sticky;
     width: 200px;
     height: 200px;
     margin-bottom: 2rem;
+    margin-right: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */

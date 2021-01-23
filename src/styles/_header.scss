@@ -27,6 +27,11 @@
     img {
       width: 2rem;
       height: 2rem;
+      margin-bottom: -6px;
+    }
+    & a {
+      margin: 0;
+      line-height: 0;
     }
   }
 
@@ -157,6 +162,10 @@
     width: 200px;
     margin: 0 auto;
     padding: 1rem;
+  }
+
+  .header__cta {
+    color: $purple !important;
   }
 
   &:not(:last-child) {

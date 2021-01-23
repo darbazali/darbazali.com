@@ -33,11 +33,16 @@
     .about-content {
       width: 100%;
     }
+
+    h1 {
+      font-size: 3rem;
+    }
     & img {
       position: sticky;
       width: 200px;
       height: 200px;
       margin-bottom: 2rem;
+      margin-right: 0;
     }
   }
 }

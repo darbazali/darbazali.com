@@ -36,7 +36,7 @@ const About = () => {
 
         <p>
           Now, I'm looking for an opportunity to join a supportive, growing
-          community and passionate team that let me apply my acquired skill to
+          community and passionate team that let me apply my acquired skills to
           tackle interesting problems and (possibly) creating the next big thing
           of the internet.
           <br />
