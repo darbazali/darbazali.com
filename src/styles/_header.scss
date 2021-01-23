@@ -3,6 +3,8 @@
   z-index: 90;
   background-color: $milky;
   transition: all 400ms ease-in-out;
+  content-visibility: auto;
+  contain-intrinsic-size: 0 100px;
 
   /* 
   ======================================================
