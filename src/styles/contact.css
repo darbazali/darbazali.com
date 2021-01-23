@@ -1,0 +1,33 @@
+#contact {
+  text-align: center;
+  padding-top: 6rem;
+  height: calc(100vh - 104px);
+}
+
+@media (max-width: 39.9375em) {
+  #contact h1 {
+    font-size: 3rem;
+  }
+}
+
+#contact p {
+  margin: 2rem auto;
+  margin-top: 0;
+  max-width: 395px;
+}
+
+#contact h3 {
+  margin: 1rem auto;
+  margin-top: 5rem;
+}
+
+#contact .socials {
+  max-width: 104px;
+  margin: 1rem auto;
+  opacity: 0.8;
+}
+
+#contact .socials svg {
+  fill: #1f2122;
+}
+/*# sourceMappingURL=contact.css.map */

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../assets/ICON/DARBAZ_ALI_LOGO.svg'
 import resume from '../assets/Darbaz-Ali-Resume.pdf'
+import '../styles/header.css'
 
 const Header = ({ opacity, top }) => {
   const [click, setClick] = useState(false)

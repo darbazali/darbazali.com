@@ -1,11 +1,26 @@
 import React from 'react'
+const styles = {
+  width: '100vw',
+  height: '90vh',
+  position: 'relative',
+}
 
-import Spinner from '../assets/ICON/spinner.gif'
+const contentStyle = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  textAlign: 'center',
+  fontWeight: '300',
+}
 
 const Fallback = () => {
   return (
-    <section className='full-screen'>
-      <img src={Spinner} width='800' height='600' alt='Loading...' />
+    <section style={styles}>
+      <div style={contentStyle}>
+        <h3>Loading...</h3>
+        <p>Please wait</p>
+      </div>
     </section>
   )
 }

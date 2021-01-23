@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import '../styles/about.css'
 import DarbazAli from '../assets/JPEG/Darbaz_Ali.jpg'
 
 const About = () => {

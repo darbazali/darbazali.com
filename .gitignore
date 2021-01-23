@@ -36,3 +36,6 @@ firebase.json
 
 # maps
 src/styles/style.css.map
+src/styles/about.css.map
+src/styles/contact.css.map
+src/styles/header.css.map

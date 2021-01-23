@@ -16,11 +16,19 @@
       name="description"
       content="Darbaz Ali Personal website, Full-Stack Developer and UX/UI Designer"
     />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" /> -->
     <link
+      rel="preload"
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
-      rel="stylesheet"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      />
+    </noscript>
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
     <title>Darbaz Ali | Full-Stack Developer</title>

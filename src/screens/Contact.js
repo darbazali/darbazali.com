@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { Github, Linkedin } from '@icons-pack/react-simple-icons'
-
+import '../styles/contact.css'
 const Contact = () => {
   useEffect(() => (document.title = 'Darbaz Ali | Contact'))
   return (
