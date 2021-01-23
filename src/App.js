@@ -2,9 +2,8 @@ import React, { useState, useEffect, Suspense, lazy } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import Fallback from './components/Fallback'
-
-const Header = lazy(() => import('./components/Header'))
-const Footer = lazy(() => import('./components/Footer'))
+import Header from './components/Header'
+import Footer from './components/Footer'
 
 const About = lazy(() => import('./screens/About'))
 const Contact = lazy(() => import('./screens/Contact'))
@@ -33,8 +32,8 @@ const App = () => {
 
   return (
     <Router>
+      <Header opacity={showHeader} top={top} />
       <Suspense fallback={<Fallback />}>
-        <Header opacity={showHeader} top={top} />
         <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path='/contact' component={Contact} />
@@ -43,8 +42,8 @@ const App = () => {
           <Route exact path='/hike-with-me' component={HikeWithMe} />
           <Route exact path='/quad-captcha' component={QuadCaptcha} />
         </Switch>
-        <Footer />
       </Suspense>
+      <Footer />
     </Router>
   )
 }
