@@ -6,6 +6,7 @@ const ProjectPomodoroClock = () => (
     image={pomodoroClock}
     title='Pomodoro Clock'
     link='https://codepen.io/Darbaz/pen/KKVQXPj'
+    description='Pomodoro Clock with React'
   />
 )
 

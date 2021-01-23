@@ -291,6 +291,27 @@ CASE STUDIES
   overflow: hidden;
 }
 
+.projects .project .project-content {
+  position: absolute;
+  z-index: 20;
+  left: 20px;
+  bottom: 30px;
+  width: 40%;
+}
+
+.projects .project .project-content h3 {
+  font-weight: 600;
+  max-width: 160px;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.projects .project .project-content p {
+  line-height: 24px;
+  color: #1f2122;
+  margin-bottom: 0;
+}
+
 @media (min-width: 64em) {
   .projects .project {
     width: calc(50% - 0.5rem);

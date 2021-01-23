@@ -7,6 +7,8 @@ const ProjectURLShortener = () => (
     image={bit8Url}
     title='8bit-URL Shortener'
     link='https://bit8-url.herokuapp.com'
+    description='URL Shortener App'
+    linkDesc='Project Website'
   />
 )
 
