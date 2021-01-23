@@ -12,7 +12,10 @@ import ProjectPomodoroClock from '../sections/ProjectPomodoroClock'
 import ProjectHeatMap from '../sections/ProjectHeatMap'
 
 const Home = () => {
-  useEffect(() => (document.title = 'Darbaz Ali | Full-Stack Developer'))
+  useEffect(
+    () =>
+      (document.title = 'Darbaz Ali | Full Stack Web Developer, UI/UX Designer')
+  )
   return (
     <>
       <Hero />

@@ -1,8 +1,8 @@
 import React, { useState, useEffect, Suspense, lazy } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
-import Fallback from './components/Fallback'
 import Header from './components/Header'
+import Fallback from './components/Fallback'
 import Footer from './components/Footer'
 
 const About = lazy(() => import('./screens/About'))
