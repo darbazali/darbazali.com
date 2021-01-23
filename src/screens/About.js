@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import DarbazAli from '../assets/JPEG/Darbaz_Ali.jpg'
 
 const About = () => {
+  useEffect(() => (document.title = 'Darbaz Ali | About'))
   return (
     <section id='about' className='container'>
       <img src={DarbazAli} alt='Darbaz Ali' width='400' height='400' />

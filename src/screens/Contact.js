@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Github, Linkedin } from '@icons-pack/react-simple-icons'
 
 const Contact = () => {
+  useEffect(() => (document.title = 'Darbaz Ali | Contact'))
   return (
     <section className='container' id='contact'>
       <h1>Get in touch</h1>

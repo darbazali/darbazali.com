@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import GithubAPI from '../sections/GithubAPI'
 import Certifications from '../sections/Certifications'
@@ -12,6 +12,7 @@ import ProjectPomodoroClock from '../sections/ProjectPomodoroClock'
 import ProjectHeatMap from '../sections/ProjectHeatMap'
 
 const Home = () => {
+  useEffect(() => (document.title = 'Darbaz Ali | Full-Stack Developer'))
   return (
     <>
       <Hero />
