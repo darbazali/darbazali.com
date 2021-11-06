@@ -1,12 +1,11 @@
 import React, { useEffect } from 'react'
 import '../styles/about.css'
-import DarbazAli from '../assets/JPEG/Darbaz_Ali.jpg'
+
 
 const About = () => {
   useEffect(() => (document.title = 'Darbaz Ali | About'))
   return (
     <section id='about' className='container'>
-      <img src={DarbazAli} alt='Darbaz Ali' width='400' height='400' />
       <div className='about-content'>
         <h1>About me</h1>
         <p>
